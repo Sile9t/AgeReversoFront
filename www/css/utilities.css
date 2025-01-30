@@ -1,0 +1,68 @@
+@charset "utf0-8";
+@import url("../source/font/Gilroy/stylesheet.css");
+@import url("../source/font/Avenir\ Next/stylesheet.css");
+
+:root {
+    --prmr-clr: #0A406E;
+    --scndr-clr: #1E66A6;
+    --thrd-clr: #F4F9FF;
+
+    --blk-txt-clr: #000;
+    --wt-txt-clr: #fff;
+    --hdr-txt-clr: #3D3D3D;
+    --snd-txt-clr: #1E66A6;
+    --thrd-txt-clr: #0A406E;
+
+    --nav-area-border-clr: #D3DEEA;
+}
+
+body {
+    font-family: Avenir Next;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.wt-rounded-btn {
+    border: 1px solid white;
+    border-radius: .5rem;
+    padding: .75rem 1rem;
+    margin: 0 .5rem;
+    background-color: white;
+    font-family: Avenir Next;
+    font-weight: 500;
+    height: 100%;
+}
+
+.bl-rounded-btn {
+    border: 1px solid white;
+    border-radius: .5rem;
+    color: var(--wt-txt-clr);
+    padding: .75rem 1rem;
+    margin: 0 .5rem;
+    background-color: hsl(from var(--scndr-clr) h s 35%);
+    font-family: Avenir Next;
+    font-weight: 500;
+    height: 100%;
+}
+
+.wt-pill-btn {
+    border: 1px solid var(--prmr-clr);
+    border-radius: 2rem;
+    color: var(--thrd-txt-clr);
+    padding: 1rem 1.25rem;
+    margin: 0 .5rem;
+    background-color: white;
+    font-family: Avenir Next;
+    font-weight: 500;
+}
+
+.bl-pill-btn {
+    border: 1px solid var(--prmr-clr);
+    border-radius: 2rem;
+    color: var(--wt-txt-clr);
+    padding: 1rem 1.25rem;
+    margin: 0 .5rem;
+    background-color: var(--prmr-clr);
+    font-family: Avenir Next;
+    font-weight: 500;
+}

@@ -1,0 +1,238 @@
+@charset "utf-8";
+@import url("./utilities.css");
+
+body {
+    justify-content: space-around;
+}
+
+.header-container {
+    width: 100%;
+    background: 
+        url("../source/img/main/HeaderPhoto3.png") bottom right 2.5vw / 45% no-repeat,
+        url("../source/img/main/HeaderPhoto2.png") bottom right / 60% no-repeat,
+        url("../source/img/main/HeaderPhoto1.png") bottom right / 57% no-repeat,
+        url("../source/img/main/Ellipse.png") top left no-repeat,
+        url("..//source/img/main/Ellipse1.png") right no-repeat,
+        var(--prmr-clr);
+    border-radius: 30px;
+    overflow: hidden;
+    padding: 0;
+    margin-bottom: 2.5vw;
+    margin-top: 2.5vw;
+}
+
+.header-wrapper {
+    padding: 1.5rem;
+
+    .navbar-wrapper {
+        .navbar {
+            padding: .5rem 5rem;
+
+            .navbar-nav {
+
+                a {
+                    color: var(--wt-txt-clr);
+                    font-family: Gilroy;
+                    font-size: 16px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.meet-wrapper {
+    color: var(--wt-txt-clr);
+    padding: 1.5rem;
+
+    h1 {
+        font-size: 100px;
+        margin: 1rem 0;
+    }
+
+    p {
+        width: 47%;
+        font-size: 25px;
+        font-weight: 300;
+    }
+}
+
+.meet-bottom-wrapper {
+    .btns-wrapper {
+        background-color: white;
+        width: 53%;
+        padding: .5rem;
+        padding-bottom: .2rem;
+        border-top-right-radius: 2rem;
+        position: relative;
+        
+        p {
+            width: 90%;
+            margin-top: 1rem;
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--hdr-txt-clr);
+        }
+
+        .svg {
+            /* display: none; */
+            position: absolute;
+            top: -2.47vw;
+            left: 0px;
+        }
+
+        .svg1 {
+            /* display: none; */
+            position: absolute;
+            bottom: -.07vw;
+            right: -2.5vw;
+        }
+    }
+
+    .specialists-introduce-wrapper {
+        border-radius: 1rem;
+        margin: 1rem;
+        margin-top: 0;
+        padding: 1rem;
+        width: 47%;
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(5px);
+
+        .specialist-introduce {
+            .name {
+                margin: .5rem 0;
+                font-weight: 700;
+            }
+
+            .specializations {
+                width: 90%;
+                font-size: 12px;
+                font-weight: 400;
+            }
+        }
+    }   
+}
+
+.nav-area {
+    height: 50vw;
+    border: 1px solid var(--nav-area-border-clr);
+    border-radius: 2.5vw;
+    margin-bottom: 2.5vw;
+    margin-top: 2.5vw;
+
+    .logo-wrapper {
+        color: var(--thrd-txt-clr);
+    }
+
+    :nth-child(n+1 of .nav-link) {
+        max-width: 27vw;
+        min-width: 20vw;
+        a {
+            text-decoration: none;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--snd-txt-clr);
+        }
+    }
+
+    .nav-link-1 {
+        top: 10%;
+        right: 20%;
+    }
+
+    .nav-link-2 {
+        top: 20%;
+        left: 15%;
+    }
+
+    .nav-link-3 {
+        top: 30%;
+        right: 15%;
+    }
+
+    .nav-link-4 {
+        top: 48%;
+        left: 3%;
+    }
+
+    .nav-link-5 {
+        bottom: 40%;
+        right: 7%;
+    }
+
+    .nav-link-6 {
+        bottom: 28%;
+        left: 30%;
+    }
+
+    .nav-link-7 {
+        bottom: 27%;
+        right: 19%;
+    }
+
+    .nav-link-8 {
+        bottom: 15%;
+        left: 10%;
+        width: 15vw;
+    }
+
+    .nav-link-9 {
+        bottom: 8%;
+        right: 9%;
+    }
+
+    .nav-link-10 {
+        bottom: 5%;
+        right: 38%;
+    }
+}
+
+.symptoms-cards-wrapper {
+    
+    h2 {
+        text-align: center;
+    }
+
+    .symptoms-cards-list {
+        .symptoms-card {
+            width: 48%;
+            border-radius: 1vw;
+            padding: 1rem;
+            aspect-ratio:  680 / 423;
+            color: var(--wt-txt-clr);
+            background: linear-gradient(var(--scndr-clr), var(--prmr-clr));
+
+            .symptoms-card-header {
+                font-size: 20px;
+                font-weight: 400;
+                padding: 0;
+            }
+
+            .symptoms-list {
+                padding: .25rem;
+                margin-bottom: .15rem;
+                .symptom {
+                    font-size: 12px;
+                    margin: .5rem;
+                }
+            }
+
+            .symptoms-more {
+                font-size: 12px;
+                font-weight: 500;
+                padding: 0;
+            }
+        }
+
+        .symptoms-card-1 {
+            background: url("../source/img/main/SymptomCardImg1.png") center no-repeat,
+                /* linear-gradient(var(--scndr-clr), var(--prmr-clr)) */
+                /* linear-gradient(white, var(--scndr-clr)), */
+                ;
+            mask-image: linear-gradient(var(--scndr-clr), var(--prmr-clr));
+            -webkit-mask-image: linear-gradient(var(--scndr-clr), var(--prmr-clr));
+            /* background: linear-gradient(var(--scndr-clr), var(--prmr-clr)); */
+        }
+    }
+}
