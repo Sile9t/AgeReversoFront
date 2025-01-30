@@ -199,9 +199,9 @@ body {
             width: 48%;
             border-radius: 1vw;
             padding: 1rem;
-            aspect-ratio:  680 / 423;
+            aspect-ratio:  680 / 390;
             color: var(--wt-txt-clr);
-            background: linear-gradient(var(--scndr-clr), var(--prmr-clr));
+            /* background: linear-gradient(var(--symptomps-card-first-color), var(--symptomps-card-second-color)); */
 
             .symptoms-card-header {
                 font-size: 20px;
@@ -226,13 +226,15 @@ body {
         }
 
         .symptoms-card-1 {
-            background: url("../source/img/main/SymptomCardImg1.png") center no-repeat,
-                /* linear-gradient(var(--scndr-clr), var(--prmr-clr)) */
-                /* linear-gradient(white, var(--scndr-clr)), */
-                ;
-            mask-image: linear-gradient(var(--scndr-clr), var(--prmr-clr));
-            -webkit-mask-image: linear-gradient(var(--scndr-clr), var(--prmr-clr));
-            /* background: linear-gradient(var(--scndr-clr), var(--prmr-clr)); */
+            background: 
+                linear-gradient(var(--symptomps-card-first-color), var(--symptomps-card-second-color)),
+                url("../source/img/main/SymptomCardImg1.png") no-repeat center / cover;
+        }
+
+        .symptoms-card-2 {
+            background: 
+                linear-gradient(var(--symptomps-card-first-color), var(--symptomps-card-second-color)),
+                url("../source/img/main/SymptomCardImg2.png") no-repeat center / cover;
         }
     }
 }

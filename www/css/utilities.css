@@ -14,7 +14,10 @@
     --thrd-txt-clr: #0A406E;
 
     --nav-area-border-clr: #D3DEEA;
-}
+
+    --symptomps-card-first-color: #1E66A600; 
+    --symptomps-card-second-color: #0A406EFF; 
+}   
 
 body {
     font-family: Avenir Next;
