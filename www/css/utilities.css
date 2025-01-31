@@ -15,8 +15,11 @@
 
     --nav-area-border-clr: #D3DEEA;
 
-    --symptomps-card-first-color: #1E66A600; 
-    --symptomps-card-second-color: #0A406EFF; 
+    --symptomps-card-first-color: #0088FF77;
+    --symptomps-card-second-color: #0A406E;
+    --symptomps-card-third-color: #0088FF37;
+
+    --specialist-card-clr: #F7FBFF;
 }   
 
 body {

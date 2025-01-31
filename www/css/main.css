@@ -191,50 +191,133 @@ body {
 .symptoms-cards-wrapper {
     
     h2 {
+        font-size: xx-large;
         text-align: center;
     }
 
     .symptoms-cards-list {
+        padding: 2rem 0;
+        
         .symptoms-card {
-            width: 48%;
+            width: 49%;
             border-radius: 1vw;
-            padding: 1rem;
             aspect-ratio:  680 / 390;
             color: var(--wt-txt-clr);
-            /* background: linear-gradient(var(--symptomps-card-first-color), var(--symptomps-card-second-color)); */
+            position: relative;
+            overflow: hidden;
+            
+            .symptomps-card-info {
+                padding: 1rem;
+                text-decoration: none;
+                color: var(--wt-txt-clr);
 
-            .symptoms-card-header {
-                font-size: 20px;
-                font-weight: 400;
-                padding: 0;
-            }
-
-            .symptoms-list {
-                padding: .25rem;
-                margin-bottom: .15rem;
-                .symptom {
+                .symptoms-card-header {
+                    font-size: 24px;
+                    font-weight: 500;
+                    padding: 0;
+                }
+    
+                .symptoms-list {
+                    padding: .25rem;
+                    margin-bottom: .15rem;
+            
+                    .symptom {
+                        font-size: 12px;
+                        font-weight: 400;
+                        margin: .5rem;
+                        padding-left: .5rem;
+                    }
+                }
+    
+                .symptoms-more {
                     font-size: 12px;
-                    margin: .5rem;
+                    font-weight: 500;
+                    padding: 0;
                 }
             }
-
-            .symptoms-more {
-                font-size: 12px;
-                font-weight: 500;
-                padding: 0;
-            }
-        }
+        }                                                   
 
         .symptoms-card-1 {
             background: 
-                linear-gradient(var(--symptomps-card-first-color), var(--symptomps-card-second-color)),
+                linear-gradient(to bottom, var(--symptomps-card-third-color), var(--symptomps-card-first-color), var(--symptomps-card-second-color)),
                 url("../source/img/main/SymptomCardImg1.png") no-repeat center / cover;
         }
 
         .symptoms-card-2 {
-            background: 
-                linear-gradient(var(--symptomps-card-first-color), var(--symptomps-card-second-color)),
+            background:
+                linear-gradient(to bottom, var(--symptomps-card-third-color), var(--symptomps-card-first-color), var(--symptomps-card-second-color)),
                 url("../source/img/main/SymptomCardImg2.png") no-repeat center / cover;
+       }
+    }
+}
+
+.specialists-cards-wrapper {
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+
+    .specialists-cards-header {
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        .specialists-cards-header-description {
+            width: 80%;
+            margin: 2rem;
+            font-size: 1.25rem;
+            font-weight: 400;
+            text-align: center;
+        }
+    }
+
+    .specialists-cards-list {
+        
+        .specialist-card {
+            width: 24%;
+            border-radius: 1rem;
+            background-color: var(--specialist-card-clr);
+
+            .specialist-img {
+                aspect-ratio: 5 / 4;
+
+                img {
+                    width: 100%;
+                    border-radius: 1rem;
+                    object-fit: cover;
+                }
+            }
+
+            .specialist-info {
+                margin: 1rem;
+
+                .specialist-name {
+                    text-align: center;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+
+                .specialist-specializations {
+                    margin: 1rem 0;
+                    text-align: center;
+                    font-size: .75rem;
+                }
+            }
+
+            .specialist-more-btn {
+                button {
+                    padding: .6rem 1.3rem;
+                    margin-bottom: 1rem;
+                    font-size: .8rem;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .specialists-cards-bottom {
+        button {
+            margin: 3rem 0;
+            padding: 1rem 3rem;
         }
     }
 }
