@@ -373,6 +373,7 @@ body {
 .program-benefits-wrapper {
     margin-top: 2rem;
     margin-bottom: 2rem;
+    padding: 0;
 
     .header-block {
         width: 49%;
@@ -458,5 +459,165 @@ body {
                 background: url("../source/img/main/finalBenefitBg.png");
             }
         }
+    }
+}
+
+.programs-list-and-price-list-wrapper {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 1.25rem;
+    background: 
+        url("../source/img/main/ProgramListBg.png") no-repeat,
+        url("../source/img/main/ProgramListEllipse3.png") top left no-repeat,
+        url("../source/img/main/ProgramListEllipse2.png") center right no-repeat,
+        url("../source/img/main/ProgramListEllipse1.png") bottom left no-repeat,
+        var(--prmr-clr)
+    ;
+    color: var(--wt-txt-clr);
+
+    .programs-list-wrapper {
+        .programs-list-header {
+            h2 {
+                margin: 0;
+                margin-bottom: 2rem;
+                font-size: 3rem;
+            }
+        }
+    
+        .programs-list {
+            padding: 0;
+            margin: 0;
+    
+            .program {
+                margin: 2rem 0;
+    
+                .program-name-wrapper {
+                    h3 {
+                        font-size: 2rem;
+                    }
+    
+                    hr {
+                        height: .15rem;
+                        width: 10rem;
+                        opacity: 100%;
+                    }
+                }
+    
+                .program-description-wrapper {
+                    position: relative;
+                    border-radius: .75rem;
+                    overflow: hidden;
+                    width: 60%;
+    
+                    .program-description {
+                        z-index: 1;
+                        padding: 2rem;
+    
+                        p {
+                            font-size: 1.5rem;
+                            font-weight: 400;
+                            margin: 0 1rem 3rem 1rem;
+                        }
+    
+                        a {
+                            color: transparent;
+                        }
+                    }
+    
+                    .program-description-mask {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background-color: hsl(from #000F1D h s 60%);
+                        opacity: 20%;
+                    }
+                }
+            }
+        }
+    }
+
+    .price-list-wrapper {
+        
+        .price-list-header {
+            h3 {
+                margin-top: 5rem;
+                margin-bottom: 3rem;
+            }
+        }
+        
+        .price-list {
+            list-style: none;
+            padding: 0;
+            
+            .price-item {
+                width: 31%;
+                position: relative;
+            
+                .price-body {
+                    position: relative;
+                    border-radius: .75rem;
+                    padding: 1.25rem;
+                    padding-bottom: 2.5rem;
+                    overflow: hidden;
+                    
+                    hr {
+                        margin: 2rem 0;
+                        background-color: hsl(from #000F1D h s 90%);
+                        opacity: 50%;
+                    }
+
+                    .price-info {
+                        position: relative;
+                        z-index: 1;
+                        font-size: 1.2rem;
+
+                        h4 {
+                            font-size: 2.5rem;
+                            font-weight: 400;
+                        }
+
+                        .price-benefits-list-header {
+                            
+                        }
+        
+                        .price-benefits-list {
+                            list-style: disc;
+                            padding-left: 1.2rem;
+                            .price-benefit {
+                                margin: 1rem 0;
+                            }
+                        }
+        
+                        .price-price-wrapper {
+                            h4 {
+                                margin: 2rem 0;
+                            }
+                        }
+                    }
+                    
+                    .price-mask {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background-color: hsl(from #000F1D h s 60%);
+                        opacity: 20%;
+                    }
+                }
+            }
+
+            :nth-child( 2n of .price-item) {
+                .price-mask {
+                    background-color: hsl(from #00274A h s 40%);
+                    opacity: 60%;
+                }
+            }
+
+        }
+
     }
 }
