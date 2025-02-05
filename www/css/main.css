@@ -215,7 +215,7 @@ body {
 .symptoms-cards-wrapper {
     
     h2 {
-        font-size: xx-large;
+        font-size: 3rem;
         text-align: center;
     }
 
@@ -281,7 +281,7 @@ body {
 
     .specialists-cards-header {
         h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             text-align: center;
         }
 
@@ -316,23 +316,23 @@ body {
 
                 .specialist-name {
                     text-align: center;
-                    font-size: 1.5rem;
+                    font-size: 1.8rem;
                     font-weight: 600;
                 }
 
                 .specialist-specializations {
                     margin: 1rem 0;
                     text-align: center;
-                    font-size: .75rem;
+                    font-size: .9rem;
                 }
             }
 
             .specialist-more-btn {
                 button {
-                    padding: .6rem 1.3rem;
+                    padding: .5rem 1.5rem;
                     margin-bottom: 1rem;
-                    font-size: .8rem;
-                    font-weight: 400;
+                    font-size: 1rem;
+                    font-weight: 200;
                 }
             }
         }
@@ -347,8 +347,8 @@ body {
 }
 
 .magazine-wrapper {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
     padding: 2rem;
     background: 
         url("../source/img/main/MagaxzineImg.png") right no-repeat,
@@ -423,7 +423,7 @@ body {
                     position: absolute;
                     width: 2rem;
                     height: 2rem;
-                    top: -7%;
+                    top: -10%;
                     right: 0;
                     color: var(--prmr-clr);
                 }
@@ -750,25 +750,24 @@ body {
 }
 
 .offline-project-wrapper {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
     padding: 2rem;
     border-radius: 1.25rem;
     box-shadow: 0 0 0.5rem rgba(235, 235, 235, 0.8);
     
     .offline-project-info {
-        width: 50%;
+        width: 49%;
 
         .offline-project-tag p {
             color: #054175;
             font-size: 1.4rem;
             font-weight: 400;
         }
-
-        .offline-project-header {
-            h2 {
-                font-size: 3rem;
-            }
+        
+        .offline-project-header h2{
+            width: 90%;
+            font-size: 3rem;
         }
 
         .offline-project-redirect-btn a button {
@@ -778,8 +777,49 @@ body {
     }
 
     .offline-project-img-wrapper {
-        width: 50%;
+        width: 49%;
         border-radius: .75rem;
         overflow: hidden;
+    }
+}
+
+.supervisor-for-wrapper {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 0.5rem rgba(235, 235, 235, 0.8);
+
+    .supervisor-for-info {
+        width: 49%;
+
+        .supervisor-for-header h2{
+            width: 90%;
+            font-size: 3rem;
+        }
+        
+        .supervisor-for-description p {
+            height: 5rem;
+            font-size: 1.2rem;
+        }
+
+        .supervisor-for-btn-wrapper a button{
+            padding: 2% 12%;
+            margin: 0;
+        }
+    }
+
+    .supervisor-for-img-wrapper {
+        width: 49%;
+        aspect-ratio: 615.44 / 410;
+        border-radius: .75rem;
+        overflow: hidden;
+        background: 
+            url("../source/img/main/SupervisorForImg3.png") bottom center no-repeat,
+            url("../source/img/main/SupervisorForImg2.png") bottom left no-repeat,
+            url("../source/img/main/SupervisorForImg1.png") bottom right no-repeat,
+            url("../source/img/main/SupervisorForEllipse1.png"),
+            var(--prmr-clr)
+        ;
     }
 }
