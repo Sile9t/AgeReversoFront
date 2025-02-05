@@ -698,3 +698,88 @@ body {
         }
     }
 }
+
+.learning-advertisement-wrapper {
+    padding: 2rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    border-radius: 2.5rem;
+    background:
+        url("../source/img/main/LearningAdBgPhoto.png") bottom right / 50% no-repeat,
+        url("../source/img/main/LearningAdEllipse2.png") bottom right no-repeat,
+        url("../source/img/main/LearningAdEllipse1.png") top left no-repeat,
+        url("../source/img/main/LearningAdBgMask.png") no-repeat,
+        radial-gradient(farthest-side at 10% 30% ,#0088FF23, transparent) no-repeat,
+        var(--prmr-clr)
+    ;
+    color: var(--wt-txt-clr);
+
+    .learning-advertisement-header {
+        h2 {
+            max-width: 55%;
+            margin: 2rem 0;
+            font-size: 3rem;
+        }
+    }
+
+    .learning-advertisement-topic {
+        h3 {
+            max-width: 55%;
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+    }
+
+    .learning-advertisement-description {
+        p {
+            max-width: 55%;
+            height: 7rem;
+            margin: 3rem 0;
+            font-size: 1.2rem;
+            font-weight: 200;
+        }
+    }
+
+    .learning-advertisement-more-btn-wrapper {
+        button {
+            padding: 1.2rem 4.8rem;
+            margin: 1rem 0;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.offline-project-wrapper {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 0.5rem rgba(235, 235, 235, 0.8);
+    
+    .offline-project-info {
+        width: 50%;
+
+        .offline-project-tag p {
+            color: #054175;
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+
+        .offline-project-header {
+            h2 {
+                font-size: 3rem;
+            }
+        }
+
+        .offline-project-redirect-btn a button {
+            padding: 2% 12%;
+            margin: 0;
+        }
+    }
+
+    .offline-project-img-wrapper {
+        width: 50%;
+        border-radius: .75rem;
+        overflow: hidden;
+    }
+}
