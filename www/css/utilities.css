@@ -45,7 +45,7 @@ body {
     color: var(--wt-txt-clr);
     padding: .75rem 1rem;
     margin: 0 .5rem;
-    background-color: hsl(from var(--scndr-clr) h s 35%);
+    background-color: rgba(255, 255, 255, 0.2);
     font-family: Avenir Next;
     font-weight: 500;
     height: 100%;
@@ -73,4 +73,34 @@ body {
     font-size: 1.25rem;
     font-family: Avenir Next;
     font-weight: 300;
+}
+
+
+.marquee {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.marquee .content-wrapper {
+    padding-inline: .5rem;
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+    animation: scroll 10s linear infinite;
+}
+
+.scroll {
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
