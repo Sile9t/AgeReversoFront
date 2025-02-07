@@ -104,3 +104,126 @@ body {
         transform: translateX(-100%);
     }
 }
+
+.header-container {
+    background: 
+        url("../source/img/main/HeaderPhoto3.png") bottom right 2.5rem / 46.5% no-repeat,
+        url("../source/img/main/HeaderPhoto2.png") bottom right / 61% no-repeat,
+        url("../source/img/main/HeaderPhoto1.png") bottom right / 58% no-repeat,
+        url("../source/img/main/Ellipse.png") top left no-repeat,
+        url("..//source/img/main/Ellipse1.png") right no-repeat,
+        var(--prmr-clr);
+    border-radius: 2rem;
+    border-bottom-left-radius: 0;
+    overflow: hidden;
+    padding: 0;
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+.meeting-wrapper {
+    
+    .meet-wrapper {
+        color: var(--wt-txt-clr);
+        padding: 2rem;
+    
+        h1 {
+            font-size: 7rem;
+            margin: 1rem 0;
+        }
+    
+        p {
+            width: 49%;
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin: 2rem 0;
+        }
+    }
+    
+    .meet-bottom-wrapper {
+        .btns-wrapper {
+            background-color: white;
+            width: 51%;
+            padding: .5rem;
+            padding-bottom: .2rem;
+            border-top-right-radius: 2rem;
+            position: relative;
+            
+            a {
+                color: transparent;
+            }
+
+            p {
+                width: 95%;
+                margin-top: 1rem;
+                font-size: 2.1rem;
+                font-weight: 700;
+                color: var(--hdr-txt-clr);
+            }
+    
+            .svg {
+                position: absolute;
+                top: -2.49rem;
+                left: 0;
+                color: hsl(from var(--scndr-clr) h s 26.7%);
+            }
+    
+            .svg1 {
+                position: absolute;
+                bottom: 0;
+                right: -2.499rem;
+                color: hsl(from var(--scndr-clr) h s 26.7%);
+            }
+        }
+    
+        .specialists-introduce-wrapper {
+            border-radius: 1.25rem;
+            margin: 1rem;
+            margin-top: 0;
+            padding: 1rem;
+            width: 47%;
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+    
+            .specialist-introduce {
+                .name {
+                    margin: .5rem 0;
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                }
+    
+                .specializations {
+                    width: 90%;
+                    font-size: .9rem;
+                    font-weight: 400;
+                }
+            }
+        }   
+    }
+}
+
+.header-wrapper {
+    padding: 1.5rem;
+
+    .navbar-wrapper {
+        .navbar {
+            padding: .5rem 5rem;
+
+            .navbar-nav {
+
+                a {
+                    color: var(--wt-txt-clr);
+                    font-family: Gilroy;
+                    font-size: 1rem;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .navbar-btns-wrapper {
+        a {
+            color: transparent;
+        }
+    }
+}
