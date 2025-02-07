@@ -65,12 +65,14 @@ body {
                 position: absolute;
                 top: -2.49rem;
                 left: 0;
+                color: hsl(from var(--scndr-clr) h s 26.7%);
             }
     
             .svg1 {
                 position: absolute;
                 bottom: 0;
-                right: -2.49rem;
+                right: -2.499rem;
+                color: hsl(from var(--scndr-clr) h s 26.7%);
             }
         }
     
@@ -125,7 +127,6 @@ body {
         }
     }
 }
-
 
 .nav-area {
     height: 55rem;
@@ -209,6 +210,7 @@ body {
 }
 
 .symptoms-cards-wrapper {
+    padding: 0;
     
     h2 {
         font-size: 3rem;
@@ -272,6 +274,7 @@ body {
 }
 
 .specialists-cards-wrapper {
+    padding: 0;
     margin-top: 3rem;
     margin-bottom: 3rem;
 
@@ -291,9 +294,14 @@ body {
     }
 
     .specialists-cards-list {
-        
+        column-gap: 1.1rem;
+        row-gap: 1.1rem;
+        max-height: 31rem;
+        transition: max-height 2s ease-out;
+        overflow: hidden;
+
         .specialist-card {
-            width: 24%;
+            /* width: 19.5rem; */
             border-radius: 1rem;
             background-color: var(--specialist-card-clr);
 
@@ -328,11 +336,44 @@ body {
                     padding: .5rem 1.5rem;
                     margin-bottom: 1rem;
                     font-size: 1rem;
-                    font-weight: 200;
+                    font-weight: 300;
                 }
             }
         }
+
+        &.show {
+            max-height: 200rem;
+            transition: max-height 2s ease-out;
+        }
+        /* .collapse-content {
+            padding: 0;
+            column-gap: 1.1rem;
+            row-gap: 1.1rem;
+            max-height: 20rem;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            transition: max-height 2s ease-out;
+        }
+
+        .collapse-content.show {
+            padding: 0;
+            column-gap: 1.1rem;
+            row-gap: 1.1rem;
+            max-height: 0;
+            max-height: 200rem;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            transition: max-height 2s ease-out;
+        } */
     }
+
+    .specialists-cards-list.show {
+        max-height: 200rem;
+        transition: max-height 2s ease-out;
+    }
+
 
     .specialists-cards-bottom {
         button {
@@ -991,5 +1032,65 @@ body {
     .politics-wrapper {
         font-size: 1.2rem;
         font-weight: 100;
+    }
+}
+
+@media screen and (min-width:1400px) {
+    .header-container {
+
+    }
+
+    .nav-area {
+
+    }
+
+    .symproms-cards-wrapper {
+
+    }
+
+    .specialists-cards-wrapper {
+        .specialist-card {
+            width: 19.5rem;
+        }
+    }
+
+    .magazine-wrapper {
+
+    }
+
+    .program-benefits-wrapper {
+
+    }
+
+    .programs-list-and-price-list-wrapper {
+
+    }
+
+    .article-cards-wrapper {
+
+    }
+
+    .learning-advertisement-wrapper {
+
+    }
+
+    .offline-project-wrapper {
+
+    }
+
+    .supervisor-for-wrapper {
+
+    }
+
+    .investor-for-wrapper {
+
+    }
+
+    .partners-marquee-wrapper {
+
+    }
+
+    footer {
+        
     }
 }

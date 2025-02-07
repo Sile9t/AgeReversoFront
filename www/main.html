@@ -64,13 +64,13 @@
                     <div class="svg">
                         <svg version="1.1" width="2.5rem" height="2.5rem" xmlns="http://www.w3.org/2000/svg">
                            <rect width="100%" height="100%" fill="white" />
-                           <circle cx="2.5rem" cy="0" r="2.5rem" fill="hsl(from var(--scndr-clr) h s 26.7%)" />
+                           <circle cx="2.5rem" cy="0" r="2.5rem" fill="currentColor" />
                         </svg>
                     </div>
                     <div class="svg1">
                         <svg version="1.1" width="2.5rem" height="2.5rem" xmlns="http://www.w3.org/2000/svg">
                            <rect width="100%" height="100%" fill="white" />
-                           <circle cx="2.5rem" cy="0" r="2.5rem" fill="hsl(from var(--scndr-clr) h s 26.7%)" />
+                           <circle cx="2.5rem" cy="0" r="2.5rem" fill="currentColor" />
                         </svg>
                     </div>
                 </div>
@@ -178,7 +178,7 @@
             <h2>Команда специалистов AgeReverso</h2>
             <p class="specialists-cards-header-description">Мы собрали международную команду из ведущих специалистов каждой области здоровья. </br> Наши специалисты работают как с физическим, так и с ментальным состояниями.</p>
         </div>
-        <div class="specialists-cards-list d-flex flex-wrap justify-content-between">
+        <div class="specialists-cards-list d-flex flex-wrap" id="specialists-collapse-content">
             <div class="specialist-card d-flex flex-column">
                 <div class="specialist-img d-flex justify-content-center">
                     <img src="./source/img/main/SpecialistPhoto1.png">
@@ -251,9 +251,261 @@
                     </a>
                 </div>
             </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto5.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Андрей Шестаков
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill justify-content-center">
+                        Профессор микробиолог, Руководитель лаборатории микробной биотехнологии МГУ
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto6.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Дмитрий Субботин
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill justify-content-center">
+                        к.б.н, профессор НГУ, специалист в области биотехнологий, стволовых клеток и клеточной биологии.
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto7.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Екатерина Барышева
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill justify-content-center">
+                        Врач кардиолог, терапевт, интегративный врач, нутрициолог, специалист...
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto8.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Елена Яковлева
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill">
+                        M.D., врач-терапевт
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto9.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Атанян Асмик
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill justify-content-center">
+                        M.D., врач эндокринолог, нутрициолог
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto10.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Алёна Хрипкова
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill justify-content-center">
+                        врач функциональной диагностики
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto11.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Анна Плотникова
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill justify-content-center">
+                        M.D., врач эндокринолог, нутрициолог
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto12.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Лала Попова
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill">
+                        Психолог, психосоматолог, ЭОТ-терапевт
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto13.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Ольга Постникова
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill justify-content-center">
+                        Психолог, когнитивно-поведенческий терапевт
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto14.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Манана Лепсверидзе
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill justify-content-center">
+                        Психотерапевт, психоаналитик
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto15.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Анастасия Голубева
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill justify-content-center">
+                        Экспоненциальный Коуч
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto16.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Анна Кочнева
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill">
+                        Йога-тренер, эксперт по дыхательным практикам и медитациям
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto17.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Рыжова Наташа
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill justify-content-center">
+                        Фитнес тренер, ментор ЗОЖ
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto18.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Ирина Левашова
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill">
+                        Йога-тренер, йога-терапевт
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
         </div>
         <div class="specialists-cards-bottom d-flex justify-content-center">
-            <button class="specialists-cards-expand-btn wt-pill-btn" type="button">Показать больше</button>
+            <button class="specialists-cards-expand-btn wt-pill-btn collapsible" type="button" popovertarget="specialists-collapse-content" >Показать больше</button>
         </div>
     </div>
     <div class="magazine-wrapper container">
@@ -755,6 +1007,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
