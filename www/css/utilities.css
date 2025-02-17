@@ -20,6 +20,14 @@
     --symptomps-card-third-color: #0088FF37;
 
     --specialist-card-clr: #F7FBFF;
+    
+    --account-bg-clr: #EFEFEF;
+    --account-search-bg-clr: #F4F4F4;
+    --account-info-tile-bg-clr: #FFFFFF99;
+    --btn-wt-clr: #FFFFFF;
+    --btn-bl-clr: #0A406E;
+    --btn-red-clr: #C40003;
+    --search-muted-clr: #D8D8D8;
 }   
 
 body {

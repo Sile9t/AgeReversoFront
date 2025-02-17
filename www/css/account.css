@@ -1,0 +1,176 @@
+@import url("./utilities.css");
+
+#main {
+}
+
+.account {
+    background-color: var(--account-bg-clr);
+    border-radius: 2rem;
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    .nav {
+        .main-nav-wrapper {
+            border-radius: 5rem;
+            padding: .5rem;
+            background-color: var(--btn-wt-clr);
+            
+            .nav-link {
+                height: 3.5rem;
+                width: 3.5rem;    
+            }
+            
+            .nav-link.active {
+                background-color: var(--btn-bl-clr);
+                color: var(--btn-wt-clr);
+            }
+        }
+        
+        .nav-link {
+            border-radius: 50% 50%;
+            height: 4.5rem;
+            width: 4.5rem;
+            padding: 1rem;
+            margin: .2rem;
+            background-color: var(--btn-wt-clr);
+            color: var(--btn-bl-clr);
+            
+            svg {
+                overflow: visible;
+                margin-left: .05rem;
+                margin-bottom: .1rem;
+            }
+        }
+        .main-tab svg {
+            margin-top: .3rem;
+            margin-bottom: .2rem;
+        }
+
+        .quit-tab {
+            color: var(--btn-red-clr);
+        }
+    }
+
+    .account-body-wrapper {
+        padding-left: 2rem;
+        
+        .header-wrapper {
+            padding: 0;
+            margin-bottom: 2rem;
+    
+            .name-wrapper h2{
+                width: 35rem;
+                margin: 0;
+                /* padding: 0 1rem; */
+                font-size: 2.5rem;
+            }
+    
+            .search-wrapper {
+                position: relative;
+                color: var(--search-muted-clr);
+                
+                svg {
+                    position: absolute;
+                    margin: 1.2rem;
+                }
+                
+                input {
+                    border: 0;
+                    width: 25rem;
+                    padding: 1.5rem 1.5rem;
+                    padding-left: 4.5rem;
+                    /* background-color: var(--account-search-bg-clr); */
+    
+                    &::placeholder {
+                        opacity: .6;                    
+                    }
+    
+                    &::-moz-placeholder{
+                        opacity: .6;
+                    }
+                    
+                    &::-webkit-input-placeholder {
+                        opacity: .6;
+                    }
+                }
+            }
+    
+            .notifications-wrapper button{
+                background-color: var(--btn-bl-clr);
+                color: var(--btn-wt-clr);
+                
+                svg {
+                    margin-left: .1rem;
+                    margin-right: .1rem;
+                }
+            }
+    
+            .account-header-btn {
+                border: 0;
+                border-radius: 50% 50%;
+                height: 4.5rem;
+                width: 4.5rem;
+                padding: 1rem;
+                margin: 0;
+    
+                
+                svg {
+                    margin: 0;
+                    padding: 0;
+                    height: 2rem;
+                }    
+            }
+        }
+        
+        .body-wrapper {
+            .photo-wrapper {
+            }
+
+            .stats-and-calendar-wrapper {
+
+                h3 {
+
+                }
+
+                .stats-wrapper {
+                    column-gap: 2rem;
+
+                    .parameters-stats-wrapper {
+                        .progress-bar-wrapper {
+                            font-weight: 500;
+
+                            .progress {
+                                border-radius: 1rem;
+                                height: 1.7rem;
+                                width: 85%;
+
+                                .progress-bar {
+                                    border-radius: 1rem;
+                                    background: linear-gradient(90deg, #E00000, #E3D300, #37BA03);
+                                    width: 87%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .calendar-wrapper {
+                    column-gap: 2rem;
+                }
+
+                .info-tile {
+                    border: .15rem solid white;
+                    border-radius: 2rem;
+                    height: 15rem;
+                    aspect-ratio: 290 / 235;
+                    padding: 1rem;
+                    /* margin: 1rem; */
+                    background-color: var(--account-info-tile-bg-clr);
+                }
+            }
+        }
+    }
+
+
+}
