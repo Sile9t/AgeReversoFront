@@ -124,11 +124,32 @@
         }
         
         .body-wrapper {
+            overflow: hidden;
+
             .photo-wrapper {
+                border-radius: 2rem;
+                height: 39.5rem;
+                aspect-ratio: 458 / 629;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
             }
 
-            .stats-and-calendar-wrapper {
+            .content-wrapper {
+                width: 40rem;
+                height: 39.5rem;
+                overflow: auto;
+                /* position: relative; */
+                row-gap: 1.4rem;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
 
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                
                 h3 {
 
                 }
@@ -140,16 +161,75 @@
                         .progress-bar-wrapper {
                             font-weight: 500;
 
+                            @property --pbPercentage {
+                                syntax: "<number>";
+                                inherits: false;
+                                initial-value: 0;
+                            }
+
                             .progress {
                                 border-radius: 1rem;
                                 height: 1.7rem;
                                 width: 85%;
-
-                                .progress-bar {
+                                
+                                div[role="progressbar"].progress-bar {
                                     border-radius: 1rem;
                                     background: linear-gradient(90deg, #E00000, #E3D300, #37BA03);
-                                    width: 87%;
+                                    width: calc(var(--value) * 1%);
                                 }
+                            }
+                        }
+                    }
+
+                    .general-stats-wrapper {
+                        @keyframes growProgressBar {
+                            0%, 33% { --pgPercentage: 0; }
+                            100% { --pgPercentage: var(--value); }
+                        }
+                          
+                        @property --pgPercentage {
+                            syntax: '<number>';
+                            inherits: false;
+                            initial-value: 0;
+                        }
+                          
+                        div[role="progressbar"].circle-progressbar {
+                            --size: 12rem;
+                            --fg: #37BA03;
+                            --bg: #F2F2F2;
+                            --pgPercentage: var(--value);
+                            animation: growProgressBar 3s 1 forwards;
+                            width: var(--size);
+                            height: var(--size);
+                            border-radius: var(--size);
+                            display: grid;
+                            position: relative;
+                            place-items: center;
+                            background: 
+                              /* radial-gradient(closest-side, white 70%, transparent 0 99.9%), */
+                              conic-gradient(var(--bg) 5%, var(--fg) calc(var(--pgPercentage) * .3%), var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+                              ;
+                            font-weight: 500;
+                            font-size: calc(var(--size) / 7);
+                            color: inherit;
+
+                            div.inside-circle-progressbar-circle {
+                                position: absolute;
+                                top: 15%;
+                                left: 15%;
+                                width: 70%;
+                                height: 70%;
+                                border-radius: 50%;
+                                background-color: white;
+                                display: grid;
+                                place-items: center;
+                            }
+                            
+                            div.inside-circle-progressbar-circle::before {
+                                top: 50%;
+                                left: 50%;
+                                counter-reset: percentage var(--value);
+                                content: counter(percentage) '%';
                             }
                         }
                     }
@@ -159,18 +239,137 @@
                     column-gap: 2rem;
                 }
 
+                .closest-checkup-date {
+                    font-weight: 500;
+
+                    .header {
+                        margin-bottom: 1.5rem;
+                    }
+
+                    .date {
+                        margin: 0;
+                        margin-left: .5rem;
+                        font-weight: 400;
+                        font-size: 6rem;
+                    }
+
+                    .month {
+                        margin: 0;
+                        font-size: 1.8rem;
+                        text-align: top;
+                    }
+                }
+
                 .info-tile {
                     border: .15rem solid white;
                     border-radius: 2rem;
                     height: 15rem;
-                    aspect-ratio: 290 / 235;
+                    width: 100%;
+                    /* aspect-ratio: 290 / 235; */
                     padding: 1rem;
-                    /* margin: 1rem; */
                     background-color: var(--account-info-tile-bg-clr);
+                }
+
+                .age-wrapper {
+                    .age-tile {
+                        height: 6rem;
+                        background: 
+                            url("../source/img/account/backgrounds/AgeBg.png") no-repeat center / 100%,
+                            white;
+                        aspect-ratio: none;
+                        font-weight: 500;
+                        font-size: 2.5rem;
+                        color: #37BA03;
+                    }
+                }
+
+                .passed-steps-wrapper {
+
+                    .passed-steps-tile {
+                        height: 24rem;
+
+                        canvas {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
                 }
             }
         }
     }
 
 
+}
+
+.datepicker {
+    background-color: transparent;
+    border-radius: 10px;
+    padding: .5rem;
+    font-size: .75rem;
+    font-weight: 600;
+
+    .datepicker-top {
+        margin-bottom: .5rem;
+    }
+    
+    .month-selector {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .month-name {
+        /* font-weight: 600; */
+    }
+    
+    .datepicker-calendar {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-row-gap: .5rem;
+    }
+    
+    .day, .date {
+        justify-self: center;
+    }
+    
+    .day {
+        font-weight: inherit;
+        justify-self: center;
+    }
+    
+    .date {
+        border: 0;
+        padding: 0;
+        width: 1.75rem;
+        height: 1.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2rem;
+        font-weight: inherit;
+        border: 2px solid transparent;
+        background-color: transparent;
+        cursor: pointer;
+        
+        &:focus {
+            outline: 0;
+            color: var(--c-theme-primary);
+            border: 2px solid var(--c-theme-primary-accent);	
+        }	
+    }
+    
+    .faded {
+        color: var(--c-text-secondary);
+    }
+    
+    .current-day {
+        color: #FFF;
+        border-color: var(--c-theme-primary);
+        background-color: var(--c-theme-primary);
+    
+        &:focus {
+            color: #FFF;
+            background-color: var(--c-theme-primary-accent);
+        }
+    }
 }

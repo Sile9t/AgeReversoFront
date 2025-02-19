@@ -28,6 +28,14 @@
     --btn-bl-clr: #0A406E;
     --btn-red-clr: #C40003;
     --search-muted-clr: #D8D8D8;
+
+    --c-theme-primary: #0A406E;
+	--c-theme-primary-accent: #1E66A6;
+	--c-bg-primary: #D6DAE0;
+	--c-bg-secondary: #EAEBEC;
+	--c-bg-tertiary: #FDFDFD;
+	--c-text-primary: #1F1F25;
+	--c-text-secondary: #D8D8D8;
 }   
 
 body {
