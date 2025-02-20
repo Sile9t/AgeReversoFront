@@ -29,6 +29,7 @@
         }
         
         .nav-link {
+            border: 0;
             border-radius: 50% 50%;
             height: 4.5rem;
             width: 4.5rem;
@@ -39,8 +40,8 @@
             
             svg {
                 overflow: visible;
-                margin-left: .05rem;
-                margin-bottom: .1rem;
+                /* margin-left: .05rem;
+                margin-bottom: .1rem; */
             }
         }
         .main-tab svg {
@@ -276,11 +277,12 @@
     
     svg {
         position: absolute;
-        margin: 1.2rem;
+        margin: .9rem;
     }
     
     input {
         border: 0;
+        border-radius: 2rem;
         width: 25rem;
         padding: 1.5rem 1.5rem;
         padding-left: 4.5rem;
