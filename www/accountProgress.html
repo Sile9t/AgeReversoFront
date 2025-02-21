@@ -12,6 +12,7 @@
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous">
     </script>
+    <link rel="stylesheet" href="./css/accountProgress.css">
 </head>
 <body>
     <div class="container" id="main">
@@ -25,7 +26,7 @@
                         </svg>
                 </button>
                 <div class="main-nav-wrapper d-flex flex-column align-items-center">
-                    <button class="nav-link account-tab active" type="button" onclick="location.href='account.html'" title="Account">
+                    <button class="nav-link account-tab" type="button" onclick="location.href='account.html'" title="Account">
                         <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.4rem" viewBox="0 0 17 22" fill="transparent">
                             <path d="M11.7143 20.5948C10.7401 20.8546 9.65028 21 8.5 21C4.35786 21 1 19.1149 1 16.7895C1 14.4641 4.35786 12.5789 8.5 12.5789C12.6421 12.5789 16 14.4641 16 16.7895C16 17.1529 15.918 17.5057 15.7637 17.8421M12.7857 5.21053C12.7857 7.53594 10.8669 9.42105 8.5 9.42105C6.13307 9.42105 4.21429 7.53594 4.21429 5.21053C4.21429 2.88512 6.13307 1 8.5 1C10.8669 1 12.7857 2.88512 12.7857 5.21053Z" stroke="currentColor" stroke-linecap="round"/>
                           </svg>
@@ -45,7 +46,7 @@
                             <path d="M16.4545 6.39474C16.1784 6.39474 15.9545 6.61859 15.9545 6.89474C15.9545 7.17088 16.1784 7.39474 16.4545 7.39474V6.39474ZM16.4545 2.18421C16.1784 2.18421 15.9545 2.40807 15.9545 2.68421C15.9545 2.96035 16.1784 3.18421 16.4545 3.18421V2.18421ZM5.54545 7.39474C5.8216 7.39474 6.04545 7.17088 6.04545 6.89474C6.04545 6.61859 5.8216 6.39474 5.54545 6.39474V7.39474ZM5.54545 3.18421C5.8216 3.18421 6.04545 2.96035 6.04545 2.68421C6.04545 2.40807 5.8216 2.18421 5.54545 2.18421V3.18421ZM11.8576 10.8071C12.1322 10.8355 12.378 10.6359 12.4064 10.3613C12.4349 10.0866 12.2353 9.84085 11.9606 9.81239L11.8576 10.8071ZM18.1732 14.8258C17.9026 14.8808 17.7278 15.1447 17.7827 15.4153C17.8377 15.6859 18.1016 15.8608 18.3723 15.8058L18.1732 14.8258ZM18.3723 10.6153C18.1016 10.5603 17.8377 10.7351 17.7827 11.0057C17.7278 11.2763 17.9026 11.5403 18.1732 11.5953L18.3723 10.6153ZM3.62774 15.8058C3.89835 15.8608 4.16229 15.6859 4.21727 15.4153C4.27224 15.1447 4.09742 14.8808 3.82681 14.8258L3.62774 15.8058ZM3.82681 11.5953C4.09742 11.5403 4.27224 11.2763 4.21727 11.0057C4.16229 10.7351 3.89835 10.5603 3.62774 10.6153L3.82681 11.5953ZM14.1364 4.36842C14.1364 5.91726 12.7689 7.23684 11 7.23684V8.23684C13.2477 8.23684 15.1364 6.54024 15.1364 4.36842H14.1364ZM11 7.23684C9.23111 7.23684 7.86364 5.91726 7.86364 4.36842H6.86364C6.86364 6.54024 8.75228 8.23684 11 8.23684V7.23684ZM7.86364 4.36842C7.86364 2.81958 9.23111 1.5 11 1.5V0.5C8.75228 0.5 6.86364 2.1966 6.86364 4.36842H7.86364ZM11 1.5C12.7689 1.5 14.1364 2.81958 14.1364 4.36842H15.1364C15.1364 2.1966 13.2477 0.5 11 0.5V1.5ZM18.6818 4.78947C18.6818 5.56339 17.8127 6.39474 16.4545 6.39474V7.39474C18.1088 7.39474 19.6818 6.34097 19.6818 4.78947H18.6818ZM16.4545 3.18421C17.8127 3.18421 18.6818 4.01556 18.6818 4.78947H19.6818C19.6818 3.23798 18.1088 2.18421 16.4545 2.18421V3.18421ZM2.31818 4.78947C2.31818 6.34097 3.89115 7.39474 5.54545 7.39474V6.39474C4.18729 6.39474 3.31818 5.56339 3.31818 4.78947H2.31818ZM5.54545 2.18421C3.89115 2.18421 2.31818 3.23798 2.31818 4.78947H3.31818C3.31818 4.01556 4.18729 3.18421 5.54545 3.18421V2.18421ZM15.9545 13.6316C15.9545 14.3242 15.4982 15.0297 14.5942 15.588C13.6981 16.1414 12.4286 16.5 11 16.5V17.5C12.5838 17.5 14.0416 17.1046 15.1197 16.4388C16.1898 15.778 16.9545 14.7993 16.9545 13.6316H15.9545ZM11 16.5C9.57139 16.5 8.3019 16.1414 7.40577 15.588C6.50179 15.0297 6.04545 14.3242 6.04545 13.6316H5.04545C5.04545 14.7993 5.81016 15.778 6.88034 16.4388C7.95836 17.1046 9.41615 17.5 11 17.5V16.5ZM6.04545 13.6316C6.04545 12.9389 6.50179 12.2334 7.40577 11.6752C8.3019 11.1218 9.57139 10.7632 11 10.7632V9.76316C9.41615 9.76316 7.95836 10.1586 6.88034 10.8243C5.81016 11.4852 5.04545 12.4639 5.04545 13.6316H6.04545ZM15.3599 12.2892C15.757 12.7131 15.9545 13.1713 15.9545 13.6316H16.9545C16.9545 12.8648 16.6208 12.1725 16.0897 11.6055L15.3599 12.2892ZM11 10.7632C11.2926 10.7632 11.5791 10.7782 11.8576 10.8071L11.9606 9.81239C11.6478 9.77998 11.3269 9.76316 11 9.76316V10.7632ZM20.5 13.2105C20.5 13.4785 20.3428 13.7924 19.9324 14.1035C19.5251 14.4123 18.9187 14.6744 18.1732 14.8258L18.3723 15.8058C19.2216 15.6333 19.9788 15.3232 20.5364 14.9005C21.0909 14.4802 21.5 13.9035 21.5 13.2105H20.5ZM18.1732 11.5953C18.9187 11.7467 19.5251 12.0088 19.9324 12.3175C20.3428 12.6286 20.5 12.9426 20.5 13.2105H21.5C21.5 12.5176 21.0909 11.9409 20.5364 11.5206C19.9788 11.0979 19.2216 10.7878 18.3723 10.6153L18.1732 11.5953ZM0.5 13.2105C0.5 13.9035 0.909075 14.4802 1.46356 14.9005C2.02119 15.3232 2.77843 15.6333 3.62774 15.8058L3.82681 14.8258C3.08134 14.6744 2.47495 14.4123 2.06763 14.1035C1.65718 13.7924 1.5 13.4785 1.5 13.2105H0.5ZM3.62774 10.6153C2.77843 10.7878 2.02119 11.0979 1.46356 11.5206C0.909075 11.9409 0.5 12.5176 0.5 13.2105H1.5C1.5 12.9426 1.65718 12.6286 2.06763 12.3175C2.47495 12.0088 3.08134 11.7467 3.82681 11.5953L3.62774 10.6153Z" fill="currentColor"/>
                           </svg>
                     </button>
-                    <button class="nav-link progress-tab" type="button" onclick="location.href='accountProgress.html'" id="v-pills-progress-tab" data-bs-toggle="tab" data-bs-target="" role="tab" aria-controls="" aria-selected="false" title="Progress">
+                    <button class="nav-link progress-tab active" type="button" onclick="location.href='accountProgress.html'" id="v-pills-progress-tab" data-bs-toggle="tab" data-bs-target="" role="tab" aria-controls="" aria-selected="false" title="Progress">
                         <svg xmlns="http://www.w3.org/2000/svg" width="1.4rem" height=".9rem" viewBox="0 0 22 13" fill="transparent">
                             <path d="M21 1V6.54583M21 1H15.4179M21 1L16.5 5.5M13.6203 8.33467C12.6227 9.32625 12.1238 9.82205 11.5051 9.82198C10.8864 9.82191 10.3876 9.326 9.3902 8.33418L9.15086 8.09618C8.15254 7.10349 7.65338 6.60714 7.03422 6.60737C6.41506 6.60759 5.91626 7.1043 4.91867 8.09773L1 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                           </svg>
@@ -70,7 +71,7 @@
             <div class="account-body-wrapper d-flex flex-column flex-fill">
                 <div class="header-wrapper d-flex justify-content-between align-items-center">
                     <div class="name-wrapper d-flex">
-                        <h2><span>Михаил Успенский</span></h2>
+                        <h2><span>Прогресс</span></h2>
                     </div>
                     <div class="search-wrapper">
                         <svg xmlns="http://www.w3.org/2000/svg" width="2.3rem" height="2.3rem" viewBox="0 0 37 37" fill="transparent">
@@ -87,122 +88,11 @@
                     </div>
                 </div>
                 <div class="body-wrapper tab-content" id="v-pills-tabContent">
-                    <div class="account-content d-flex flex-row justify-content-between" id="accountContent" role="tabpanel" aria-labelledby="v-pills-account-tab" tabindex="0">
+                    <div class="progress-content d-flex flex-row justify-content-between" id="accountContent" role="tabpanel" aria-labelledby="v-pills-account-tab" tabindex="0">
                         <div class="photo-wrapper">
                             <img src="./source/img/account/img/ProfilePhoto.png" alt="">
                         </div>
                         <div class="content-wrapper d-flex flex-column justify-content-between">
-                            <div class="parameters-stats-header">
-                                <h3>Whoop recovery/overview</h3>
-                            </div>
-                            <div class="stats-wrapper d-flex flex-row">
-                                <div class="parameters-stats-wrapper info-tile d-flex flex-column justify-content-between">
-                                    <div class="progress-bar-1-wrapper progress-bar-wrapper d-flex flex-row justify-content-between align-items-center">
-                                        <div class="progress-bar-1 progress">
-                                            <div class="progress-bar" id="progress-bar-1" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="--value:87" title="Progress bar 1"></div>
-                                        </div>
-                                        <span id="progress-bar-1-value">87</span>
-                                    </div>
-                                    <div class="progress-bar-2-wrapper progress-bar-wrapper d-flex flex-row justify-content-between align-items-center">
-                                        <div class="progress-bar-2 progress">
-                                            <div class="progress-bar" id="progress-bar-2" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="--value:77" title="Progress bar 2"></div>
-                                        </div>
-                                        <span id="progress-bar-2-value">77</span>
-                                    </div>
-                                    <div class="progress-bar-3-wrapper progress-bar-wrapper d-flex flex-row justify-content-between align-items-center">
-                                        <div class="progress-bar-3 progress">
-                                            <div class="progress-bar" id="progress-bar-3" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="--value:75" title="Progress bar 3"></div>
-                                        </div>
-                                        <span id="progress-bar-3-value">75</span>
-                                    </div>
-                                    <div class="progress-bar-4-wrapper progress-bar-wrapper d-flex flex-row justify-content-between align-items-center">
-                                        <div class="progress-bar-4 progress">
-                                            <div class="progress-bar" id="progress-bar-4" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="--value:73" title="Progress bar 4"></div>
-                                        </div>
-                                        <span id="progress-bar-4-value">73</span>
-                                    </div>
-                                    <div class="progress-bar-5-wrapper progress-bar-wrapper d-flex flex-row justify-content-between align-items-center">
-                                        <div class="progress-bar-5 progress">
-                                            <div class="progress-bar" id="progress-bar-5" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="--value:69" title="Progress bar 5"></div>
-                                        </div>
-                                        <span id="progress-bar-5-value">69</span>
-                                    </div>
-                                    <div class="progress-bar-6-wrapper progress-bar-wrapper d-flex flex-row justify-content-between align-items-center">
-                                        <div class="progress-bar-6 progress">
-                                            <div class="progress-bar" id="progress-bar-6" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="--value:65" title="Progress bar 6"></div>
-                                        </div>
-                                        <span id="progress-bar-6-value">65</span>
-                                    </div>
-                                </div>
-                                <div class="general-stats-wrapper info-tile d-flex justify-content-center align-items-center">
-                                    <div class="circle-progressbar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="--value:80">
-                                        <div class="inside-circle-progressbar-circle"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="calendar-header">
-                                <h3>Календарь чекапов</h3>
-                            </div>
-                            <div class="calendar-wrapper d-flex flex-row">
-                                <div class="calendar info-tile">
-                                    <div class="datepicker">
-                                        <!-- <div class="datepicker-top">
-                                            <div class="month-selector justify-content-center">
-                                                <span class="month-name">December 2020</span>
-                                            </div>
-                                        </div> -->
-                                        <div class="datepicker-calendar">
-                                            <span class="day">m</span>
-                                            <span class="day">t</span>
-                                            <span class="day">w</span>
-                                            <span class="day">t</span>
-                                            <span class="day">f</span>
-                                            <span class="day">s</span>
-                                            <span class="day">s</span>
-                                            <button class="date">01</button>
-                                            <button class="date current-day">02</button>
-                                            <button class="date">03</button>
-                                            <button class="date">04</button>
-                                            <button class="date">05</button>
-                                            <button class="date">06</button>
-                                            <button class="date">07</button>
-                                            <button class="date">08</button>
-                                            <button class="date">09</button>
-                                            <button class="date">10</button>
-                                            <button class="date">11</button>
-                                            <button class="date">12</button>
-                                            <button class="date">13</button>
-                                            <button class="date">14</button>
-                                            <button class="date">15</button>
-                                            <button class="date">16</button>
-                                            <button class="date">17</button>
-                                            <button class="date">18</button>
-                                            <button class="date">19</button>
-                                            <button class="date">20</button>
-                                            <button class="date">21</button>
-                                            <button class="date">22</button>
-                                            <button class="date">23</button>
-                                            <button class="date">24</button>
-                                            <button class="date">25</button>
-                                            <button class="date">26</button>
-                                            <button class="date">27</button>
-                                            <button class="date">28</button>
-                                            <button class="date">29</button>
-                                            <button class="date">30</button>
-                                            <button class="date">31</button>
-                                            <button class="date faded">01</button>
-                                            <button class="date faded">02</button>
-                                            <button class="date faded">03</button>
-                                            <button class="date faded">04</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="closest-checkup-date info-tile d-flex flex-column justify-content-start align-items-center">
-                                    <p class="header">Ближайший чекап</p>
-                                    <h3 class="date">01</h3>
-                                    <p class="month">января</p>
-                                </div>
-                            </div>
                             <div class="age-header">
                                 <h3>Биологический возраст </h3>
                             </div>
@@ -211,13 +101,43 @@
                                     <span>32 года</span>
                                 </div>
                             </div>
-                            <div class="passed-steps-header">
-                                <h3>Пройденные шаги</h3>
+                            <div class="indicators-steps-header">
+                                <h3>Показатели</h3>
                             </div>
-                            <div class="passed-steps-wrapper">
-                                <!-- TODO: end chart stylizing -->
-                                <div class="passed-steps-tile info-tile d-flex justify-content-center align-items-center">
-                                    <canvas id="passedStepsChart"></canvas>
+                            <div class="indicators-list d-flex flex-column flex-fill">
+                                <div class="indicator d-flex flex-row">
+                                    <div class="heart-tile info-tile d-flex justify-content-center">
+                                        <img src="./source/img/account/img/HeartImg.png" alt="">
+                                    </div>
+                                    <div class="pulse-tile info-tile d-flex flex-column justify-content-center">
+                                        <div class="name">Пульс</div>
+                                        <span class="value">72</span>
+                                    </div>
+                                    <div class="pressure-tile info-tile d-flex flex-column">
+                                        <div class="name">Давление</div>
+                                        <div class="pressure-value d-flex flex-row justify-content-center">
+                                            <span class="upper-pressure">120</span>
+                                            <div class="pressure-separator">|</div>
+                                            <span class="lower-pressure">80</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="indicator d-flex flex-row">
+                                    <div class="heart-tile info-tile d-flex justify-content-center">
+                                        <img src="./source/img/account/img/HeartImg.png" alt="">
+                                    </div>
+                                    <div class="pulse-tile info-tile d-flex flex-column justify-content-center">
+                                        <div class="name">Пульс</div>
+                                        <span class="value">72</span>
+                                    </div>
+                                    <div class="pressure-tile info-tile d-flex flex-column">
+                                        <div class="name">Давление</div>
+                                        <div class="pressure-value d-flex flex-row justify-content-center">
+                                            <span class="upper-pressure">120</span>
+                                            <div class="pressure-separator">|</div>
+                                            <span class="lower-pressure">80</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -227,7 +147,6 @@
         </div>
     </div>
     <script src="./js/account.js"></script>
-    <script src="./js/_passedStepsChart.js"></script>
     <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js" ></script>
 </body>
 </html>
