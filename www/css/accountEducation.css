@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.biohacking-content {
+.education-content {
     .content-description {
         font-size: 1.5rem;
         font-weight: 500;
@@ -39,7 +39,7 @@
         }
     }
     
-    .articles-cards-list {
+    .education-cards-list {
         height: 31rem;
         padding: 1rem 0;
         column-gap: 1rem;
@@ -52,7 +52,7 @@
             display: none;
         }
 
-        .article-card {
+        .education-card {
             border: 0;
             border-radius: 1.25rem;
             overflow: hidden;
@@ -60,31 +60,42 @@
             height: 30rem;
             position: relative;
 
-            .article-img {
-                width: 18rem;
-                aspect-ratio: 1 / 1;
+            .education-img {
+                width: 17rem;
+                aspect-ratio: 1 / 1.5;
                 border-radius: 1.25rem;
                 overflow: hidden;
+                color: var(--wt-txt-clr);
+                background: 
+                    url("../source/img/account/backgrounds/EducationCardBg5.png") center 100% / 105% no-repeat,
+                    var(--prmr-clr)
+                ;
                 
-                img {
-                    height: 100%;
-                    width: 100%;
-                    object-position: center top;
-                    object-fit: cover;
+                svg {
+                    margin: 2rem 0;
+                }
+
+                h3 {
+                    font-size: 2rem;
+                    font-weight: 200;
+                    text-align: center;
+                    text-transform: uppercase;
+                    margin-bottom: 20%;
                 }
             }
 
-            .article-info {
+            .education-info {
                 background-color: white;
                 position: absolute;
                 border: 0;
                 border-radius: 1.25rem;
                 padding: 1.5rem;
                 bottom: 4rem;
-                height: 8rem;
+                height: 2rem;
+                width: 14rem;
                 font-size: .9rem;
                 
-                .article-name {
+                .education-name {
                     text-align: center;
                     font-weight: 500;
                 }
