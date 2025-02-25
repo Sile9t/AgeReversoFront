@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgeReverso</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="header-container d-flex flex-column container">
+        <div class="header-wrapper d-flex align-items-center">
+            <div class="logo-wrapper d-inline-flex">
+                <svg width="201.6" height="32" viewBox="0 0 1260 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M315.596 24.175H322.334L378.025 147.904H371.287L356.989 115.739H280.834L266.643 147.904H259.905L315.596 24.175ZM354.612 110.182L318.974 29.4825L282.961 110.182H354.612Z" fill="white"/>
+                    <path d="M396.13 166.285C396.291 185.021 414.753 194.782 433.197 194.782C452.178 194.782 471.337 187.533 471.337 169.152C471.337 149.169 449.515 143.345 433.197 143.345C407.3 143.345 388.516 128.313 388.516 101.098C388.516 72.9934 411.75 58.8519 433.197 58.8519C442.956 58.8519 454.126 62.04 461.043 66.9913L469.979 56.5543L473.875 59.3862L464.832 70.0725C470.694 76.2706 477.611 83.6797 477.611 101.187C477.611 116.202 468.21 136.185 447.817 140.246C462.884 142.9 476.717 151.912 476.717 169.241C476.717 189.029 456.503 200 433.269 200C411.822 200 391.233 188.334 391.054 166.409L396.13 166.285ZM433.197 138.18C457.325 138.18 472.213 119.799 472.213 101.063C472.213 74.5607 452.142 63.8744 433.197 63.8744C414.574 63.8744 393.878 75.1841 393.878 100.991C393.824 126.514 411.036 138.18 433.197 138.18Z" fill="white"/>
+                    <path d="M577.572 131.554C569.243 143.042 553.801 148.706 539.61 148.706C516.376 148.706 495.984 132.677 495.984 104.5C495.984 77.7846 514.785 59.6179 539.432 59.6179C563.023 59.6179 586.436 73.2252 583.076 106.976H501.31C503.258 131.911 520.809 143.577 539.61 143.577C552.032 143.577 566.58 138.091 573.568 128.545L577.572 131.554ZM578.287 102.025C578.984 77.8203 563.56 64.7473 539.432 64.7473C518.86 64.7473 502.9 78.1765 501.31 102.025H578.287Z" fill="white"/>
+                    <path d="M651.528 99.2997H613.746V147.904H608.08V24.175H661.698C687.952 24.175 700.374 43.2678 700.553 62.0045C700.713 82.8606 688.131 100.529 659.035 99.2997L704.145 147.904H696.513L651.528 99.2997ZM660.232 93.814C683.466 93.814 694.816 81.0795 694.816 62.0045C694.816 45.7435 683.645 29.6428 661.644 29.6428H613.746V93.7606L660.232 93.814Z" fill="white"/>
+                    <path d="M798.744 131.554C790.415 143.042 774.974 148.706 760.801 148.706C737.566 148.706 717.156 132.677 717.156 104.5C717.156 77.7846 735.958 59.6179 760.622 59.6179C784.214 59.6179 807.627 73.2252 804.249 106.976H722.482C724.43 131.911 741.999 143.577 760.801 143.577C773.204 143.577 787.752 138.091 794.669 128.545L798.744 131.554ZM799.459 102.025C800.174 77.8203 784.732 64.7473 760.622 64.7473C740.033 64.7473 724.073 78.1765 722.482 102.025H799.459Z" fill="white"/>
+                    <path d="M816.492 60.5796H822.515L856.061 141.19L889.751 60.5796H895.792L859.064 147.851H853.023L816.492 60.5796Z" fill="white"/>
+                    <path d="M989.604 131.554C981.258 143.042 965.834 148.706 951.643 148.706C928.409 148.706 908.016 132.677 908.016 104.5C908.016 77.7846 926.818 59.6179 951.465 59.6179C975.056 59.6179 998.469 73.2252 995.091 106.976H913.253C915.201 131.911 932.77 143.577 951.572 143.577C963.993 143.577 978.524 138.091 985.44 128.545L989.604 131.554ZM990.301 102.025C991.016 77.8203 975.592 64.7473 951.465 64.7473C930.893 64.7473 914.933 78.1765 913.325 102.025H990.301Z" fill="white"/>
+                    <path d="M1023.47 60.5797V70.1261L1022.94 82.1482C1025.15 75.5951 1029.4 69.9105 1035.06 65.9106C1040.72 61.9107 1047.51 59.8013 1054.45 59.8851C1060.39 59.8785 1066.24 61.3346 1071.48 64.124L1069.17 68.541C1064.65 66.0925 1059.59 64.8127 1054.45 64.8186C1046.3 64.9895 1038.54 68.3148 1032.81 74.0898C1027.08 79.8648 1023.84 87.6356 1023.76 95.7554V147.905H1018.25V60.6331L1023.47 60.5797Z" fill="white"/>
+                    <path d="M1146.04 74.7213C1138.59 67.5971 1128.47 64.3021 1116.95 64.3021C1101.7 64.3021 1087.85 69.2534 1087.85 82.5044C1087.85 97.0022 1106.13 98.2311 1117.13 100.529C1132.37 103.539 1152.96 105.302 1152.96 124.929C1152.96 143.309 1133.62 148.777 1117.3 148.777C1101.52 148.777 1085.9 142.241 1079.52 130.967L1083.78 127.957C1091.23 139.284 1105.06 143.879 1117.48 143.879C1128.65 143.879 1147.63 140.691 1147.63 124.787C1147.63 110.111 1130.96 108.347 1116.05 105.516C1099.04 102.328 1082.54 99.5135 1082.54 82.5401C1082.54 66.101 1099.22 59.3865 1116.95 59.3865C1129.46 59.3865 1140.9 63.091 1149.4 71.0523L1146.04 74.7213Z" fill="white"/>
+                    <path d="M1214.85 59.1726C1238.62 59.1726 1259.19 76.4845 1259.19 104.411C1259.19 132.908 1238.44 148.938 1214.67 148.938C1190.9 148.938 1170.33 132.908 1170.33 104.411C1170.33 75.9145 1190.9 59.1726 1214.85 59.1726ZM1214.67 64.302C1193.92 64.302 1175.66 79.4944 1175.66 104.411C1175.66 129.328 1193.85 143.844 1214.67 143.844C1235.5 143.844 1253.87 129.346 1253.87 104.411C1253.87 79.4766 1235.96 64.302 1214.67 64.302Z" fill="white"/>
+                    <path d="M136.355 68.8415C140.839 68.8415 144.473 65.2148 144.473 60.7412C144.473 56.2675 140.839 52.6409 136.355 52.6409C131.871 52.6409 128.237 56.2675 128.237 60.7412C128.237 65.2148 131.871 68.8415 136.355 68.8415Z" fill="white"/>
+                    <path d="M138.676 63.6631C138.197 63.6597 137.73 63.5155 137.334 63.2486C136.937 62.9816 136.628 62.6038 136.445 62.1624C136.262 61.7211 136.214 61.2357 136.307 60.7672C136.399 60.2986 136.628 59.8677 136.965 59.5283L167.076 29.5403C167.53 29.0875 168.145 28.8331 168.787 28.8331C169.429 28.8331 170.045 29.0875 170.499 29.5403C170.952 29.9932 171.207 30.6074 171.207 31.2479C171.207 31.8883 170.952 32.5026 170.499 32.9555L140.387 62.9999C140.16 63.2182 139.892 63.3892 139.598 63.5031C139.305 63.617 138.991 63.6714 138.676 63.6631Z" fill="white"/>
+                    <path d="M194.826 15.8091C189.665 10.5398 183.451 6.41316 176.586 3.69739C169.722 0.981627 162.362 -0.262433 154.984 0.0460503C141.369 0.653308 128.461 6.26854 118.749 15.8091C118.293 16.262 118.036 16.877 118.035 17.5188C118.034 18.1606 118.288 18.7766 118.742 19.2313C119.196 19.6861 119.812 19.9423 120.455 19.9436C121.099 19.9449 121.716 19.6913 122.172 19.2384C131.022 10.5416 142.787 5.42374 155.196 4.87233C161.904 4.59414 168.596 5.72975 174.834 8.20507C181.073 10.6804 186.719 14.4399 191.404 19.2384C200.575 28.4037 205.726 40.8259 205.726 53.7775C205.726 66.729 200.575 79.1513 191.404 88.3166L120.361 159.201C116.36 163.186 110.938 165.424 105.285 165.424C99.6313 165.424 94.2089 163.186 90.2077 159.201L19.1655 88.3166C10.0011 79.1476 4.8547 66.7268 4.8547 53.7775C4.8547 40.8282 10.0011 28.4073 19.1655 19.2384C23.8519 14.442 29.4978 10.684 35.736 8.20882C41.9743 5.73365 48.6649 4.59681 55.3726 4.87233C67.782 5.42374 79.547 10.5416 88.3973 19.2384L132.242 62.9856C132.467 63.2098 132.735 63.3875 133.03 63.5085C133.324 63.6295 133.64 63.6915 133.958 63.6908C134.277 63.6901 134.592 63.6269 134.886 63.5047C135.18 63.3825 135.447 63.2037 135.672 62.9785C135.896 62.7534 136.074 62.4862 136.196 62.1924C136.317 61.8986 136.379 61.5838 136.378 61.266C136.378 60.9482 136.314 60.6337 136.192 60.3403C136.069 60.047 135.89 59.7806 135.664 59.5563L91.82 15.8091C82.1081 6.26854 69.2001 0.653308 55.5847 0.0460503C48.2076 -0.258001 40.8487 0.988087 33.9852 3.70359C27.1216 6.4191 20.9065 10.5434 15.7428 15.8091C5.66207 25.8822 0 39.5354 0 53.7705C0 68.0055 5.66207 81.6587 15.7428 91.7317L86.785 162.616C91.6954 167.504 98.3484 170.249 105.285 170.249C112.221 170.249 118.874 167.504 123.784 162.616L194.826 91.7317C204.9 81.6551 210.557 68.0033 210.557 53.7705C210.557 39.5377 204.9 25.8858 194.826 15.8091Z" fill="white"/>
+                    </svg>
+            </div>
+            <div class="navbar-wrapper d-flex flex-fill align-items-center">
+                <ul class="navbar d-flex flex-fill justify-content-between m-0">
+                    <li class="navbar-nav mx-1"><a href="http://">О проекте</a></li>
+                    <li class="navbar-nav"><a href="http://">Команда</a></li>
+                    <li class="navbar-nav"><a href="http://">Кейсы</a></li>
+                    <li class="navbar-nav"><a href="http://">Статьи</a></li>
+                    <li class="navbar-nav"><a href="http://">FAQ</a></li>
+                    <li class="navbar-nav"><a href="http://">Медиа</a></li>
+                </ul>
+            </div>
+            <div class="navbar-btns-wrapper">
+                <a href="https://">
+                    <button class="get-consult wt-rounded-btn" type="button">Получить консультацию</button>
+                </a>
+                <button class="lang-indicator bl-rounded-btn" type="button">RUS</button>
+            </div>
+        </div>
+        <div class="meeting-wrapper d-flex flex-column flex-fill justify-content-end align-items-center">
+            <div class="meet-wrapper">
+                <div class="meet-text-wrapper d-flex flex-column flex-fill">
+                    <h1 class="d-flex flex-fill">AgeReverso</h1>
+                    <p>авторский проект международных ученых и врачей для сохранения вашего здоровья и долголетия.</p>
+                </div>
+            </div>
+            <div class="meet-bottom-wrapper d-flex">
+                <div class="btns-wrapper d-flex flex-column flex-fill justify-content-between">
+                    <p class="d-flex flex-fill">Инновационные решения в сочетании с доказательной медициной.</p>
+                    <div class="btn-group d-inline-flex">
+                        <a href="http://"><button class="get-consult bl-pill-btn">Получить консультацию</button></a>
+                        <a href="http://"><button class="details wt-pill-btn">Узнать подробнее</button></a>
+                    </div>
+                    <div class="svg">
+                        <svg version="1.1" width="2.5rem" height="2.5rem" xmlns="http://www.w3.org/2000/svg">
+                           <rect width="100%" height="100%" fill="white" />
+                           <circle cx="2.5rem" cy="0" r="2.5rem" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <div class="svg1">
+                        <svg version="1.1" width="2.5rem" height="2.5rem" xmlns="http://www.w3.org/2000/svg">
+                           <rect width="100%" height="100%" fill="white" />
+                           <circle cx="2.5rem" cy="0" r="2.5rem" fill="currentColor" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="specialists-introduce-wrapper d-flex flex-column flex-fill justify-content-between">
+                    <div class="specialist-introduce">
+                        <div class="name">Мария Курилина</div>
+                        <div class="specializations">N.D., натуропатический доктор, нутрициолог, health коуч, эксперт по долголетию и биохакингу</div>
+                    </div>
+                    <div class="specialist-introduce">
+                        <div class="name">Юрий Никольский</div>
+                        <div class="specializations">Ph.D., профессор, микробиолог, генетик, нутрициолог, эксперт по долголетию и биохакингу</div>
+                    </div>
+                    <div class="specialist-introduce">
+                        <div class="name">Борис Захаров</div>
+                        <div class="specializations">Доктор медицинских наук - доктор внутренних болезней, врач-гомеопат</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-area container d-flex flex-wrap justify-content-center align-content-center position-relative">
+        <div class="logo-wrapper d-inline">
+            <svg width="1260" height="200" viewBox="0 0 1260 200" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M315.596 24.175H322.334L378.025 147.904H371.287L356.989 115.739H280.834L266.643 147.904H259.905L315.596 24.175ZM354.612 110.182L318.974 29.4825L282.961 110.182H354.612Z" fill="currentColor"/>
+                <path d="M396.13 166.285C396.291 185.021 414.753 194.782 433.197 194.782C452.178 194.782 471.337 187.533 471.337 169.152C471.337 149.169 449.515 143.345 433.197 143.345C407.3 143.345 388.516 128.313 388.516 101.098C388.516 72.9934 411.75 58.8519 433.197 58.8519C442.956 58.8519 454.126 62.04 461.043 66.9913L469.979 56.5543L473.875 59.3862L464.832 70.0725C470.694 76.2706 477.611 83.6797 477.611 101.187C477.611 116.202 468.21 136.185 447.817 140.246C462.884 142.9 476.717 151.912 476.717 169.241C476.717 189.029 456.503 200 433.269 200C411.822 200 391.233 188.334 391.054 166.409L396.13 166.285ZM433.197 138.18C457.325 138.18 472.213 119.799 472.213 101.063C472.213 74.5607 452.142 63.8744 433.197 63.8744C414.574 63.8744 393.878 75.1841 393.878 100.991C393.824 126.514 411.036 138.18 433.197 138.18Z" fill="currentColor"/>
+                <path d="M577.572 131.554C569.243 143.042 553.801 148.706 539.61 148.706C516.376 148.706 495.984 132.677 495.984 104.5C495.984 77.7846 514.785 59.6179 539.432 59.6179C563.023 59.6179 586.436 73.2252 583.076 106.976H501.31C503.258 131.911 520.809 143.577 539.61 143.577C552.032 143.577 566.58 138.091 573.568 128.545L577.572 131.554ZM578.287 102.025C578.984 77.8203 563.56 64.7473 539.432 64.7473C518.86 64.7473 502.9 78.1765 501.31 102.025H578.287Z" fill="currentColor"/>
+                <path d="M651.528 99.2997H613.746V147.904H608.08V24.175H661.698C687.952 24.175 700.374 43.2678 700.553 62.0045C700.713 82.8606 688.131 100.529 659.035 99.2997L704.145 147.904H696.513L651.528 99.2997ZM660.232 93.814C683.466 93.814 694.816 81.0795 694.816 62.0045C694.816 45.7435 683.645 29.6428 661.644 29.6428H613.746V93.7606L660.232 93.814Z" fill="currentColor"/>
+                <path d="M798.744 131.554C790.415 143.042 774.974 148.706 760.801 148.706C737.566 148.706 717.156 132.677 717.156 104.5C717.156 77.7846 735.958 59.6179 760.622 59.6179C784.214 59.6179 807.627 73.2252 804.249 106.976H722.482C724.43 131.911 741.999 143.577 760.801 143.577C773.204 143.577 787.752 138.091 794.669 128.545L798.744 131.554ZM799.459 102.025C800.174 77.8203 784.732 64.7473 760.622 64.7473C740.033 64.7473 724.073 78.1765 722.482 102.025H799.459Z" fill="currentColor"/>
+                <path d="M816.492 60.5796H822.515L856.061 141.19L889.751 60.5796H895.792L859.064 147.851H853.023L816.492 60.5796Z" fill="currentColor"/>
+                <path d="M989.604 131.554C981.258 143.042 965.834 148.706 951.643 148.706C928.409 148.706 908.016 132.677 908.016 104.5C908.016 77.7846 926.818 59.6179 951.465 59.6179C975.056 59.6179 998.469 73.2252 995.091 106.976H913.253C915.201 131.911 932.77 143.577 951.572 143.577C963.993 143.577 978.524 138.091 985.44 128.545L989.604 131.554ZM990.301 102.025C991.016 77.8203 975.592 64.7473 951.465 64.7473C930.893 64.7473 914.933 78.1765 913.325 102.025H990.301Z" fill="currentColor"/>
+                <path d="M1023.47 60.5797V70.1261L1022.94 82.1482C1025.15 75.5951 1029.4 69.9105 1035.06 65.9106C1040.72 61.9107 1047.51 59.8013 1054.45 59.8851C1060.39 59.8785 1066.24 61.3346 1071.48 64.124L1069.17 68.541C1064.65 66.0925 1059.59 64.8127 1054.45 64.8186C1046.3 64.9895 1038.54 68.3148 1032.81 74.0898C1027.08 79.8648 1023.84 87.6356 1023.76 95.7554V147.905H1018.25V60.6331L1023.47 60.5797Z" fill="currentColor"/>
+                <path d="M1146.04 74.7213C1138.59 67.5971 1128.47 64.3021 1116.95 64.3021C1101.7 64.3021 1087.85 69.2534 1087.85 82.5044C1087.85 97.0022 1106.13 98.2311 1117.13 100.529C1132.37 103.539 1152.96 105.302 1152.96 124.929C1152.96 143.309 1133.62 148.777 1117.3 148.777C1101.52 148.777 1085.9 142.241 1079.52 130.967L1083.78 127.957C1091.23 139.284 1105.06 143.879 1117.48 143.879C1128.65 143.879 1147.63 140.691 1147.63 124.787C1147.63 110.111 1130.96 108.347 1116.05 105.516C1099.04 102.328 1082.54 99.5135 1082.54 82.5401C1082.54 66.101 1099.22 59.3865 1116.95 59.3865C1129.46 59.3865 1140.9 63.091 1149.4 71.0523L1146.04 74.7213Z" fill="currentColor"/>
+                <path d="M1214.85 59.1726C1238.62 59.1726 1259.19 76.4845 1259.19 104.411C1259.19 132.908 1238.44 148.938 1214.67 148.938C1190.9 148.938 1170.33 132.908 1170.33 104.411C1170.33 75.9145 1190.9 59.1726 1214.85 59.1726ZM1214.67 64.302C1193.92 64.302 1175.66 79.4944 1175.66 104.411C1175.66 129.328 1193.85 143.844 1214.67 143.844C1235.5 143.844 1253.87 129.346 1253.87 104.411C1253.87 79.4766 1235.96 64.302 1214.67 64.302Z" fill="currentColor"/>
+                <path d="M136.355 68.8415C140.839 68.8415 144.473 65.2148 144.473 60.7412C144.473 56.2675 140.839 52.6409 136.355 52.6409C131.871 52.6409 128.237 56.2675 128.237 60.7412C128.237 65.2148 131.871 68.8415 136.355 68.8415Z" fill="currentColor"/>
+                <path d="M138.676 63.6631C138.197 63.6597 137.73 63.5155 137.334 63.2486C136.937 62.9816 136.628 62.6038 136.445 62.1624C136.262 61.7211 136.214 61.2357 136.307 60.7672C136.399 60.2986 136.628 59.8677 136.965 59.5283L167.076 29.5403C167.53 29.0875 168.145 28.8331 168.787 28.8331C169.429 28.8331 170.045 29.0875 170.499 29.5403C170.952 29.9932 171.207 30.6074 171.207 31.2479C171.207 31.8883 170.952 32.5026 170.499 32.9555L140.387 62.9999C140.16 63.2182 139.892 63.3892 139.598 63.5031C139.305 63.617 138.991 63.6714 138.676 63.6631Z" fill="currentColor"/>
+                <path d="M194.826 15.8091C189.665 10.5398 183.451 6.41316 176.586 3.69739C169.722 0.981627 162.362 -0.262433 154.984 0.0460503C141.369 0.653308 128.461 6.26854 118.749 15.8091C118.293 16.262 118.036 16.877 118.035 17.5188C118.034 18.1606 118.288 18.7766 118.742 19.2313C119.196 19.6861 119.812 19.9423 120.455 19.9436C121.099 19.9449 121.716 19.6913 122.172 19.2384C131.022 10.5416 142.787 5.42374 155.196 4.87233C161.904 4.59414 168.596 5.72975 174.834 8.20507C181.073 10.6804 186.719 14.4399 191.404 19.2384C200.575 28.4037 205.726 40.8259 205.726 53.7775C205.726 66.729 200.575 79.1513 191.404 88.3166L120.361 159.201C116.36 163.186 110.938 165.424 105.285 165.424C99.6313 165.424 94.2089 163.186 90.2077 159.201L19.1655 88.3166C10.0011 79.1476 4.8547 66.7268 4.8547 53.7775C4.8547 40.8282 10.0011 28.4073 19.1655 19.2384C23.8519 14.442 29.4978 10.684 35.736 8.20882C41.9743 5.73365 48.6649 4.59681 55.3726 4.87233C67.782 5.42374 79.547 10.5416 88.3973 19.2384L132.242 62.9856C132.467 63.2098 132.735 63.3875 133.03 63.5085C133.324 63.6295 133.64 63.6915 133.958 63.6908C134.277 63.6901 134.592 63.6269 134.886 63.5047C135.18 63.3825 135.447 63.2037 135.672 62.9785C135.896 62.7534 136.074 62.4862 136.196 62.1924C136.317 61.8986 136.379 61.5838 136.378 61.266C136.378 60.9482 136.314 60.6337 136.192 60.3403C136.069 60.047 135.89 59.7806 135.664 59.5563L91.82 15.8091C82.1081 6.26854 69.2001 0.653308 55.5847 0.0460503C48.2076 -0.258001 40.8487 0.988087 33.9852 3.70359C27.1216 6.4191 20.9065 10.5434 15.7428 15.8091C5.66207 25.8822 0 39.5354 0 53.7705C0 68.0055 5.66207 81.6587 15.7428 91.7317L86.785 162.616C91.6954 167.504 98.3484 170.249 105.285 170.249C112.221 170.249 118.874 167.504 123.784 162.616L194.826 91.7317C204.9 81.6551 210.557 68.0033 210.557 53.7705C210.557 39.5377 204.9 25.8858 194.826 15.8091Z" fill="currentColor"/>
+                </svg>
+        </div>
+        <div class="nav-link nav-link-1 position-absolute d-flex justify-content-center">
+            <a href="http://">ДНК Здоровья - премиальная программа сопровождения</a>
+        </div>
+        <div class="nav-link nav-link-2 position-absolute d-flex justify-content-center">
+            <a href="http://">Клиника холистической медицины и продления жизни Santa Maria</a>
+        </div>
+        <div class="nav-link nav-link-3 position-absolute d-flex justify-content-center">
+            <a href="http://">Научные работы и статьи</a>
+        </div>
+        <div class="nav-link nav-link-4 position-absolute d-flex justify-content-center">
+            <a href="http://">Врачебный консилиум </a>
+        </div>
+        <div class="nav-link nav-link-5 position-absolute d-flex justify-content-center">
+            <a href="http://">Обучение AgeReverso</a>
+        </div>
+        <div class="nav-link nav-link-6 position-absolute d-flex justify-content-center">
+            <a href="http://">Longevity club</a>
+        </div>
+        <div class="nav-link nav-link-7 position-absolute d-flex justify-content-center">
+            <a href="http://">Wellness program Дубаи </a>
+        </div>
+        <div class="nav-link nav-link-8 position-absolute d-flex justify-content-center">
+            <a href="http://">Авторская методика микроскопии крови</a>
+        </div>
+        <div class="nav-link nav-link-9 position-absolute d-flex justify-content-center">
+            <a href="http://">Работа с корпоративными клиентами</a>
+        </div>
+        <div class="nav-link nav-link-10 position-absolute d-flex justify-content-center">
+            <a href="http://">Интервью и публикации о нас</a>
+        </div>
+    </div>
+    <div class="symptoms-cards-wrapper container justify-content-center">
+        <h2>Пациенты выбирают нас когда:</h2>
+        <div class="symptoms-cards-list d-flex flex-row justify-content-between">
+            <div class="symptoms-card symptoms-card-1 d-flex flex-column justify-content-end">
+                <a class="symptomps-card-info" href="">
+                    <div class="symptoms-card-header">Физическое здоровье</div>
+                    <ul class="symptoms-list">
+                        <li class="symptom">Низкий уровень энергии даже по утрам</li>
+                        <li class="symptom">Отсутствие продуктивности и низкое кпд</li>
+                    </ul>
+                    <div class="symptoms-more">подробнее 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+                          </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="symptoms-card symptoms-card-2 d-flex flex-column justify-content-end">
+                <a class="symptomps-card-info" href="">
+                    <div class="symptoms-card-header">Ментальное здоровье</div>
+                    <ul class="symptoms-list">
+                        <li class="symptom">Сниженная мотивация переходящая в апатию</li>
+                        <li class="symptom">Тревожность</li>
+                    </ul>
+                    <div class="symptoms-more">подробнее 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+                          </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="specialists-cards-wrapper container">
+        <div class="specialists-cards-header d-flex flex-column justify-content-center align-items-center">
+            <h2>Команда специалистов AgeReverso</h2>
+            <p class="specialists-cards-header-description">Мы собрали международную команду из ведущих специалистов каждой области здоровья. </br> Наши специалисты работают как с физическим, так и с ментальным состояниями.</p>
+        </div>
+        <div class="specialists-cards-list d-flex flex-wrap" id="specialists-collapse-content">
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto1.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Мария Курилина
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill justify-content-center">
+                        N.D., натуропатический доктор, нутрицолог, health коуч эксперт по долголетию и биохакингу
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto2.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Юрий Никольский
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill justify-content-center">
+                        Ph.D., профессор молекулярной биологии, эксперт по долголетию и биохакингу
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto3.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Борис Захаров
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill justify-content-center">
+                        M.D., д.м.н., врач-терапевт, врач гомеопат
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto4.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Ара Унанян
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill">
+                        Профессор, доктор медицинских наук, врач высшей квалификационной категории...
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto5.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Андрей Шестаков
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill justify-content-center">
+                        Профессор микробиолог, Руководитель лаборатории микробной биотехнологии МГУ
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto6.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Дмитрий Субботин
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill justify-content-center">
+                        к.б.н, профессор НГУ, специалист в области биотехнологий, стволовых клеток и клеточной биологии.
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto7.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Екатерина Барышева
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill justify-content-center">
+                        Врач кардиолог, терапевт, интегративный врач, нутрициолог, специалист...
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto8.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Елена Яковлева
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill">
+                        M.D., врач-терапевт
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto9.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Атанян Асмик
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill justify-content-center">
+                        M.D., врач эндокринолог, нутрициолог
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto10.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Алёна Хрипкова
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill justify-content-center">
+                        врач функциональной диагностики
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto11.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Анна Плотникова
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill justify-content-center">
+                        M.D., врач эндокринолог, нутрициолог
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto12.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Лала Попова
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill">
+                        Психолог, психосоматолог, ЭОТ-терапевт
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto13.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Ольга Постникова
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill justify-content-center">
+                        Психолог, когнитивно-поведенческий терапевт
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto14.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Манана Лепсверидзе
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill justify-content-center">
+                        Психотерапевт, психоаналитик
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto15.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Анастасия Голубева
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill justify-content-center">
+                        Экспоненциальный Коуч
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto16.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Анна Кочнева
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill">
+                        Йога-тренер, эксперт по дыхательным практикам и медитациям
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto17.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Рыжова Наташа
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill justify-content-center">
+                        Фитнес тренер, ментор ЗОЖ
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+            <div class="specialist-card d-flex flex-column">
+                <div class="specialist-img d-flex justify-content-center">
+                    <img src="./source/img/main/SpecialistPhoto18.png">
+                </div>
+                <div class="specialist-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="specialist-name">
+                        Ирина Левашова
+                    </div>
+                    <div class="specialist-specializations d-flex flex-fill">
+                        Йога-тренер, йога-терапевт
+                    </div>
+                </div>
+                <div class="specialist-more-btn d-flex justify-content-center">
+                    <a href="http://">
+                        <button class="bl-pill-btn" type="button">Подробнее</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="specialists-cards-bottom d-flex justify-content-center">
+            <button class="specialists-cards-expand-btn wt-pill-btn collapsible" type="button" popovertarget="specialists-collapse-content" >Показать больше</button>
+        </div>
+    </div>
+    <div class="magazine-wrapper container">
+        <h2>Журнал AgeReverso</h2>
+        <p class="magazine-description">Самые полезные темы, о которых молчат</p>
+        <a href="http://">
+            <button class="bl-pill-btn" type="button">Читать журнал</button>
+        </a>
+    </div>
+    <div class="program-benefits-wrapper container d-flex justify-content-between">
+        <div class="header-block d-flex flex-column justify-content-end">
+            <h3>Что вы получите в рамках наших программ</h3>
+        </div>
+        <div class="benefits-block d-flex flex-wrap justify-content-between align-content-between">
+            <div class="benefit-tile benefit-tile-1 d-flex flex-column justify-content-between">
+                <div class="benefit-number-wrapper d-flex justify-content-end">
+                    <p class="number-wrapper">1</p>
+                    <svg version="1.1" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50%" cy="50%" r="50%" fill="currentColor" />
+                    </svg>
+                </div>
+                <p class="benefit-description d-flex">Уникальный метод диагностики, сочетабщий в себе принципы последних научных разработок, доказательной медицины и биохакинга</p>
+            </div>
+            <div class="benefit-tile benefit-tile-2 d-flex flex-column justify-content-between">
+                <div class="benefit-number-wrapper d-flex justify-content-end">
+                    <p class="number-wrapper">2</p>
+                    <svg version="1.1" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50%" cy="50%" r="50%" fill="currentColor" />
+                    </svg>
+                </div>
+                <p class="benefit-description d-flex">Детальная digital карта с систематизированными данными вашего здоровья и рекомендациями от ведущих специалистов</p>
+            </div>
+            <div class="benefit-tile benefit-tile-3 d-flex flex-column justify-content-between">
+                <div class="benefit-number-wrapper d-flex justify-content-end">
+                    <p class="number-wrapper">3</p>
+                    <svg version="1.1" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50%" cy="50%" r="50%" fill="currentColor" />
+                    </svg>
+                </div>
+                <p class="benefit-description d-flex">Уникальный комплексный протокол лечения минимум на 3 месяца</p>
+            </div>
+            <div class="benefit-tile benefit-tile-4 d-flex flex-column justify-content-between">
+                <div class="benefit-number-wrapper d-flex justify-content-end">
+                    <p class="number-wrapper">4</p>
+                    <svg version="1.1" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50%" cy="50%" r="50%" fill="currentColor" />
+                    </svg>
+                </div>
+                <p class="benefit-description d-flex">Сопровождение специалистами с многолетним опытом работы</p>
+            </div>
+            <div class="benefit-tile benefit-tile-5 d-flex flex-column justify-content-between">
+                <div class="benefit-number-wrapper d-flex justify-content-end">
+                    <p class="number-wrapper">5</p>
+                    <svg version="1.1" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50%" cy="50%" r="50%" fill="currentColor" />
+                    </svg>
+                </div>
+                <p class="benefit-description d-flex">Все необходимые девайсы, препараты и травы для получения результата</p>
+            </div>
+            <div class="benefit-tile final-benefit-tile d-flex flex-column justify-content-center align-content-center">
+                <p class="benefit-description">Лучшее качество жизни!</p>
+                <div class="final-benefit-tile-bg"></div>
+            </div>
+        </div>
+    </div>
+    <div class="programs-list-and-price-list-wrapper container justify-content-between">
+        <div class="programs-list-wrapper">
+            <div class="programs-list-header d-flex justify-content-center">
+                <h2>Наши основные программы</h2>
+            </div>
+            <ul class="programs-list">
+                <li class="program d-flex justify-content-between">
+                    <div class="program-name-wrapper">
+                        <h3>Врачебный консилиум</h3>
+                        <hr>
+                    </div>
+                    <div class="program-description-wrapper d-flex flex-column">
+                        <div class="program-description">
+                            <p>Международная команда врачей и ученых для вашей максимальной производительности и здоровья</p>
+                            <a href="http://">
+                                <button type="button" class="wt-pill-btn btn more-btn">Подробнее</button>
+                            </a>
+                        </div>
+                        <div class="program-description-mask"></div>
+                    </div>
+                </li>
+                <li class="program d-flex justify-content-between">
+                    <div class="program-name-wrapper">
+                        <h3>ДНК здоровья</h3>
+                        <hr>
+                    </div>
+                    <div class="program-description-wrapper d-flex flex-column">
+                        <div class="program-description">
+                            <p>Премиальная программа сопровождения</p>
+                            <a href="http://">
+                                <button type="button" class="wt-pill-btn btn more-btn">Подробнее</button>
+                            </a>
+                        </div>
+                        <div class="program-description-mask"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="price-list-wrapper">
+            <div class="price-list-header">
+                <h3>Сопровождение</h3>
+            </div>
+            <ul class="price-list d-flex justify-content-between">
+                <li class="price-item">
+                    <div class="price-body">
+                        <div class="price-info">
+                            <div class="price-header-wrapper">
+                                <h4>Врачом</h4>
+                            </div>
+                            <hr>
+                            <p class="price-benefits-list-header">Что входит?</p>
+                            <ul class="price-benefits-list">
+                                <li class="price-benefit">Курация врачом и персональным помощником в закрытом чате</li>
+                                <li class="price-benefit">Ежедневное отслеживание показателей здоровья с помощью браслета Whoop</li>
+                                <li class="price-benefit">Еженедельный созвон с командой</li>
+                            </ul>
+                            <hr>
+                            <div class="price-price-wrapper">
+                                <h4>100 000 ₽ в месяц</h4>
+                            </div>
+                            <div class="consult-btn-wrapper d-flex justify-content-center">
+                                <a href="http://">
+                                    <button type="button" class="get-consult-btn wt-pill-btn">Получить консультацию</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="price-mask"></div>
+                    </div>
+                </li>
+                <li class="price-item">
+                    <div class="price-body">
+                        <div class="price-info">
+                            <div class="price-header-wrapper">
+                                <h4>Марией</h4>
+                            </div>
+                            <hr>
+                            <p class="price-benefits-list-header">Что входит?</p>
+                            <ul class="price-benefits-list">
+                                <li class="price-benefit">Курация Марией Курилиной, врачом и персональным помощником в закрытом чате</li>
+                                <li class="price-benefit">Ежедневное отслеживание показателей здоровья с помощью браслета Whoop</li>
+                                <li class="price-benefit">Трекер протокола в приложении Healthie</li>
+                                <li class="price-benefit">Ежедневное отслеживание вашего питания и коррекция при необходимости</li>
+                                <li class="price-benefit">Еженедельный созвон в zoom с командой</li>
+                                <li class="price-benefit">Персонализированный еженедельный опросник по самочувствию</li>
+                                <li class="price-benefit">1 консилиум 2 раза в месяц с командой врачей</li>
+                            </ul>
+                            <hr>
+                            <div class="price-price-wrapper">
+                                <h4>150 000 ₽ в месяц</h4>
+                            </div>
+                            <div class="consult-btn-wrapper d-flex justify-content-center">
+                                <a href="http://">
+                                    <button type="button" class="get-consult-btn wt-pill-btn">Получить консультацию</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="price-mask"></div>
+                    </div>
+                </li>
+                <li class="price-item">
+                    <div class="price-body">
+                        <div class="price-info">
+                            <div class="price-header-wrapper">
+                                <h4>Командой</h4>
+                            </div>
+                            <hr/>
+                            <p class="price-benefits-list-header">Что входит?</p>
+                            <ul class="price-benefits-list">
+                                <li class="price-benefit">Курация Марией Курилиной, врачом семейной медицины, эндокринологом, натуропатом, генетиком и персональным помощником в закрытом чате</li>
+                                <li class="price-benefit">Ежедневное отслеживание показателей здоровья с помощью браслета Whoop</li>
+                                <li class="price-benefit">Трекер протокола в приложении Healthie</li>
+                                <li class="price-benefit">Ежедневное отслеживание вашего питания и коррекция при необходимости</li>
+                                <li class="price-benefit">Еженедельный созвон с Марией и врачом-терапевтом</li>
+                                <li class="price-benefit">Созвонимся с международной командой 1 раз в 2 недели</li>
+                                <li class="price-benefit">1 консилиум 2 раза в месяц с международной командой врачей</li>
+                            </ul>
+                            <hr/>
+                            <div class="price-price-wrapper">
+                                <h4>200 000 ₽ в месяц</h4>
+                            </div>
+                            <div class="consult-btn-wrapper d-flex justify-content-center">
+                                <a href="http://">
+                                    <button type="button" class="get-consult-btn wt-pill-btn">Получить консультацию</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="price-mask"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="article-cards-wrapper container">
+        <div class="article-cards-header d-flex flex-column justify-content-center align-items-center">
+            <h2>Научные работы и статьи</h2>
+        </div>
+        <div class="article-cards-list d-flex flex-wrap justify-content-between">
+            <div class="article-card d-flex flex-column">
+                <div class="article-author-name">
+                    Статья Юрия Никольского
+                </div>
+                <div class="article-img d-flex justify-content-center">
+                    <img class="article-img" src="./source/img/main/ArticleImg1.png">
+                </div>
+                <div class="article-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="article-header">
+                        A review of the biomedical innovations for healthy longevity 
+                    </div>
+                    <div class="article-description">
+                        The field of biogerontology and regenerative medicine is rapidly evolving with ...
+                    </div>
+                    <div class="article-more-btn-wrapper">
+                        <a href="http://">
+                            <button class="wt-pill-btn" type="button">Перейти</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="article-card d-flex flex-column">
+                <div class="article-author-name">
+                    Статья Андрея Шестакова
+                </div>
+                <div class="article-img d-flex justify-content-center">
+                    <img class="article-img" src="./source/img/main/ArticleImg2.png">
+                </div>
+                <div class="article-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="article-header">
+                        The Bacterial Microbiota of Artisanal Cheeses from the Northern Caucasus 
+                    </div>
+                    <div class="article-description">
+                        Cheese has always been valued by men both as an everyday food and as a gourmet dish...
+                    </div>
+                    <div class="article-more-btn-wrapper">
+                        <a href="http://">
+                            <button class="wt-pill-btn" type="button">Перейти</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="article-card d-flex flex-column">
+                <div class="article-author-name">
+                    Статья Ары Унанян
+                </div>
+                <div class="article-img d-flex justify-content-center">
+                    <img class="article-img" src="./source/img/main/ArticleImg3.png">
+                </div>
+                <div class="article-info d-flex flex-fill flex-column justify-content-center">
+                    <div class="article-header">
+                        The Bacterial Microbiota of Artisanal Cheeses from the Northern Caucasus
+                    </div>
+                    <div class="article-description">
+                        Cheese has always been valued by men both as an everyday food and as a gourmet dish...
+                    </div>
+                    <div class="article-more-btn-wrapper">
+                        <a href="http://">
+                            <button class="wt-pill-btn" type="button">Перейти</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="article-cards-bottom d-flex justify-content-center">
+            <button class="article-cards-all-btn wt-pill-btn" type="button">Ко всем статьям</button>
+        </div>
+    </div>
+    <div class="learning-advertisement-wrapper container justify-content-between">
+        <div class="learning-advertisement-header">
+            <h2>Обучение AgeReverso</h2>
+        </div>
+        <div class="learning-advertisement-topic">
+            <h3>Научный биохакинг и долголетие для пациентов и врачей</h3>
+        </div>
+        <div class="learning-advertisement-description">
+            <p>Последние достижения биомедицины и продления жизни для вашего здоровья и профессионального роста. Практическое обучение для пациентов и специалистов.</p>
+        </div>
+        <div class="learning-advertisement-more-btn-wrapper">
+            <a href="http://">
+                <button type="button" class="wt-pill-btn">Подробнее</button>
+            </a>
+        </div>
+    </div>
+    <div class="offline-project-wrapper container d-flex justify-content-between">
+        <div class="offline-project-info d-flex flex-column justify-content-between">
+            <div class="offline-project-tag">
+                <p>Наш офлайн-проект</p>
+            </div>
+            <div class="offline-project-header">
+                <h2>Центр холистического здоровья и долголетия "Santa Maria"</h2>
+            </div>
+            <div class="offline-project-redirect-btn">
+                <a href="http://">
+                    <button type="button" class="bl-pill-btn">Перейти на сайт</button>
+                </a>
+            </div>
+        </div>
+        <div class="offline-project-img-wrapper">
+            <img src="./source/img/main/OfflineProjectImg.png" alt="">
+        </div>
+    </div>
+    <div class="supervisor-for-wrapper container d-flex justify-content-between">
+        <div class="supervisor-for-img-wrapper">
+        </div>
+        <div class="supervisor-for-info d-flex flex-column justify-content-between">
+            <div class="supervisor-for-header">
+                <h2>Для топ-менеджмента и руководителей</h2>
+            </div>
+            <div class="supervisor-for-description">
+                <p>Здоровье и продуктивность на новом уровне</p>
+            </div>
+            <div class="suprevisor-for-more-btn-wrapper">
+                <a href="http://">
+                    <button type="button" class="bl-pill-btn">Подробнее</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="investor-for-wrapper container">
+        <div class="investor-for-header d-flex flex-column justify-content-center align-items-center">
+            <h2>Для инвесторов</h2>
+            <p>Возможности инвестиций в наши проекты</p>
+        </div>
+        <div class="investor-for-list d-flex flex-wrap justify-content-between align-content-between">
+            <div class="investor-for-item investor-for-item-1 d-flex flex-column justify-content-between">
+                <div class="investor-for-item-name-wrapper d-flex flex-column justify-content-center align-content-center">
+                    <p class="investor-for-item-name">Первый в мире ретрит для биохакеров</p>
+                </div>
+                <div class="investor-for-item-btn-wrapper d-flex justify-content-center">
+                    <a href="http://">
+                        <button type="button" class="bl-rounded-btn">Перейти</button>
+                    </a>
+                </div>
+            </div>
+            <div class="investor-for-item investor-for-item-2 d-flex flex-column justify-content-between">
+                <div class="investor-for-item-name-wrapper d-flex flex-column justify-content-center align-content-center">
+                    <p class="investor-for-item-name">Клиника продления жизни для мужчин</p>
+                </div>
+                <div class="investor-for-item-btn-wrapper d-flex justify-content-center">
+                    <a href="http://">
+                        <button type="button" class="bl-rounded-btn">Перейти</button>
+                    </a>
+                </div>
+            </div>
+            <div class="investor-for-item investor-for-item-3 d-flex flex-column justify-content-between">
+                <div class="investor-for-item-name-wrapper d-flex flex-column justify-content-center align-content-center">
+                    <p class="investor-for-item-name">Клиника научного биохакинга для лечения преддиабета и диабета</p>
+                </div>
+                <div class="investor-for-item-btn-wrapper d-flex justify-content-center">
+                    <a href="http://">
+                        <button type="button" class="bl-rounded-btn">Перейти</button>
+                    </a>
+                </div>
+            </div>
+            <div class="investor-for-item investor-for-item-4 d-flex flex-column justify-content-between">
+                <div class="investor-for-item-name-wrapper d-flex flex-column justify-content-center align-content-center">
+                    <p class="investor-for-item-name">Full body детокс сеть клиник</p>
+                </div>
+                <div class="investor-for-item-btn-wrapper d-flex justify-content-center">
+                    <a href="http://">
+                        <button type="button" class="bl-rounded-btn">Перейти</button>
+                    </a>
+                </div>
+            </div>
+            <div class="investor-for-item investor-for-item-5 d-flex flex-column justify-content-between">
+                <div class="investor-for-item-name-wrapper d-flex flex-column justify-content-center align-content-center">
+                    <p class="investor-for-item-name">Сеть ланжевити клубов AgeReverso</p>
+                </div>
+                <div class="investor-for-item-btn-wrapper d-flex justify-content-center">
+                    <a href="http://">
+                        <button type="button" class="bl-rounded-btn">Перейти</button>
+                    </a>
+                </div>
+            </div>
+            <div class="investor-for-item investor-for-item-6 d-flex flex-column justify-content-between">
+                <div class="investor-for-item-name-wrapper d-flex flex-column justify-content-center align-content-center">
+                    <p class="investor-for-item-name">Клиника “под ключ”</p>
+                </div>
+                <div class="investor-for-item-btn-wrapper d-flex justify-content-center">
+                    <a href="http://">
+                        <button type="button" class="bl-rounded-btn">Перейти</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="investor-for-bottom-wrapper d-flex justify-content-center">
+            <a href="http://">
+                <button type="button" class="bl-pill-btn">Подробнее</button>
+            </a>
+        </div>
+    </div>
+    <div class="partners-marquee-wrapper container">
+        <div class="partners-marquee-header">
+            <h2>Наши партнеры и друзья</h2>
+        </div>
+        <div class="partners-marquee marquee">
+            <div class="content-wrapper">
+                <span class="partner-logo">
+                    <img src="./source/img/main/PartnerLogo1.png" alt="">
+                </span>
+                <span class="partner-logo">
+                    <img src="./source/img/main/PartnerLogo2.png" alt="">
+                </span>
+                <span class="partner-logo">
+                    <img src="./source/img/main/PartnerLogo3.png" alt="">
+                </span>
+                <span class="partner-logo">
+                    <img src="./source/img/main/PartnerLogo4.png" alt="">
+                </span>
+                <span class="partner-logo">
+                    <img src="./source/img/main/PartnerLogo5.png" alt="">
+                </span>
+                <span class="partner-logo">
+                    <img src="./source/img/main/PartnerLogo6.png" alt="">
+                </span>
+            </div>
+            <div class="content-wrapper">
+                <span class="partner-logo">
+                    <img src="./source/img/main/PartnerLogo1.png" alt="">
+                </span>
+                <span class="partner-logo">
+                    <img src="./source/img/main/PartnerLogo2.png" alt="">
+                </span>
+                <span class="partner-logo">
+                    <img src="./source/img/main/PartnerLogo3.png" alt="">
+                </span>
+                <span class="partner-logo">
+                    <img src="./source/img/main/PartnerLogo4.png" alt="">
+                </span>
+                <span class="partner-logo">
+                    <img src="./source/img/main/PartnerLogo5.png" alt="">
+                </span>
+                <span class="partner-logo">
+                    <img src="./source/img/main/PartnerLogo6.png" alt="">
+                </span>
+            </div>
+            <div class="content-wrapper">
+                <span class="partner-logo">
+                    <img src="./source/img/main/PartnerLogo1.png" alt="">
+                </span>
+                <span class="partner-logo">
+                    <img src="./source/img/main/PartnerLogo2.png" alt="">
+                </span>
+                <span class="partner-logo">
+                    <img src="./source/img/main/PartnerLogo3.png" alt="">
+                </span>
+                <span class="partner-logo">
+                    <img src="./source/img/main/PartnerLogo4.png" alt="">
+                </span>
+                <span class="partner-logo">
+                    <img src="./source/img/main/PartnerLogo5.png" alt="">
+                </span>
+                <span class="partner-logo">
+                    <img src="./source/img/main/PartnerLogo6.png" alt="">
+                </span>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-wrapper container d-flex justify-content-around align-items-center">
+            <div class="logo-wrapper d-inline-flex">
+                <svg width="1260" height="200" viewBox="0 0 1260 200" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M315.596 24.175H322.334L378.025 147.904H371.287L356.989 115.739H280.834L266.643 147.904H259.905L315.596 24.175ZM354.612 110.182L318.974 29.4825L282.961 110.182H354.612Z" fill="currentColor"/>
+                    <path d="M396.13 166.285C396.291 185.021 414.753 194.782 433.197 194.782C452.178 194.782 471.337 187.533 471.337 169.152C471.337 149.169 449.515 143.345 433.197 143.345C407.3 143.345 388.516 128.313 388.516 101.098C388.516 72.9934 411.75 58.8519 433.197 58.8519C442.956 58.8519 454.126 62.04 461.043 66.9913L469.979 56.5543L473.875 59.3862L464.832 70.0725C470.694 76.2706 477.611 83.6797 477.611 101.187C477.611 116.202 468.21 136.185 447.817 140.246C462.884 142.9 476.717 151.912 476.717 169.241C476.717 189.029 456.503 200 433.269 200C411.822 200 391.233 188.334 391.054 166.409L396.13 166.285ZM433.197 138.18C457.325 138.18 472.213 119.799 472.213 101.063C472.213 74.5607 452.142 63.8744 433.197 63.8744C414.574 63.8744 393.878 75.1841 393.878 100.991C393.824 126.514 411.036 138.18 433.197 138.18Z" fill="currentColor"/>
+                    <path d="M577.572 131.554C569.243 143.042 553.801 148.706 539.61 148.706C516.376 148.706 495.984 132.677 495.984 104.5C495.984 77.7846 514.785 59.6179 539.432 59.6179C563.023 59.6179 586.436 73.2252 583.076 106.976H501.31C503.258 131.911 520.809 143.577 539.61 143.577C552.032 143.577 566.58 138.091 573.568 128.545L577.572 131.554ZM578.287 102.025C578.984 77.8203 563.56 64.7473 539.432 64.7473C518.86 64.7473 502.9 78.1765 501.31 102.025H578.287Z" fill="currentColor"/>
+                    <path d="M651.528 99.2997H613.746V147.904H608.08V24.175H661.698C687.952 24.175 700.374 43.2678 700.553 62.0045C700.713 82.8606 688.131 100.529 659.035 99.2997L704.145 147.904H696.513L651.528 99.2997ZM660.232 93.814C683.466 93.814 694.816 81.0795 694.816 62.0045C694.816 45.7435 683.645 29.6428 661.644 29.6428H613.746V93.7606L660.232 93.814Z" fill="currentColor"/>
+                    <path d="M798.744 131.554C790.415 143.042 774.974 148.706 760.801 148.706C737.566 148.706 717.156 132.677 717.156 104.5C717.156 77.7846 735.958 59.6179 760.622 59.6179C784.214 59.6179 807.627 73.2252 804.249 106.976H722.482C724.43 131.911 741.999 143.577 760.801 143.577C773.204 143.577 787.752 138.091 794.669 128.545L798.744 131.554ZM799.459 102.025C800.174 77.8203 784.732 64.7473 760.622 64.7473C740.033 64.7473 724.073 78.1765 722.482 102.025H799.459Z" fill="currentColor"/>
+                    <path d="M816.492 60.5796H822.515L856.061 141.19L889.751 60.5796H895.792L859.064 147.851H853.023L816.492 60.5796Z" fill="currentColor"/>
+                    <path d="M989.604 131.554C981.258 143.042 965.834 148.706 951.643 148.706C928.409 148.706 908.016 132.677 908.016 104.5C908.016 77.7846 926.818 59.6179 951.465 59.6179C975.056 59.6179 998.469 73.2252 995.091 106.976H913.253C915.201 131.911 932.77 143.577 951.572 143.577C963.993 143.577 978.524 138.091 985.44 128.545L989.604 131.554ZM990.301 102.025C991.016 77.8203 975.592 64.7473 951.465 64.7473C930.893 64.7473 914.933 78.1765 913.325 102.025H990.301Z" fill="currentColor"/>
+                    <path d="M1023.47 60.5797V70.1261L1022.94 82.1482C1025.15 75.5951 1029.4 69.9105 1035.06 65.9106C1040.72 61.9107 1047.51 59.8013 1054.45 59.8851C1060.39 59.8785 1066.24 61.3346 1071.48 64.124L1069.17 68.541C1064.65 66.0925 1059.59 64.8127 1054.45 64.8186C1046.3 64.9895 1038.54 68.3148 1032.81 74.0898C1027.08 79.8648 1023.84 87.6356 1023.76 95.7554V147.905H1018.25V60.6331L1023.47 60.5797Z" fill="currentColor"/>
+                    <path d="M1146.04 74.7213C1138.59 67.5971 1128.47 64.3021 1116.95 64.3021C1101.7 64.3021 1087.85 69.2534 1087.85 82.5044C1087.85 97.0022 1106.13 98.2311 1117.13 100.529C1132.37 103.539 1152.96 105.302 1152.96 124.929C1152.96 143.309 1133.62 148.777 1117.3 148.777C1101.52 148.777 1085.9 142.241 1079.52 130.967L1083.78 127.957C1091.23 139.284 1105.06 143.879 1117.48 143.879C1128.65 143.879 1147.63 140.691 1147.63 124.787C1147.63 110.111 1130.96 108.347 1116.05 105.516C1099.04 102.328 1082.54 99.5135 1082.54 82.5401C1082.54 66.101 1099.22 59.3865 1116.95 59.3865C1129.46 59.3865 1140.9 63.091 1149.4 71.0523L1146.04 74.7213Z" fill="currentColor"/>
+                    <path d="M1214.85 59.1726C1238.62 59.1726 1259.19 76.4845 1259.19 104.411C1259.19 132.908 1238.44 148.938 1214.67 148.938C1190.9 148.938 1170.33 132.908 1170.33 104.411C1170.33 75.9145 1190.9 59.1726 1214.85 59.1726ZM1214.67 64.302C1193.92 64.302 1175.66 79.4944 1175.66 104.411C1175.66 129.328 1193.85 143.844 1214.67 143.844C1235.5 143.844 1253.87 129.346 1253.87 104.411C1253.87 79.4766 1235.96 64.302 1214.67 64.302Z" fill="currentColor"/>
+                    <path d="M136.355 68.8415C140.839 68.8415 144.473 65.2148 144.473 60.7412C144.473 56.2675 140.839 52.6409 136.355 52.6409C131.871 52.6409 128.237 56.2675 128.237 60.7412C128.237 65.2148 131.871 68.8415 136.355 68.8415Z" fill="currentColor"/>
+                    <path d="M138.676 63.6631C138.197 63.6597 137.73 63.5155 137.334 63.2486C136.937 62.9816 136.628 62.6038 136.445 62.1624C136.262 61.7211 136.214 61.2357 136.307 60.7672C136.399 60.2986 136.628 59.8677 136.965 59.5283L167.076 29.5403C167.53 29.0875 168.145 28.8331 168.787 28.8331C169.429 28.8331 170.045 29.0875 170.499 29.5403C170.952 29.9932 171.207 30.6074 171.207 31.2479C171.207 31.8883 170.952 32.5026 170.499 32.9555L140.387 62.9999C140.16 63.2182 139.892 63.3892 139.598 63.5031C139.305 63.617 138.991 63.6714 138.676 63.6631Z" fill="currentColor"/>
+                    <path d="M194.826 15.8091C189.665 10.5398 183.451 6.41316 176.586 3.69739C169.722 0.981627 162.362 -0.262433 154.984 0.0460503C141.369 0.653308 128.461 6.26854 118.749 15.8091C118.293 16.262 118.036 16.877 118.035 17.5188C118.034 18.1606 118.288 18.7766 118.742 19.2313C119.196 19.6861 119.812 19.9423 120.455 19.9436C121.099 19.9449 121.716 19.6913 122.172 19.2384C131.022 10.5416 142.787 5.42374 155.196 4.87233C161.904 4.59414 168.596 5.72975 174.834 8.20507C181.073 10.6804 186.719 14.4399 191.404 19.2384C200.575 28.4037 205.726 40.8259 205.726 53.7775C205.726 66.729 200.575 79.1513 191.404 88.3166L120.361 159.201C116.36 163.186 110.938 165.424 105.285 165.424C99.6313 165.424 94.2089 163.186 90.2077 159.201L19.1655 88.3166C10.0011 79.1476 4.8547 66.7268 4.8547 53.7775C4.8547 40.8282 10.0011 28.4073 19.1655 19.2384C23.8519 14.442 29.4978 10.684 35.736 8.20882C41.9743 5.73365 48.6649 4.59681 55.3726 4.87233C67.782 5.42374 79.547 10.5416 88.3973 19.2384L132.242 62.9856C132.467 63.2098 132.735 63.3875 133.03 63.5085C133.324 63.6295 133.64 63.6915 133.958 63.6908C134.277 63.6901 134.592 63.6269 134.886 63.5047C135.18 63.3825 135.447 63.2037 135.672 62.9785C135.896 62.7534 136.074 62.4862 136.196 62.1924C136.317 61.8986 136.379 61.5838 136.378 61.266C136.378 60.9482 136.314 60.6337 136.192 60.3403C136.069 60.047 135.89 59.7806 135.664 59.5563L91.82 15.8091C82.1081 6.26854 69.2001 0.653308 55.5847 0.0460503C48.2076 -0.258001 40.8487 0.988087 33.9852 3.70359C27.1216 6.4191 20.9065 10.5434 15.7428 15.8091C5.66207 25.8822 0 39.5354 0 53.7705C0 68.0055 5.66207 81.6587 15.7428 91.7317L86.785 162.616C91.6954 167.504 98.3484 170.249 105.285 170.249C112.221 170.249 118.874 167.504 123.784 162.616L194.826 91.7317C204.9 81.6551 210.557 68.0033 210.557 53.7705C210.557 39.5377 204.9 25.8858 194.826 15.8091Z" fill="currentColor"/>
+                    </svg>
+            </div>
+            <div class="socials-wrapper d-flex flex-fill">
+                <a href="http://">
+                    <div class="social-logo-wrapper d-flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                          </svg>
+                    </div>
+                </a>
+                <a href="http://">
+                    <div class="social-logo-wrapper d-flex">
+                        <svg width="16" height="16" viewBox="0 0 27 21" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25.2126 0.116491L24.768 0.277741L0.634239 8.97302C0.463213 9.02591 0.31457 9.13405 0.211606 9.28049C0.108643 9.42693 0.0571791 9.6034 0.0652824 9.78223C0.0733858 9.96106 0.140598 10.1321 0.256383 10.2687C0.372169 10.4052 0.529984 10.4995 0.705091 10.5367L6.95231 12.2469L8.11771 15.6673L9.2831 19.0878C9.35005 19.2555 9.45691 19.4043 9.59442 19.5213C9.73193 19.6383 9.89591 19.7199 10.0721 19.7592C10.2484 19.7984 10.4315 19.7941 10.6057 19.7465C10.7798 19.6989 10.9397 19.6095 11.0715 19.486L14.299 16.4369L20.6366 20.7345C21.4111 21.2622 22.5154 20.8713 22.7133 20.0015L26.9107 1.45535C27.1159 0.536718 26.1484 -0.218225 25.2126 0.116491ZM22.1318 4.23325L11.2279 13.146L10.7148 13.5662C10.6021 13.6556 10.5285 13.7852 10.5096 13.9278L10.3948 14.8758L10.0796 17.5388C10.0822 17.5712 10.0718 17.6033 10.0507 17.6281C10.0296 17.6528 9.99959 17.6682 9.96719 17.6707C9.9348 17.6733 9.90269 17.663 9.87795 17.6419C9.85321 17.6208 9.83785 17.5908 9.83526 17.5584L8.94839 14.8977L8.03219 12.1736C7.99344 12.0511 7.99859 11.919 8.04675 11.8C8.09491 11.6809 8.18307 11.5823 8.29606 11.5213L19.6422 5.01751L21.7775 3.79592C22.0878 3.61513 22.4054 4.00848 22.1318 4.23325Z" fill="currentColor"/>
+                          </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="politics-wrapper">
+                <a href="http://">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

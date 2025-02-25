@@ -1,0 +1,245 @@
+@charset "utf0-8";
+@import url("../source/font/Gilroy/stylesheet.css");
+@import url("../source/font/Avenir\ Next/stylesheet.css");
+
+:root {
+    --prmr-clr: #0A406E;
+    --scndr-clr: #1E66A6;
+    --thrd-clr: #F4F9FF;
+
+    --blk-txt-clr: #000;
+    --wt-txt-clr: #fff;
+    --hdr-txt-clr: #3D3D3D;
+    --snd-txt-clr: #1E66A6;
+    --thrd-txt-clr: #0A406E;
+
+    --nav-area-border-clr: #D3DEEA;
+
+    --symptomps-card-first-color: #0088FF77;
+    --symptomps-card-second-color: #0A406E;
+    --symptomps-card-third-color: #0088FF37;
+
+    --specialist-card-clr: #F7FBFF;
+    
+    --account-bg-clr: #EFEFEF;
+    --account-search-bg-clr: #F4F4F4;
+    --account-info-tile-bg-clr: #FFFFFF99;
+    --btn-wt-clr: #FFFFFF;
+    --btn-bl-clr: #0A406E;
+    --btn-red-clr: #C40003;
+    --search-muted-clr: #D8D8D8;
+
+    --c-theme-primary: #0A406E;
+	--c-theme-primary-accent: #1E66A6;
+	--c-bg-primary: #D6DAE0;
+	--c-bg-secondary: #EAEBEC;
+	--c-bg-tertiary: #FDFDFD;
+	--c-text-primary: #1F1F25;
+	--c-text-secondary: #D8D8D8;
+}   
+
+body {
+    font-family: Avenir Next;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.wt-rounded-btn {
+    border: 1px solid white;
+    border-radius: .5rem;
+    padding: .75rem 1rem;
+    margin: 0 .5rem;
+    background-color: white;
+    font-family: Avenir Next;
+    font-weight: 500;
+    height: 100%;
+}
+
+.bl-rounded-btn {
+    border: 1px solid white;
+    border-radius: .5rem;
+    color: var(--wt-txt-clr);
+    padding: .75rem 1rem;
+    margin: 0 .5rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-family: Avenir Next;
+    font-weight: 500;
+    height: 100%;
+}
+
+.wt-pill-btn {
+    border: 1px solid var(--prmr-clr);
+    border-radius: 2.5rem;
+    color: var(--thrd-txt-clr);
+    padding: 1.25rem 1.75rem;
+    margin: 0 .5rem;
+    background-color: white;
+    font-size: 1.25rem;
+    font-family: Avenir Next;
+    font-weight: 500;
+}
+
+.bl-pill-btn {
+    border: 1px solid var(--prmr-clr);
+    border-radius: 2.5rem;
+    color: var(--wt-txt-clr);
+    padding: 1.25rem 1.75rem;
+    margin: 0 .5rem;
+    background-color: var(--prmr-clr);
+    font-size: 1.25rem;
+    font-family: Avenir Next;
+    font-weight: 300;
+}
+
+
+.marquee {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.marquee .content-wrapper {
+    padding-inline: .5rem;
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+    animation: scroll 10s linear infinite;
+}
+
+.scroll {
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.header-container {
+    background: 
+        url("../source/img/main/HeaderPhoto3.png") bottom right 2.5rem / 46.5% no-repeat,
+        url("../source/img/main/HeaderPhoto2.png") bottom right / 61% no-repeat,
+        url("../source/img/main/HeaderPhoto1.png") bottom right / 58% no-repeat,
+        url("../source/img/main/Ellipse.png") top left no-repeat,
+        url("..//source/img/main/Ellipse1.png") right no-repeat,
+        var(--prmr-clr);
+    border-radius: 2rem;
+    border-bottom-left-radius: 0;
+    overflow: hidden;
+    padding: 0;
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+.meeting-wrapper {
+    
+    .meet-wrapper {
+        color: var(--wt-txt-clr);
+        padding: 2rem;
+    
+        h1 {
+            font-size: 7rem;
+            margin: 1rem 0;
+        }
+    
+        p {
+            width: 49%;
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin: 2rem 0;
+        }
+    }
+    
+    .meet-bottom-wrapper {
+        .btns-wrapper {
+            background-color: white;
+            width: 51%;
+            padding: .5rem;
+            padding-bottom: .2rem;
+            border-top-right-radius: 2rem;
+            position: relative;
+            
+            a {
+                color: transparent;
+            }
+
+            p {
+                width: 95%;
+                margin-top: 1rem;
+                font-size: 2.1rem;
+                font-weight: 700;
+                color: var(--hdr-txt-clr);
+            }
+    
+            .svg {
+                position: absolute;
+                top: -2.49rem;
+                left: 0;
+                color: hsl(from var(--scndr-clr) h s 26.7%);
+            }
+    
+            .svg1 {
+                position: absolute;
+                bottom: 0;
+                right: -2.499rem;
+                color: hsl(from var(--scndr-clr) h s 26.7%);
+            }
+        }
+    
+        .specialists-introduce-wrapper {
+            border-radius: 1.25rem;
+            margin: 1rem;
+            margin-top: 0;
+            padding: 1rem;
+            width: 47%;
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+    
+            .specialist-introduce {
+                .name {
+                    margin: .5rem 0;
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                }
+    
+                .specializations {
+                    width: 90%;
+                    font-size: .9rem;
+                    font-weight: 400;
+                }
+            }
+        }   
+    }
+}
+
+.header-wrapper {
+    padding: 1.5rem;
+
+    .navbar-wrapper {
+        .navbar {
+            padding: .5rem 5rem;
+
+            .navbar-nav {
+
+                a {
+                    color: var(--wt-txt-clr);
+                    font-family: Gilroy;
+                    font-size: 1rem;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .navbar-btns-wrapper {
+        a {
+            color: transparent;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+.body-wrapper {
+    .team-content {
+        .specialists-cards-list {
+            height: 45rem;
+            column-gap: 1rem;
+            row-gap: 1rem;
+            overflow-y: scroll;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .specialist-card {
+                border: 0;
+                border-radius: 1.25rem;
+                overflow: hidden;
+                width: 17rem;
+                aspect-ratio: 1 / 1.75;
+                position: relative;
+
+                .specialist-img {
+                    width: 17rem;
+                    aspect-ratio: 1 / 1.75;
+                    border-radius: 1.25rem;
+                    overflow: hidden;
+                    
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-position: center top;
+                        object-fit: cover;
+                    }
+                }
+
+                .specialist-info {
+                    background-color: white;
+                    position: absolute;
+                    border: 0;
+                    border-radius: 1.25rem;
+                    padding: 1.5rem;
+                    bottom: -.5rem;
+                    height: 6rem;
+                    
+                    .specialist-name {
+                        text-align: center;
+                        font-size: 1.2rem;
+                        font-weight: 500;
+                    }
+
+                    .specialist-specializations {
+                        height: 4rem;
+                        margin: .5rem 0 ;
+                        font-size: .9rem;
+                        text-align: center;    
+                    }
+                }
+            }
+        }
+    }
+}

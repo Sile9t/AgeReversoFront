@@ -1,0 +1,973 @@
+@charset "utf-8";
+@import url("./utilities.css");
+
+body {
+    justify-content: space-around;
+}
+
+.nav-area {
+    height: 55rem;
+    border: 1px solid var(--nav-area-border-clr);
+    border-radius: 2.5rem;
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+
+    .logo-wrapper {
+        color: var(--thrd-txt-clr);
+        
+        svg {
+            height: 5rem;
+            aspect-ratio: 6.3 / 1;
+        }
+    }
+
+    :nth-child(n+1 of .nav-link) {
+        max-width: 27rem;
+        min-width: 20rem;
+
+        a {
+            text-decoration: none;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--snd-txt-clr);
+        }
+    }
+
+    .nav-link-1 {
+        top: 10%;
+        right: 22%;
+    }
+
+    .nav-link-2 {
+        top: 20%;
+        left: 8%;
+    }
+
+    .nav-link-3 {
+        top: 30%;
+        right: 13%;
+    }
+
+    .nav-link-4 {
+        top: 48%;
+        left: 3%;
+    }
+
+    .nav-link-5 {
+        bottom: 40%;
+        right: 4%;
+    }
+
+    .nav-link-6 {
+        bottom: 28%;
+        left: 30%;
+    }
+
+    .nav-link-7 {
+        bottom: 27%;
+        right: 18%;
+    }
+
+    .nav-link-8 {
+        bottom: 15%;
+        left: 8%;
+        width: 15rem;
+    }
+
+    .nav-link-9 {
+        bottom: 8%;
+        right: 5%;
+    }
+
+    .nav-link-10 {
+        bottom: 5%;
+        right: 38%;
+    }
+}
+
+.symptoms-cards-wrapper {
+    padding: 0;
+    
+    h2 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .symptoms-cards-list {
+        padding: 2rem 0;
+        
+        .symptoms-card {
+            width: 49%;
+            border-radius: 1rem;
+            aspect-ratio:  68 / 39;
+            color: var(--wt-txt-clr);
+            position: relative;
+            overflow: hidden;
+            
+            .symptomps-card-info {
+                padding: 1rem;
+                text-decoration: none;
+                color: var(--wt-txt-clr);
+
+                .symptoms-card-header {
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                    padding: 0;
+                }
+    
+                .symptoms-list {
+                    padding: .25rem;
+                    margin-bottom: .15rem;
+            
+                    .symptom {
+                        font-size: 1rem;
+                        font-weight: 200;
+                        margin: .5rem;
+                        padding-left: .5rem;
+                    }
+                }
+    
+                .symptoms-more {
+                    font-size: 1rem;
+                    font-weight: 500;
+                    padding: 0;
+                }
+            }
+        }                                                   
+
+        .symptoms-card-1 {
+            background: 
+                linear-gradient(to bottom, var(--symptomps-card-third-color), var(--symptomps-card-first-color), var(--symptomps-card-second-color)),
+                url("../source/img/main/SymptomCardImg1.png") no-repeat center / cover;
+        }
+
+        .symptoms-card-2 {
+            background:
+                linear-gradient(to bottom, var(--symptomps-card-third-color), var(--symptomps-card-first-color), var(--symptomps-card-second-color)),
+                url("../source/img/main/SymptomCardImg2.png") no-repeat center / cover;
+       }
+    }
+}
+
+.specialists-cards-wrapper {
+    padding: 0;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    .specialists-cards-header {
+        h2 {
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        .specialists-cards-header-description {
+            width: 80%;
+            margin: 2rem;
+            font-size: 1.25rem;
+            font-weight: 400;
+            text-align: center;
+        }
+    }
+
+    .specialists-cards-list {
+        column-gap: 1.1rem;
+        row-gap: 1.1rem;
+        max-height: 31rem;
+        transition: max-height 2s ease-out;
+        overflow: hidden;
+
+        .specialist-card {
+            /* width: 19.5rem; */
+            border-radius: 1rem;
+            background-color: var(--specialist-card-clr);
+
+            .specialist-img {
+                aspect-ratio: 5 / 4;
+
+                img {
+                    width: 100%;
+                    border-radius: 1rem;
+                    object-fit: cover;
+                }
+            }
+
+            .specialist-info {
+                margin: 1rem;
+
+                .specialist-name {
+                    text-align: center;
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                }
+
+                .specialist-specializations {
+                    margin: 1rem 0;
+                    text-align: center;
+                    font-size: .9rem;
+                }
+            }
+
+            .specialist-more-btn {
+                button {
+                    padding: .5rem 1.5rem;
+                    margin-bottom: 1rem;
+                    font-size: 1rem;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        &.show {
+            max-height: 200rem;
+            transition: max-height 2s ease-out;
+        }
+        /* .collapse-content {
+            padding: 0;
+            column-gap: 1.1rem;
+            row-gap: 1.1rem;
+            max-height: 20rem;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            transition: max-height 2s ease-out;
+        }
+
+        .collapse-content.show {
+            padding: 0;
+            column-gap: 1.1rem;
+            row-gap: 1.1rem;
+            max-height: 0;
+            max-height: 200rem;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            transition: max-height 2s ease-out;
+        } */
+    }
+
+    .specialists-cards-list.show {
+        max-height: 200rem;
+        transition: max-height 2s ease-out;
+    }
+
+
+    .specialists-cards-bottom {
+        button {
+            margin: 3rem 0;
+            padding: 1rem 4rem;
+        }
+    }
+}
+
+.magazine-wrapper {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: 
+        url("../source/img/main/MagaxzineImg.png") right no-repeat,
+        url("../source/img/main/MagazineImg2.png") right no-repeat,
+        url("../source/img/main/MagazineImg3.png") right no-repeat,
+        url("../source/img/main/MagazineWrapperBg.png") center no-repeat;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 0.5rem rgba(235, 235, 235, 0.8);
+
+    h2 {
+        font-size: 4.75rem;
+        font-weight: 400;
+    }
+
+    p {
+        font-size: 2rem;
+        margin-top: 3rem;
+        margin-bottom: 6rem;
+    }
+}
+
+.program-benefits-wrapper {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0;
+
+    .header-block {
+        width: 49%;
+        aspect-ratio: 1 / 1;
+        border-radius: 1.25rem;
+        padding: 1.5rem;
+        background: 
+            url("../source/img/main/benefitHeaderImg1.png") top center / 80% no-repeat,
+            url("../source/img/main/benefitHeaderImg2.png") center left no-repeat,
+            url("../source/img/main/benefitHeaderImg3.png") bottom right no-repeat,
+            url("../source/img/main/benefitHeaderEllipse2.png") no-repeat,
+            url("../source/img/main/benefitHeaderEllipse1.png") no-repeat,
+            var(--prmr-clr);
+
+
+        h3 {
+            font-size: 2.9rem;
+            color: var(--wt-txt-clr);
+        }
+    }
+
+    .benefits-block {
+        width: 49%;
+        /* aspect-ratio: 1 / 1; */
+
+        .benefit-tile {
+            width: 48.5%;
+            height: 31%;
+            border: 2px solid var(--nav-area-border-clr);
+            border-radius: .75rem;
+            padding: 1rem;
+            
+            .benefit-number-wrapper {
+                position: relative;
+                
+                .number-wrapper {
+                    width: 2rem;
+                    height: 2rem;
+                    aspect-ratio: 1 / 1;
+                    margin: 0;
+                    color: var(--wt-txt-clr);
+                    z-index: 1;
+                    text-align: center;
+                }
+
+                svg {
+                    position: absolute;
+                    width: 2rem;
+                    height: 2rem;
+                    top: -10%;
+                    right: 0;
+                    color: var(--prmr-clr);
+                }
+            }
+
+            .benefit-description {
+                margin: 0;
+            }
+        }
+
+        .final-benefit-tile{
+            position: relative;
+            border: 0;
+            padding: 0;
+            background: 
+                url("../source/img/main/benefitHeaderEllipse2.png") no-repeat,
+                url("../source/img/main/benefitHeaderEllipse1.png") no-repeat,
+                var(--prmr-clr)
+            ;
+
+            .benefit-description {
+                font-size: 1.4rem;
+                text-align: center;
+                color: var(--wt-txt-clr);
+            }
+
+            .final-benefit-tile-bg {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 5%;
+                background: url("../source/img/main/finalBenefitBg.png");
+            }
+        }
+    }
+}
+
+.programs-list-and-price-list-wrapper {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 1.25rem;
+    background: 
+        url("../source/img/main/ProgramListBg.png") no-repeat,
+        url("../source/img/main/ProgramListEllipse3.png") top left no-repeat,
+        url("../source/img/main/ProgramListEllipse2.png") center right no-repeat,
+        url("../source/img/main/ProgramListEllipse1.png") bottom left no-repeat,
+        var(--prmr-clr)
+    ;
+    color: var(--wt-txt-clr);
+
+    .programs-list-wrapper {
+        .programs-list-header {
+            h2 {
+                margin: 0;
+                margin-bottom: 2rem;
+                font-size: 3rem;
+            }
+        }
+    
+        .programs-list {
+            padding: 0;
+            margin: 0;
+    
+            .program {
+                margin: 2rem 0;
+    
+                .program-name-wrapper {
+                    h3 {
+                        font-size: 2rem;
+                    }
+    
+                    hr {
+                        height: .15rem;
+                        width: 10rem;
+                        opacity: 100%;
+                    }
+                }
+    
+                .program-description-wrapper {
+                    position: relative;
+                    border-radius: .75rem;
+                    overflow: hidden;
+                    width: 60%;
+    
+                    .program-description {
+                        z-index: 1;
+                        padding: 2rem;
+    
+                        p {
+                            font-size: 1.5rem;
+                            font-weight: 400;
+                            margin: 0 1rem 3rem 1rem;
+                        }
+    
+                        a {
+                            color: transparent;
+                        }
+                    }
+    
+                    .program-description-mask {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background-color: hsl(from #000F1D h s 60%);
+                        opacity: 20%;
+                    }
+                }
+            }
+        }
+    }
+
+    .price-list-wrapper {
+        
+        .price-list-header {
+            h3 {
+                margin-top: 5rem;
+                margin-bottom: 3rem;
+            }
+        }
+        
+        .price-list {
+            list-style: none;
+            padding: 0;
+            
+            .price-item {
+                width: 31%;
+                position: relative;
+            
+                .price-body {
+                    position: relative;
+                    border-radius: .75rem;
+                    padding: 1.25rem;
+                    padding-bottom: 2.5rem;
+                    overflow: hidden;
+                    
+                    hr {
+                        margin: 2rem 0;
+                        background-color: hsl(from #000F1D h s 90%);
+                        opacity: 50%;
+                    }
+
+                    .price-info {
+                        position: relative;
+                        z-index: 1;
+                        font-size: 1.2rem;
+
+                        h4 {
+                            font-size: 2.5rem;
+                            font-weight: 400;
+                        }
+
+                        .price-benefits-list-header {
+                            
+                        }
+        
+                        .price-benefits-list {
+                            list-style: disc;
+                            padding-left: 1.2rem;
+                            .price-benefit {
+                                margin: 1rem 0;
+                            }
+                        }
+        
+                        .price-price-wrapper {
+                            h4 {
+                                margin: 2rem 0;
+                            }
+                        }
+                    }
+                    
+                    .price-mask {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background-color: hsl(from #000F1D h s 60%);
+                        opacity: 20%;
+                    }
+                }
+            }
+
+            :nth-child( 2n of .price-item) {
+                .price-mask {
+                    background-color: hsl(from #00274A h s 40%);
+                    opacity: 60%;
+                }
+            }
+
+        }
+
+    }
+}
+
+.article-cards-wrapper {
+    padding: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    .article-cards-header {
+        h2 {
+            margin: 0;
+            /* margin-bottom: 2rem; */
+            font-size: 3rem;
+        }
+    }
+
+    .article-cards-list {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+
+        .article-card {
+            position: relative;
+            width: 32.5%;
+            border-radius: 1.25rem;
+            background-color: var(--thrd-clr);
+
+            .article-author-name {
+                position: absolute;
+                border-radius: 2rem;
+                padding: .5rem 1.2rem;
+                margin: 1.1rem;
+                font-size: 1.1rem;
+                font-weight: 200;
+                color: var(--wt-txt-clr);
+                background-color: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(10px);
+            }
+
+            .article-img {
+                border-radius: 1.25rem;
+                /* overflow: hidden; */
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .article-info {
+                padding: 1.5rem;
+
+                .article-header {
+                    font-size: 1.25rem;
+                    font-weight: 400;
+                }
+
+                .article-description {
+                    height: 7rem;
+                    margin: 1rem 0;
+                    font-size: 1.15rem;
+                    font-weight: 400;
+                }
+
+                .article-more-btn-wrapper {
+                    button {
+                        padding: .5rem 1.5rem;
+                        margin: 0;
+                        border: 1px solid white;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+    
+    .article-cards-bottom {
+        button {
+            padding: 1rem 4rem;
+        }
+    }
+}
+
+.learning-advertisement-wrapper {
+    padding: 2rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    border-radius: 2.5rem;
+    background:
+        url("../source/img/main/LearningAdBgPhoto.png") bottom right / 50% no-repeat,
+        url("../source/img/main/LearningAdEllipse2.png") bottom right no-repeat,
+        url("../source/img/main/LearningAdEllipse1.png") top left no-repeat,
+        url("../source/img/main/LearningAdBgMask.png") no-repeat,
+        radial-gradient(farthest-side at 10% 30% ,#0088FF23, transparent) no-repeat,
+        var(--prmr-clr)
+    ;
+    color: var(--wt-txt-clr);
+
+    .learning-advertisement-header {
+        h2 {
+            max-width: 55%;
+            margin: 2rem 0;
+            font-size: 3rem;
+        }
+    }
+
+    .learning-advertisement-topic {
+        h3 {
+            max-width: 55%;
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+    }
+
+    .learning-advertisement-description {
+        p {
+            max-width: 55%;
+            height: 7rem;
+            margin: 3rem 0;
+            font-size: 1.2rem;
+            font-weight: 200;
+        }
+    }
+
+    .learning-advertisement-more-btn-wrapper {
+        button {
+            padding: 1.2rem 4.8rem;
+            margin: 1rem 0;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.offline-project-wrapper {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 0.5rem rgba(235, 235, 235, 0.8);
+    
+    .offline-project-info {
+        width: 49%;
+
+        .offline-project-tag p {
+            color: #054175;
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+        
+        .offline-project-header h2{
+            width: 90%;
+            font-size: 3rem;
+        }
+
+        .offline-project-redirect-btn a button {
+            padding: 2% 12%;
+            margin: 0;
+        }
+    }
+
+    .offline-project-img-wrapper {
+        width: 49%;
+        border-radius: .75rem;
+        overflow: hidden;
+    }
+}
+
+.supervisor-for-wrapper {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 0.5rem rgba(235, 235, 235, 0.8);
+
+    .supervisor-for-info {
+        width: 49%;
+
+        .supervisor-for-header h2{
+            width: 90%;
+            font-size: 3rem;
+        }
+        
+        .supervisor-for-description p {
+            height: 5rem;
+            font-size: 1.2rem;
+        }
+
+        .supervisor-for-btn-wrapper a button{
+            padding: 2% 12%;
+            margin: 0;
+        }
+    }
+
+    .supervisor-for-img-wrapper {
+        width: 49%;
+        aspect-ratio: 615.44 / 410;
+        border-radius: .75rem;
+        overflow: hidden;
+        background: 
+            url("../source/img/main/SupervisorForImg3.png") bottom center no-repeat,
+            url("../source/img/main/SupervisorForImg2.png") bottom left no-repeat,
+            url("../source/img/main/SupervisorForImg1.png") bottom right no-repeat,
+            url("../source/img/main/SupervisorForEllipse1.png"),
+            var(--prmr-clr)
+        ;
+    }
+}
+
+.investor-for-wrapper {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    .investor-for-header {
+
+        h2 {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-size: 3rem;
+        }
+
+        p {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+    }
+
+
+    .investor-for-list {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        aspect-ratio: 135 / 64;
+
+        .investor-for-item {
+            width: 32.5%;
+            aspect-ratio: 45 / 32;
+            padding: 2rem;
+            border-radius: .75rem;
+            background: 
+                url("../source/img/main/InverstorForEllipse1.png") center no-repeat,
+                var(--prmr-clr)
+            ;
+            color: var(--wt-txt-clr);
+            
+            .investor-for-item-name-wrapper {
+                height: 10rem;
+                padding: 10% 10%;
+                p {
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    text-align: center;
+                }
+            }
+
+            button {
+                height: auto;
+                padding: .5rem 2rem;
+                border-radius: 2.5rem;
+                font-size: 1.2rem;
+                font-weight: 200;
+            }
+        }
+
+        .investor-for-item-1 {
+            background: 
+                url("../source/img/main/InvestorForMask1.png") bottom / 100% no-repeat,
+                radial-gradient(at 50% 50%, #0088FF73, transparent) no-repeat,
+                var(--prmr-clr)
+            ;
+        }
+
+        .investor-for-item-2 {
+            background: 
+                url("../source/img/main/InvestorForMask2.png") bottom / 100% no-repeat,
+                radial-gradient(at 50% 50%, #0088FF73, transparent) no-repeat,
+                var(--prmr-clr)
+            ;
+        }
+        
+        .investor-for-item-3 {
+            background: 
+                url("../source/img/main/InvestorForMask3.png") bottom / 100% no-repeat,
+                radial-gradient(at 50% 50%, #0088FF73, transparent) no-repeat,
+                var(--prmr-clr)
+            ;
+        }
+        .investor-for-item-4 {
+            background: 
+                url("../source/img/main/InvestorForMask4.png") bottom / 100% no-repeat,
+                radial-gradient(at 50% 50%, #0088FF73, transparent) no-repeat,
+                var(--prmr-clr)
+            ;
+        }
+        .investor-for-item-5 {
+            background: 
+                url("../source/img/main/InvestorForMask5.png") bottom / 100% no-repeat,
+                radial-gradient(at 50% 50%, #0088FF73, transparent) no-repeat,
+                var(--prmr-clr)
+            ;
+        }
+        .investor-for-item-6 {
+            background: 
+                url("../source/img/main/InvestorForMask6.png") bottom / 100% no-repeat,
+                radial-gradient(at 50% 50%, #0088FF73, transparent) no-repeat,
+                var(--prmr-clr)
+            ;
+        }
+
+    }
+
+    .investor-for-bottom-wrapper a button {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding: 1rem 4rem;
+        font-size: 1.2rem;
+    }
+}
+
+.partners-marquee-wrapper {
+    padding: 0;
+    
+    .partners-marquee-header h2{
+        font-size: 3rem;
+        text-align: center;
+    }
+    
+    .partners-marquee {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        .partner-logo {
+            padding-inline: 2rem;
+            display: flex;
+            column-gap: 4rem;
+            align-items: center;
+        }
+    }
+}
+
+.footer-wrapper {
+    padding: 2rem;
+    background-color: var(--prmr-clr);
+    color: var(--wt-txt-clr);
+    
+    .logo-wrapper {
+        aspect-ratio: 6.3 / 1;
+        height: 3rem;
+        overflow: hidden;
+        
+        svg {
+            aspect-ratio: 6.3 / 1;
+            height: 3rem;
+        }
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .socials-wrapper {
+        padding: .5rem;
+        a {
+            .social-logo-wrapper {
+                padding: .3rem;
+                margin: .5rem;
+                border-radius: 15% 15%;
+                background-color: var(--scndr-clr);
+                
+                svg {
+                    height: 2rem;
+                    width: 2rem;
+                }
+            }
+        }
+    }
+
+    .politics-wrapper {
+        font-size: 1.2rem;
+        font-weight: 100;
+    }
+}
+
+@media screen and (min-width:1400px) {
+    .header-container {
+
+    }
+
+    .nav-area {
+
+    }
+
+    .symproms-cards-wrapper {
+
+    }
+
+    .specialists-cards-wrapper {
+        .specialist-card {
+            width: 19.5rem;
+        }
+    }
+
+    .magazine-wrapper {
+
+    }
+
+    .program-benefits-wrapper {
+
+    }
+
+    .programs-list-and-price-list-wrapper {
+
+    }
+
+    .article-cards-wrapper {
+
+    }
+
+    .learning-advertisement-wrapper {
+
+    }
+
+    .offline-project-wrapper {
+
+    }
+
+    .supervisor-for-wrapper {
+
+    }
+
+    .investor-for-wrapper {
+
+    }
+
+    .partners-marquee-wrapper {
+
+    }
+
+    footer {
+        
+    }
+}

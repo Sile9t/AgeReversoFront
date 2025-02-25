@@ -1,0 +1,195 @@
+@charset "utf-8";
+
+.body-wrapper {
+    .protocols-content {
+        .search-and-filter-wrapper {
+            margin: 2rem 0;
+            .search-wrapper {
+                width: 100%;
+                
+                input {
+                    width: 90%;
+                }
+            }
+            
+            button.filter {
+                border: 0;
+                border-radius: 50% 50%;
+                height: 4.5rem;
+                width: 4.5rem;
+                padding: 1rem;
+                margin: .2rem;
+                background-color: var(--btn-wt-clr);
+                color: var(--search-muted-clr);
+                /* color: var(--btn-bl-clr); */
+                
+                svg {
+                    overflow: visible;
+                    margin-left: .05rem;
+                    margin-bottom: .1rem;
+                }
+
+                &:active, .active {
+                    background-color: var(--btn-bl-clr);
+                    color: var(--btn-wt-clr);
+                }
+            }
+        }
+
+        .protocols-list {
+            overflow: hidden;
+            padding: 1rem 0;
+            
+            .protocol {
+
+                .protocol-preview {
+                    height: 23rem;
+                    border-radius: 1rem;
+                    aspect-ratio: 269 / 384;
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                    font-size: .4rem;
+                    background-color: white;
+                    overflow: hidden;
+
+                    .protocol-header {
+                        height: 1.2rem;
+                        padding: 0 .7rem;
+                        color: var(--wt-txt-clr);
+                        background-color: var(--prmr-clr);
+                        font-size: .7rem;
+                        
+                        .protocol-name, .patient-name {
+                            background: linear-gradient(to left, white 40%, transparent, white 40%);
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            color: transparent;
+                        }
+
+                        .patient-name {
+                            width: 30%;
+                        }
+                    }
+
+                    .lines-wrapper {
+                        background: url("../source/img/account/img/ProtocolSeparator.png") center no-repeat;
+                        height: 100%;
+                        width: 1rem;
+                        margin: 0;
+                    }
+
+                    .protocol-preview-body {
+                        height: 15.8rem;
+                        padding: 1rem;
+                        padding-top: .5rem;
+
+                        .protocol-date {
+                            font-size: .5rem;
+                            span {
+                                color: var(--snd-txt-clr);
+                            }
+                        }
+
+                        h4 {
+                            color: var(--snd-txt-clr);
+                            font-size: .7rem;
+                            font-weight: 300;
+                        }
+
+                        ol {
+                            margin: 0;
+                            padding: 0 .5rem;
+                        }
+
+                        hr {
+                            margin-top: 1rem;
+                            margin-bottom: 1rem;
+                            border: 0;
+                            height: .05rem;
+                            opacity: .2;
+                            background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,0.65) 50%, rgba(0,0,0,0) 90%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+                            background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0)), color-stop(10%,rgba(0,0,0,0)), color-stop(50%,rgba(0,0,0,0.65)), color-stop(90%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+                            background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+                            background: -o-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+                            background: -ms-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%); /* IE10+ */
+                            background: linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%); /* W3C */
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+                        }
+
+                        hr:before {
+                            content: "";
+                            display: block;
+                            border-top: solid 1px #f9f9f9;
+                            width: 100%;
+                            height: 1px;
+                            position: absolute;
+                            top: 50%;
+                            z-index: 1;
+                        }
+
+                    }
+
+                    footer {
+                        height: 3rem;
+                        border: 0;
+                        border-radius: .5rem;
+                        background-color: var(--prmr-clr);
+                        color: var(--wt-txt-clr);
+                        padding: 0 .5rem;
+                        margin: .7rem;
+                        
+                        .qrcode-wrapper {
+                            padding: .2rem;
+                            display: flex;
+                            flex-direction: column;
+                            
+                            .qrcode {
+                                height: 1.5rem;
+                                aspect-ratio: 1 / 1;
+
+                                img {
+                                    height: 100%;
+                                    width: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+
+                            .qrcode-name {
+                                margin-top: .1rem;
+                                margin-bottom: .1rem;
+                                background: linear-gradient(to left, white 40%, transparent, white 40%);
+                                -webkit-background-clip: text;
+                                background-clip: text;
+                                color: transparent;
+                            }
+                        }
+
+                        .lines-wrapper {
+                            height: 110%;
+                            width: 1.7rem;
+                        }
+
+                        .inviting-text {
+                            background: linear-gradient(to left, white 40%, transparent, white 40%);
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            color: transparent;
+                        }
+                    }
+                }
+
+                img {
+                    height: 25rem;
+                    aspect-ratio: 269 / 384;
+                    object-fit: cover;
+                }
+
+                .download-btn {
+                    padding: .75rem 1.75rem;
+                    font-size: 1rem;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
