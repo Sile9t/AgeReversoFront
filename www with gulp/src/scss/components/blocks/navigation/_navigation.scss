@@ -1,0 +1,12 @@
+@use "../../../tools/mixins/index" as mix;
+
+.menu {
+   &__body {
+      height: 100%;
+      @include mix.flex(space-between, center);
+
+      @include mix.smalltablet {
+         flex-direction: column;
+      }
+   }
+}

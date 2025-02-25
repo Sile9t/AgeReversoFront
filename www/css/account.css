@@ -4,7 +4,7 @@
 }
 
 .account {
-    height: 47rem;
+    /* height: 47rem; */
     background-color: var(--account-bg-clr);
     border-radius: 2rem;
     padding: 2rem;
@@ -12,6 +12,8 @@
     margin-bottom: 2rem;
 
     .nav {
+        height: 37rem;
+
         .main-nav-wrapper {
             border-radius: 5rem;
             padding: .5rem;
@@ -28,29 +30,30 @@
             }
         }
         
-        .nav-link {
-            border: 0;
-            border-radius: 50% 50%;
-            height: 4.5rem;
-            width: 4.5rem;
-            padding: 1rem;
-            margin: .2rem;
-            background-color: var(--btn-wt-clr);
-            color: var(--btn-bl-clr);
-            
-            svg {
-                overflow: visible;
-                /* margin-left: .05rem;
-                margin-bottom: .1rem; */
-            }
-        }
         .main-tab svg {
             margin-top: .3rem;
             margin-bottom: .2rem;
         }
-
+        
         .quit-tab {
             color: var(--btn-red-clr);
+        }
+    }
+    
+    .nav-link {
+        border: 0;
+        border-radius: 50% 50%;
+        height: 4.5rem;
+        width: 4.5rem;
+        padding: 1rem;
+        margin: .2rem;
+        background-color: var(--btn-wt-clr);
+        color: var(--btn-bl-clr);
+        
+        svg {
+            overflow: visible;
+            /* margin-left: .05rem;
+            margin-bottom: .1rem; */
         }
     }
 
@@ -136,37 +139,22 @@
                         .progress-bar-wrapper {
                             font-weight: 500;
 
-                            @property --pbPercentage {
-                                syntax: "<number>";
-                                inherits: false;
-                                initial-value: 0;
-                            }
-
                             .progress {
                                 border-radius: 1rem;
                                 height: 1.7rem;
                                 width: 85%;
                                 
                                 div[role="progressbar"].progress-bar {
+                                    height: 100%;
+                                    width: calc(var(--value) * 1%);
                                     border-radius: 1rem;
                                     background: linear-gradient(90deg, #E00000, #E3D300, #37BA03);
-                                    width: calc(var(--value) * 1%);
                                 }
                             }
                         }
                     }
 
                     .general-stats-wrapper {
-                        @keyframes growProgressBar {
-                            0%, 33% { --pgPercentage: 0; }
-                            100% { --pgPercentage: var(--value); }
-                        }
-                          
-                        @property --pgPercentage {
-                            syntax: '<number>';
-                            inherits: false;
-                            initial-value: 0;
-                        }
                           
                         div[role="progressbar"].circle-progressbar {
                             --size: 12rem;
@@ -207,6 +195,8 @@
                                 content: counter(percentage) '%';
                             }
                         }
+
+                          
                     }
                 }
 
