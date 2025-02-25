@@ -1,9 +1,0 @@
-// Отменить выделение
-%noselect {
-	user-select: none;
-}
-
-// Отменить выделение при тапе
-%taphighlight {
-	-webkit-tap-highlight-color: transparent;
-}
