@@ -1,7 +1,6 @@
 @import url("./utilities.css");
 
 .account {
-    /* height: 47rem; */
     background-color: var(--account-bg-clr);
     border-radius: 2rem;
     padding: 2rem;
@@ -123,14 +122,10 @@
 
             h3 {
                 font-weight: 500;
-                /* margin: 0; */
             }
 
-            .content-wrapper {
-                /* width: 50%; */
-                /* height: 40rem; */
+            .account-content .content-wrapper {
                 overflow: auto;
-                /* row-gap: 1.5rem; */
                 -ms-overflow-style: none;
                 scrollbar-width: none;
 
@@ -381,7 +376,7 @@
     }
 }
 
-@media (max-width: 574px) {
+@media (max-width: 575px) {
 
     .nav {
         display: flex;
@@ -541,7 +536,7 @@
     }
 }
 
-@media (min-width: 575px) {
+@media (min-width: 576px) {
 
     .nav {
         display: flex;
@@ -597,6 +592,7 @@
         flex-wrap: wrap;
         
         .main-tab {
+            padding: 2.5%;
             background-color: transparent;
         }
 
@@ -643,7 +639,7 @@
         }
     }
     
-    .content-wrapper {
+    .account-content .content-wrapper {
         width: 100%;
         height: auto;
         row-gap: 1rem;
@@ -703,10 +699,6 @@
 }
 
 @media (min-width: 768px) {
-    #main {
-        max-width: 736px;
-    }
-
     .nav {
         column-gap: 1rem;
         height: 0;
@@ -820,12 +812,6 @@
 }
 
 @media (min-width: 992px) {
-    #main {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 960px;
-    }
-
     .nav {
         .main-nav-wrapper {
             
@@ -930,10 +916,6 @@
 }
 
 @media (min-width: 1200px) {
-    #main {
-        max-width: 1140px;
-    }
-
     .nav {
         flex-direction: column;
         width: fit-content;
@@ -1019,7 +1001,7 @@
         }
     }
     
-    .content-wrapper {
+    .account-content .content-wrapper {
         width: 52%;
         height: 36.5rem;
         row-gap: 1.1rem;
@@ -1076,10 +1058,6 @@
 }
 
 @media (min-width: 1400px) {
-    #main {
-        max-width: 1320px;
-    }
-
     .nav {
         flex-direction: column;
         width: fit-content;
@@ -1163,7 +1141,7 @@
         }
     }
     
-    .content-wrapper {
+    .account-content .content-wrapper {
         width: 50%;
         height: 40rem;
         row-gap: 1.5rem;
@@ -1205,141 +1183,3 @@
         font-size: 2rem;
     }
 }
-
-/* @media (max-width: 1399px) {
-
-    .nav {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        overflow: hidden;
-        column-gap: 1rem;
-        height: 0;
-        margin: 1rem 0;
-        transition: height .5s ease-in;
-        
-        .main-nav-wrapper {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            width: 90%;
-            height: auto;
-            overflow: hidden;
-
-            .nav-link {
-                height: 4rem;
-                padding: 1rem;
-            }
-        }
-
-        &.show {
-            height: auto;
-        }
-    }
-
-    .nav-link {
-        height: 5rem;
-        padding: 1.25rem;
-    }
-
-    h3 {
-        font-size: 3rem;
-    }
-
-    .account-content {
-        display: flex;
-        flex-wrap: wrap;
-        row-gap: 1rem;
-    }
-
-    .header-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        
-        .name-wrapper {
-            width: 80%;
-            font-size: 2rem;
-        }
-    }
-
-    .navbar-toggler {
-        display: flex;
-    }
-
-    .search-wrapper {
-
-        svg {
-            width: 3rem;
-            height: 3rem;
-            padding: 1rem;
-        }
-
-        input{
-            padding-left: 5rem;
-            font-size: 1.5rem;
-        }
-    }
-
-    .notifications-wrapper {
-        display: none;
-    }
-
-    .photo-wrapper {
-        width: 100%;
-        aspect-ratio: 1 / 1;
-        background-color: #F4F4F4;
-        padding: 0 10%;
-
-        img {
-            object-position: top;
-            width: auto;
-            height: 100%;
-            top:0
-        }
-    }
-    
-    .content-wrapper {
-        width: 100%!important;
-        height: auto!important;
-    }
-
-    .stats-wrapper {
-        font-size: 2rem;
-    }
-
-    .datepicker {
-        font-size: 2rem;
-
-        .datepicker-calendar {
-            grid-row-gap: 1rem;
-        }
-        
-        .date {
-            width: 3rem;
-            font-size: 2rem;
-        }
-    }
-
-    .closest-checkup-date {
-        
-        .header {
-            font-size: 2rem;
-        }
-
-        .date {
-            font-size: 10rem;
-        }
-
-        .month {
-            font-size: 4rem;
-        }
-    }
-
-    .age-tile {
-        font-size: 4rem;
-    }
-
-    .passed-steps-tile {
-        font-size: 2rem;
-    }
-} */

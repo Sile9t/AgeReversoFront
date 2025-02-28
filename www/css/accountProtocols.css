@@ -3,30 +3,28 @@
 .body-wrapper {
     .protocols-content {
         .search-and-filter-wrapper {
-            margin: 2rem 0;
+            /* margin: 2rem 0; */
             .search-wrapper {
-                width: 100%;
+                /* width: 100%; */
                 
                 input {
-                    width: 90%;
+                    /* width: 90%; */
                 }
             }
             
             button.filter {
                 border: 0;
                 border-radius: 50% 50%;
-                height: 4.5rem;
-                width: 4.5rem;
-                padding: 1rem;
-                margin: .2rem;
+                aspect-ratio: 1 / 1;
+                /* padding: 2%; */
                 background-color: var(--btn-wt-clr);
                 color: var(--search-muted-clr);
                 /* color: var(--btn-bl-clr); */
                 
                 svg {
+                    width: 100%;
+                    height: 100%;
                     overflow: visible;
-                    margin-left: .05rem;
-                    margin-bottom: .1rem;
                 }
 
                 &:active, .active {
@@ -38,26 +36,28 @@
 
         .protocols-list {
             overflow: hidden;
-            padding: 1rem 0;
+            /* padding: 1rem 0; */
             
             .protocol {
 
                 .protocol-preview {
-                    height: 23rem;
-                    border-radius: 1rem;
+                    /* height: 23rem; */
+                    /* border-radius: 1rem; */
                     aspect-ratio: 269 / 384;
                     margin-top: 1rem;
                     margin-bottom: 1rem;
-                    font-size: .4rem;
                     background-color: white;
                     overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
 
                     .protocol-header {
-                        height: 1.2rem;
-                        padding: 0 .7rem;
+                        height: 3.5%;
+                        padding: 0 2.5%;
                         color: var(--wt-txt-clr);
                         background-color: var(--prmr-clr);
-                        font-size: .7rem;
+                        /* font-size: 1rem; */
                         
                         .protocol-name, .patient-name {
                             background: linear-gradient(to left, white 40%, transparent, white 40%);
@@ -69,41 +69,49 @@
                         .patient-name {
                             width: 30%;
                         }
+
+                        .logo-wrapper {
+                            aspect-ratio: 54 / 9;
+                            width: 20%;
+                        }
                     }
 
                     .lines-wrapper {
-                        background: url("../source/img/account/img/ProtocolSeparator.png") center no-repeat;
+                        background: url("../source/img/account/img/ProtocolSeparator.png") center / 50% no-repeat;
                         height: 100%;
-                        width: 1rem;
+                        aspect-ratio: 1 / 1;
                         margin: 0;
                     }
 
                     .protocol-preview-body {
-                        height: 15.8rem;
-                        padding: 1rem;
-                        padding-top: .5rem;
+                        /* height: 15.8rem; */
+                        padding: 2.5%;
+                        padding-top: 1.25%;
 
                         .protocol-date {
-                            font-size: .5rem;
                             span {
                                 color: var(--snd-txt-clr);
                             }
                         }
 
+                        /* .recommendations-wrapper, .recommend-exams {
+                            height: 100%;
+                        } */
+
                         h4 {
                             color: var(--snd-txt-clr);
-                            font-size: .7rem;
                             font-weight: 300;
                         }
 
                         ol {
+                            height: 100%;
                             margin: 0;
-                            padding: 0 .5rem;
+                            padding: 0 5%;
                         }
 
                         hr {
-                            margin-top: 1rem;
-                            margin-bottom: 1rem;
+                            margin-top: 2.5%;
+                            margin-bottom: 2.5%;
                             border: 0;
                             height: .05rem;
                             opacity: .2;
@@ -130,33 +138,33 @@
                     }
 
                     footer {
-                        height: 3rem;
+                        /* height: 3rem; */
+                        justify-content: space-around;
                         border: 0;
-                        border-radius: .5rem;
+                        border-radius: inherit;
                         background-color: var(--prmr-clr);
                         color: var(--wt-txt-clr);
-                        padding: 0 .5rem;
-                        margin: .7rem;
+                        padding: 0 2.5%;
+                        margin: 2.5%;
+                        bottom: 0;
                         
                         .qrcode-wrapper {
-                            padding: .2rem;
-                            display: flex;
-                            flex-direction: column;
+                            height: auto;
+                            width: 10%;
                             
                             .qrcode {
-                                height: 1.5rem;
-                                aspect-ratio: 1 / 1;
-
+                                padding: 5%;
+                                display: flex;
+                                justify-content: center;
+                            
                                 img {
-                                    height: 100%;
                                     width: 100%;
-                                    object-fit: cover;
+                                    aspect-ratio: 1 / 1;
+                                    object-fit: fill;
                                 }
                             }
 
                             .qrcode-name {
-                                margin-top: .1rem;
-                                margin-bottom: .1rem;
                                 background: linear-gradient(to left, white 40%, transparent, white 40%);
                                 -webkit-background-clip: text;
                                 background-clip: text;
@@ -165,8 +173,8 @@
                         }
 
                         .lines-wrapper {
-                            height: 110%;
-                            width: 1.7rem;
+                            height: 100%;
+                            width: 20%;
                         }
 
                         .inviting-text {
@@ -178,17 +186,367 @@
                     }
                 }
 
-                img {
+                /* img {
                     height: 25rem;
                     aspect-ratio: 269 / 384;
                     object-fit: cover;
-                }
+                } */
 
                 .download-btn {
-                    padding: .75rem 1.75rem;
+                    margin: 0;
+                    padding: 5% 7.5%;
                     font-size: 1rem;
                     font-weight: 400;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .protocols-content {
+        flex-direction: column;
+        flex-wrap: wrap;
+        row-gap: 1rem;
+    }
+
+    .search-and-filter-wrapper {
+        
+        button.filter {
+            width: 1rem;
+        }
+    }
+
+    .protocols-list {
+        .protocol {
+            .download-btn {
+
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .protocols-content {
+        flex-direction: column;
+        flex-wrap: wrap;
+        row-gap: 2rem;
+
+    }
+
+    .search-and-filter-wrapper {
+        column-gap: 1rem;
+        
+        button.filter {
+            height: 5rem;
+            padding: 3.5%;
+        }
+    }
+
+    .protocols-list {
+        row-gap: 2rem;
+
+        .protocol {
+            
+            .protocol-preview {
+                border-radius: 1rem;
+                font-size: 1rem;
+
+                .protocol-preview-body {
+                    height: 32rem;
+                }
+
+                .protocol-date {
+                    font-size: 1rem;
+                }
+
+                h4 {
+                    font-size: 1.1rem;
+                }
+
+                ol {
+                    font-size: .8rem;
+                }
+
+                footer {
+                    height: 5rem;
+                    font-size: .7rem;
+
+                    .lines-wrapper {
+
+                    }
+
+                    .qrcode-name {
+                        font-size: .5rem;
+                    }
+                }
+            }
+
+            .download-btn {
+
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .protocols-content {
+        row-gap: 2rem;
+
+    }
+
+    .search-and-filter-wrapper {
+        column-gap: 1rem;
+        
+        button.filter {
+            /* height: 5rem; */
+            padding: 3%;
+        }
+    }
+
+    .protocols-list {
+        row-gap: 2rem;
+
+        .protocol {
+            .protocol-preview {
+                border-radius: 1.5rem;
+                font-size: 1.2rem;
+
+                .protocol-preview-body {
+                    height: 45rem;
+                }
+
+                .protocol-date {
+                    font-size: 1.2rem;
+                }
+
+                h4 {
+                    font-size: 1.3rem;
+                }
+
+                ol {
+                    font-size: 1rem;
+                }
+
+                footer {
+                    height: 7rem;
+                    font-size: 1rem;
+                    align-items: center;
+
+                    .lines-wrapper {
+
+                    }
+
+                    .qrcode-name {
+                        font-size: .8rem;
+                    }
+                }
+            }
+
+            .download-btn {
+
+            }
+        }
+    }
+
+}
+
+@media (min-width: 992px) {
+    .protocols-content {
+        row-gap: 3rem;
+
+    }
+
+    .search-and-filter-wrapper {
+        column-gap: 1rem;
+        
+        button.filter {
+            /* height: 5rem; */
+            padding: 3%;
+        }
+    }
+
+    .protocols-list {
+        row-gap: 2rem;
+        column-gap: 1rem;
+
+        .protocol {
+            width: 48%;
+            .protocol-preview {
+                border-radius: 1rem;
+                font-size: 1rem;
+
+                .protocol-preview-body {
+                    height: 35rem;
+                }
+
+                .protocol-date {
+                    font-size: .9rem;
+                }
+
+                h4 {
+                    font-size: 1rem;
+                }
+
+                ol {
+                    font-size: .8rem;
+                }
+
+                footer {
+                    height: 5rem;
+                    font-size: .7rem;
+                    align-items: center;
+
+                    .lines-wrapper {
+
+                    }
+
+                    .qrcode-name {
+                        font-size: .6rem;
+                    }
+                }
+            }
+
+            .download-btn {
+
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .protocols-content {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        row-gap: 3rem;
+    }
+
+    .protocols-content .content-wrapper {
+        width: 90%;
+    }
+
+    .search-and-filter-wrapper {
+        column-gap: 1rem;
+        
+        button.filter {
+            height: 4rem;
+            padding: 2%;
+        }
+    }
+
+    .protocols-list {
+        row-gap: 2rem;
+        column-gap: 1rem;
+
+        .protocol {
+            width: 32%;
+
+            .protocol-preview {
+                border-radius: .75rem;
+                font-size: .8rem;
+
+                .protocol-preview-body {
+                    height: 35rem;
+                }
+
+                .protocol-date {
+                    font-size: .7rem;
+                }
+
+                h4 {
+                    font-size: .8rem;
+                }
+
+                ol {
+                    font-size: .6rem;
+                }
+
+                footer {
+                    height: 5rem;
+                    font-size: .5rem;
+                    align-items: center;
+
+                    .lines-wrapper {
+
+                    }
+
+                    .qrcode-name {
+                        font-size: .4rem;
+                    }
+                }
+            }
+
+            .download-btn {
+
+            }
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    .protocols-content {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        row-gap: 3rem;
+    }
+
+    .protocols-content .content-wrapper {
+        width: 90%;
+    }
+
+    .search-and-filter-wrapper {
+        column-gap: 1rem;
+        
+        button.filter {
+            height: 4.5rem;
+            padding: 2%;
+        }
+    }
+
+    .protocols-list {
+        row-gap: 1rem;
+        column-gap: .5rem;
+
+        .protocol {
+            width: 23%;
+
+            .protocol-preview {
+                border-radius: 1rem;
+                font-size: .6rem;
+
+                .protocol-preview-body {
+                    height: 35rem;
+                }
+
+                .protocol-date {
+                    font-size: .6rem;
+                }
+
+                h4 {
+                    font-size: .7rem;
+                }
+
+                ol {
+                    font-size: .5rem;
+                }
+
+                footer {
+                    height: 5rem;
+                    font-size: .4rem;
+                    align-items: center;
+
+                    .lines-wrapper {
+
+                    }
+
+                    .qrcode-name {
+                        font-size: .3rem;
+                    }
+                }
+            }
+
+            .download-btn {
+
             }
         }
     }
