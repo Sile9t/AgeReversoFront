@@ -5,10 +5,9 @@
   let chart = document.getElementById('passedStepsChart');
   
   let ctx = chart.getContext("2d");
-  let gradient = ctx.createLinearGradient(0, 20, 0, 220);
+  let gradient = ctx.createLinearGradient(0, 0, 0, 200);
   gradient.addColorStop(0, "#37BA03");
-  gradient.addColorStop(0.6, "#E3D300");
-  gradient.addColorStop(0.8, "#E3D300");
+  gradient.addColorStop(0.5, "#E3D300");
   gradient.addColorStop(1, "#E00000");
   
   let data = {
@@ -56,6 +55,11 @@
             // borderColor: "transparent",
             // tickColor: 'transparent'
           },
+          ticks: {
+            font: {
+              lineHeight: 4
+            }
+          }
         },
         y: {
           border: {

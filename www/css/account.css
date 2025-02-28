@@ -1,8 +1,5 @@
 @import url("./utilities.css");
 
-#main {
-}
-
 .account {
     /* height: 47rem; */
     background-color: var(--account-bg-clr);
@@ -12,16 +9,15 @@
     margin-bottom: 2rem;
 
     .nav {
-        height: 37rem;
-
+        
         .main-nav-wrapper {
             border-radius: 5rem;
-            padding: .5rem;
+            /* padding: .5rem; */
             background-color: var(--btn-wt-clr);
             
             .nav-link {
-                height: 3.5rem;
-                width: 3.5rem;    
+                /* height: 3.5rem; */
+                aspect-ratio: 1 / 1;
             }
             
             .nav-link.active {
@@ -31,8 +27,6 @@
         }
         
         .main-tab svg {
-            margin-top: .3rem;
-            margin-bottom: .2rem;
         }
         
         .quit-tab {
@@ -43,35 +37,49 @@
     .nav-link {
         border: 0;
         border-radius: 50% 50%;
-        height: 4.5rem;
-        width: 4.5rem;
-        padding: 1rem;
+        aspect-ratio: 1 / 1;
         margin: .2rem;
         background-color: var(--btn-wt-clr);
         color: var(--btn-bl-clr);
         
         svg {
             overflow: visible;
-            /* margin-left: .05rem;
-            margin-bottom: .1rem; */
+            height: 100%;
+            width: 100%;
         }
     }
 
     .account-body-wrapper {
-        padding-left: 2rem;
+        overflow: hidden;
         
         .header-wrapper {
             padding: 0;
             margin-bottom: 2rem;
+            column-gap: 2rem;
+            row-gap: 1rem;
     
-            .name-wrapper h2{
-                width: 35rem;
-                margin: 0;
-                /* padding: 0 1rem; */
-                font-size: 2.5rem;
-                font-weight: 500;
+            .name-wrapper {
+                /* min-width: 23rem; */
+                /* width: 50%; */
+
+                h2{
+                    margin: 0;
+                    font-weight: 500;
+                }
             }
-    
+            
+            .navbar-toggler {
+                border: 0;
+                height: 4.5rem;
+                width: 4.5rem;
+                padding: 1rem;
+
+                svg {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
             .notifications-wrapper button{
                 background-color: var(--btn-bl-clr);
                 color: var(--btn-wt-clr);
@@ -104,27 +112,25 @@
 
             .photo-wrapper {
                 border-radius: 2rem;
-                height: 40.5rem;
-                aspect-ratio: 458 / 629;
-
+                justify-content: center;
+                overflow: hidden;
+                
                 img {
                     width: 100%;
                     object-fit: cover;
                 }
             }
 
-                h3 {
-                    font-size: 1.2rem;
-                    font-weight: 500;
-                    margin: 0;
-                }
+            h3 {
+                font-weight: 500;
+                /* margin: 0; */
+            }
 
             .content-wrapper {
-                width: 41rem;
-                height: 40.5rem;
+                /* width: 50%; */
+                /* height: 40rem; */
                 overflow: auto;
-                /* position: relative; */
-                row-gap: 1rem;
+                /* row-gap: 1.5rem; */
                 -ms-overflow-style: none;
                 scrollbar-width: none;
 
@@ -136,18 +142,21 @@
                     column-gap: 2rem;
 
                     .parameters-stats-wrapper {
+                        row-gap: 1rem;
+                        
                         .progress-bar-wrapper {
                             font-weight: 500;
-
+                            
                             .progress {
-                                border-radius: 1rem;
-                                height: 1.7rem;
+                                border-radius: 3rem;
+                                height: 100%;
                                 width: 85%;
+                                background: #F2F2F2;
                                 
                                 div[role="progressbar"].progress-bar {
                                     height: 100%;
                                     width: calc(var(--value) * 1%);
-                                    border-radius: 1rem;
+                                    border-radius: 3rem;
                                     background: linear-gradient(90deg, #E00000, #E3D300, #37BA03);
                                 }
                             }
@@ -157,14 +166,15 @@
                     .general-stats-wrapper {
                           
                         div[role="progressbar"].circle-progressbar {
-                            --size: 12rem;
+                            /* --size: 14rem; */
                             --fg: #37BA03;
                             --bg: #F2F2F2;
                             --pgPercentage: var(--value);
-                            animation: growProgressBar 3s 1 forwards;
-                            width: var(--size);
-                            height: var(--size);
-                            border-radius: var(--size);
+                            /* animation: growProgressBar 3s 1 forwards; */
+                            /* width: var(--size); */
+                            height: 100%;
+                            aspect-ratio: 1 / 1;
+                            border-radius: 50% 50%;
                             display: grid;
                             position: relative;
                             place-items: center;
@@ -173,7 +183,8 @@
                               conic-gradient(var(--bg) 5%, var(--fg) calc(var(--pgPercentage) * .3%), var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
                               ;
                             font-weight: 500;
-                            font-size: calc(var(--size) / 7);
+                            /* font-size: calc(var(--size) / 7); */
+                            font-size: 200%;
                             color: inherit;
 
                             div.inside-circle-progressbar-circle {
@@ -215,12 +226,12 @@
                         margin: 0;
                         margin-left: .5rem;
                         font-weight: 400;
-                        font-size: 6rem;
+                        /* font-size: 6rem; */
                     }
 
                     .month {
                         margin: 0;
-                        font-size: 1.8rem;
+                        /* font-size: 1.8rem; */
                         text-align: top;
                     }
                 }
@@ -228,23 +239,21 @@
                 .info-tile {
                     border: .15rem solid white;
                     border-radius: 2rem;
-                    height: 15rem;
                     width: 100%;
-                    /* aspect-ratio: 290 / 235; */
-                    padding: 1rem;
+                    aspect-ratio: 290 / 235;
+                    /* padding: 2.5%; */
                     background-color: var(--account-info-tile-bg-clr);
                 }
 
                 .age-wrapper {
                     .age-tile {
-                        height: 4rem;
-                        width: 38.8rem;
+                        width: auto;
+                        aspect-ratio: 10 / 1;
                         background: 
-                            url("../source/img/account/backgrounds/AgeBg.png") center / 100% no-repeat,
+                            url("../source/img/account/backgrounds/AgeBg.png") right / 100% no-repeat,
                             white;
-                        aspect-ratio: none;
                         font-weight: 500;
-                        font-size: 2.5rem;
+                        /* font-size: 2.5rem; */
                         color: #37BA03;
                     }
                 }
@@ -252,8 +261,10 @@
                 .passed-steps-wrapper {
 
                     .passed-steps-tile {
-                        height: 26rem;
-                        width: 38.8rem;
+                        /* height: 24rem;
+                        width: 38.8rem; */
+                        width: auto;
+                        aspect-ratio: 1.6 / 1;
 
                         canvas {
                             height: 100%;
@@ -272,14 +283,14 @@
     
     svg {
         position: absolute;
-        margin: .9rem;
+        aspect-ratio: 1 / 1;
     }
     
     input {
         border: 0;
-        border-radius: 2rem;
-        width: 25rem;
-        padding: 1.5rem 1.5rem;
+        border-radius: 5rem;
+        width: 100%;
+        padding: 1.5rem;
         padding-left: 4.5rem;
         /* background-color: var(--account-search-bg-clr); */
 
@@ -321,7 +332,7 @@
     .datepicker-calendar {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
-        grid-row-gap: .5rem;
+        grid-row-gap: .6rem;
     }
     
     .day, .date {
@@ -335,13 +346,13 @@
     
     .date {
         border: 0;
+        border-radius: 50% 50%;
         padding: 0;
         width: 1.75rem;
-        height: 1.75rem;
+        aspect-ratio: 1 / 1;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 2rem;
         font-weight: inherit;
         border: 2px solid transparent;
         background-color: transparent;
@@ -369,3 +380,966 @@
         }
     }
 }
+
+@media (max-width: 574px) {
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+        column-gap: 1rem;
+        height: 0;
+        margin: 1rem 0;
+        transition: height .5s ease-in;
+        
+        .main-nav-wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 80%;
+            height: auto;
+            overflow: hidden;
+            padding: 5%;
+
+            .nav-link {
+                height: 4rem;
+                padding: 1rem;
+            }
+        }
+
+        &.show {
+            height: auto;
+        }
+    }
+
+    .nav-link {
+        height: 5rem;
+        padding: 1.25rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+        margin: 2rem 0 .5rem 0;
+
+    }
+
+    .account-content {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 1rem;
+    }
+
+    .header-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        
+        .main-tab {
+            background-color: transparent;
+        }
+
+        .name-wrapper {
+            justify-content: center;
+            width: 50%;
+            font-size: 1rem;
+        }
+    }
+
+    .navbar-toggler {
+        display: flex;
+    }
+
+    .search-wrapper {
+
+        svg {
+            width: 3rem;
+            height: 3rem;
+            padding: 1rem;
+        }
+
+        input{
+            padding-left: 5rem;
+            font-size: 1.5rem;
+        }
+    }
+
+    .notifications-wrapper {
+        display: none;
+    }
+
+    .photo-wrapper {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        background-color: #F4F4F4;
+        padding: 0 10%;
+
+        img {
+            object-position: top;
+            width: auto;
+            height: 100%;
+            top:0
+        }
+    }
+    
+    .content-wrapper {
+        width: 100%;
+        height: auto;
+    }
+
+    .info-tile {
+        padding: 5%;
+    }
+
+    .stats-wrapper {
+        flex-wrap: wrap;
+        row-gap: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .calendar-wrapper {
+        flex-wrap: wrap;
+        row-gap: 2rem;
+    }
+
+    .datepicker {
+        font-size: 2rem;
+
+        .datepicker-calendar {
+            grid-row-gap: 1rem;
+        }
+        
+        .date {
+            width: 3rem;
+            font-size: 2rem;
+        }
+    }
+
+    .closest-checkup-date {
+        
+        .header {
+            font-size: 2rem;
+        }
+
+        .date {
+            font-size: 10rem;
+        }
+
+        .month {
+            font-size: 4rem;
+        }
+    }
+
+    .age-tile {
+        padding: 1% 5%;
+        font-size: 3rem;
+    }
+
+    .passed-steps-tile {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 575px) {
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+        column-gap: 1rem;
+        height: 0;
+        /* margin: 1rem 0; */
+        transition: height .5s ease-in;
+        
+        .main-nav-wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 80%;
+            height: auto;
+            overflow: hidden;
+            padding: 5%;
+
+            .nav-link {
+                height: 4rem;
+                padding: 1rem;
+            }
+        }
+
+        &.show {
+            height: auto;
+        }
+    }
+
+    .nav-link {
+        height: 5rem;
+        padding: 1.25rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+        margin: 2rem 0 .5rem 0;
+
+    }
+
+    .account-content {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 1rem;
+    }
+
+    .header-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        
+        .main-tab {
+            background-color: transparent;
+        }
+
+        .name-wrapper {
+            justify-content: center;
+            width: 50%;
+            font-size: 1rem;
+        }
+    }
+
+    .navbar-toggler {
+        display: flex;
+    }
+
+    .search-wrapper {
+
+        svg {
+            width: 3rem;
+            height: 3rem;
+            padding: 1rem;
+        }
+
+        input{
+            padding-left: 5rem;
+            font-size: 1.5rem;
+        }
+    }
+
+    .notifications-wrapper {
+        display: none;
+    }
+
+    .photo-wrapper {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        background-color: #F4F4F4;
+        padding: 0 10%;
+
+        img {
+            object-position: top;
+            width: auto;
+            height: 100%;
+            top:0
+        }
+    }
+    
+    .content-wrapper {
+        width: 100%;
+        height: auto;
+        row-gap: 1rem;
+    }
+
+    .info-tile {
+        padding: 5%;
+    }
+
+    .stats-wrapper {
+        flex-wrap: wrap;
+        row-gap: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .calendar-wrapper {
+        flex-wrap: wrap;
+        row-gap: 2rem;
+    }
+
+    .datepicker {
+        font-size: 2rem;
+
+        .datepicker-calendar {
+            grid-row-gap: 1rem;
+        }
+        
+        .date {
+            width: 3rem;
+            font-size: 2rem;
+        }
+    }
+
+    .closest-checkup-date {
+        
+        .header {
+            font-size: 2rem;
+        }
+
+        .date {
+            font-size: 10rem;
+        }
+
+        .month {
+            font-size: 4rem;
+        }
+    }
+
+    .age-tile {
+        padding: 1% 5%;
+        font-size: 3rem;
+    }
+
+    .passed-steps-tile {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    #main {
+        max-width: 736px;
+    }
+
+    .nav {
+        column-gap: 1rem;
+        height: 0;
+        margin: 1rem 0;
+        
+        .main-nav-wrapper {
+            flex-wrap: nowrap;
+            padding: 1%;
+            width: 90%;
+        
+            .nav-link {
+                height: 4rem;
+                padding: .75rem;
+            }
+        }
+    }
+
+    .nav-link {
+        height: 5rem;
+        padding: 1.25rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+        /* margin: 2rem 0 1rem 0; */
+    }
+
+    /* .account-content {
+        row-gap: 1rem;
+    } */
+
+    .header-wrapper {
+        
+        .name-wrapper {
+            font-size: 1.5rem;
+        }
+
+        .main-tab {
+            background-color: transparent;
+            padding: .75rem;
+        }
+    }
+
+    /* .navbar-toggler {
+        display: flex;
+    } */
+
+    .search-wrapper {
+
+        svg {
+            width: 3rem;
+            height: 3rem;
+            padding: 1rem;
+        }
+
+        input{
+            padding-left: 5rem;
+            font-size: 1.5rem;
+        }
+    }
+
+    /* .notifications-wrapper {
+        display: none;
+    } */
+
+    /* .photo-wrapper {
+
+        img {
+        }
+    } */
+    
+    .stats-wrapper {
+        font-size: 2.5rem;
+    }
+
+    .datepicker {
+        font-size: 1.25rem;
+
+        .datepicker-calendar {
+            grid-row-gap: 1rem;
+        }
+        
+        .date {
+            width: 1.75rem;
+            font-size: 1.25rem;
+        }
+    }
+
+    .closest-checkup-date {
+        
+        .header {
+            font-size: 1.5rem;
+        }
+
+        .date {
+            font-size: 5rem;
+        }
+
+        .month {
+            font-size: 3rem;
+        }
+    }
+
+    .age-tile {
+        font-size: 2.5rem;
+    }
+
+    .passed-steps-tile {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    #main {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 960px;
+    }
+
+    .nav {
+        .main-nav-wrapper {
+            
+            .nav-link {
+                height: 4rem;
+                padding: 1rem;
+            }
+    
+        }
+
+        .quit-tab {
+            padding: 1.5rem;
+        }
+    }
+
+    .nav-link {
+        height: 5rem;
+        padding: 1rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    .account-content {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 1rem;
+    }
+
+    .header-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        
+        .name-wrapper {
+            width: 50%;
+            font-size: 1.5rem;
+        }
+    }
+
+    /* .navbar-toggler {
+        display: flex;
+    } */
+
+    .search-wrapper {
+
+        input{
+            height: 2rem;
+            font-size: 1.25rem;
+            padding-left: 5rem;
+        }
+
+        svg {
+            height: 3rem;
+            width: 3rem;
+            padding: 1rem;
+        }
+    }
+    
+    /* .content-wrapper {
+    } */
+
+    .stats-wrapper {
+        font-size: 2rem;
+    }
+
+    .datepicker {
+        font-size: 2rem;
+
+        .datepicker-calendar {
+            grid-row-gap: 1.5rem;
+        }
+        
+        .date {
+            width: 4rem;
+            font-size: 2rem;
+        }
+    }
+
+    .closest-checkup-date {
+        
+        .header {
+            font-size: 3rem;
+        }
+
+        .date {
+            font-size: 12rem;
+        }
+
+        .month {
+            font-size: 6rem;
+        }
+    }
+
+    .age-tile {
+        font-size: 4rem;
+    }
+
+    .passed-steps-tile {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    #main {
+        max-width: 1140px;
+    }
+
+    .nav {
+        flex-direction: column;
+        width: fit-content;
+        height: auto;
+
+        .main-nav-wrapper {
+            width: auto;
+            flex-direction: column;
+
+            .nav-link {
+                height: 3rem;
+                padding: .85rem;
+            }
+        }
+
+        .quit-tab {
+            padding: 1.25rem;
+        }
+    }
+
+    .nav-link {
+        height: 4rem;
+        padding: 1.5rem
+    }
+
+    h3 {
+        font-size: 1.75rem;
+        margin: 0;
+    }
+
+    .account-content {
+        display: flex;
+        flex-wrap: nowrap;
+        row-gap: 1.5rem;
+    }
+
+    .header-wrapper {
+        .main-tab {
+            background-color: var(--btn-wt-clr);
+        }
+
+        .name-wrapper {
+            width: 40%;
+            justify-content: start;
+            font-size: 1.5rem;
+        }
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .search-wrapper {
+
+        input{
+            height: 1.25rem;
+            font-size: 1rem;
+            padding-left: 4rem;
+        }
+
+        svg {
+            height: 2.3rem;
+            width: 2.3rem;
+            padding: 1rem;
+        }
+    }
+
+    .notifications-wrapper {
+        display: block;
+    }
+
+    .photo-wrapper {
+        width: 37%;
+        aspect-ratio: 458 / 629;
+        background-color: #F4F4F4;
+        padding: 0;
+        
+        img {
+            object-position: top;
+            width: auto;
+            height: 100%;
+            top:0
+        }
+    }
+    
+    .content-wrapper {
+        width: 52%;
+        height: 36.5rem;
+        row-gap: 1.1rem;
+    }
+
+    .info-tile {
+        padding: 2.5%;
+    }
+
+    .stats-wrapper {
+        flex-wrap: nowrap;
+        font-size: .9rem;
+    }
+
+    .calendar-wrapper {
+        flex-wrap: nowrap;
+    }
+
+    .datepicker {
+        font-size: .75rem;
+
+        .datepicker-calendar {
+            grid-row-gap: .75rem;
+        }
+        
+        .date {
+            width: 1.5rem;
+            font-size: .75rem;
+        }
+    }
+
+    .closest-checkup-date {
+        
+        .header {
+            font-size: 1.25rem;
+        }
+
+        .date {
+            font-size: 5rem;
+        }
+
+        .month {
+            font-size: 2rem;
+        }
+    }
+
+    .age-tile {
+        font-size: 2rem;
+    }
+
+    .passed-steps-tile {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    #main {
+        max-width: 1320px;
+    }
+
+    .nav {
+        flex-direction: column;
+        width: fit-content;
+        height: auto;
+
+        .main-nav-wrapper {
+            width: auto;
+            flex-direction: column;
+
+            .nav-link {
+                height: 3.5rem;
+                padding: 1rem;
+            }
+        }
+
+        .quit-tab {
+            padding: 1.5rem;
+        }
+    }
+
+    .nav-link {
+        height: 4.5rem;
+        padding: 1.25rem
+    }
+
+    h3 {
+        font-size: 1.75rem;
+        margin: 0;
+    }
+
+    .account-content {
+        flex-wrap: nowrap;
+    }
+
+    .header-wrapper {
+        .main-tab {
+            background-color: var(--btn-wt-clr);
+        }
+
+        .name-wrapper {
+            width: 45%;
+            justify-content: start;
+            font-size: 2rem;
+        }
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .search-wrapper {
+
+        input{
+            height: 1.5rem;
+            font-size: 1rem;
+            padding-left: 4rem;
+        }
+
+        svg {
+            height: 2.3rem;
+            width: 2.3rem;
+            padding: 1.2rem;
+        }
+    }
+
+    .notifications-wrapper {
+        display: block;
+    }
+
+    .photo-wrapper {
+        width: 37%;
+        aspect-ratio: 458 / 629;
+        background-color: #F4F4F4;
+        padding: 0;
+        
+        img {
+            object-position: top;
+            width: auto;
+            height: 100%;
+            top:0
+        }
+    }
+    
+    .content-wrapper {
+        width: 50%;
+        height: 40rem;
+        row-gap: 1.5rem;
+    }
+
+    .stats-wrapper {
+        font-size: 1rem;
+    }
+
+    .datepicker {
+        font-size: 1rem;
+
+        .datepicker-calendar {
+            grid-row-gap: .75rem;
+        }
+        
+        .date {
+            width: 1.5rem;
+            font-size: 1rem;
+        }
+    }
+
+    .closest-checkup-date {
+        
+        .header {
+            font-size: 1.25rem;
+        }
+
+        .date {
+            font-size: 5rem;
+        }
+
+        .month {
+            font-size: 2rem;
+        }
+    }
+
+    .age-tile {
+        font-size: 2rem;
+    }
+}
+
+/* @media (max-width: 1399px) {
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        overflow: hidden;
+        column-gap: 1rem;
+        height: 0;
+        margin: 1rem 0;
+        transition: height .5s ease-in;
+        
+        .main-nav-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 90%;
+            height: auto;
+            overflow: hidden;
+
+            .nav-link {
+                height: 4rem;
+                padding: 1rem;
+            }
+        }
+
+        &.show {
+            height: auto;
+        }
+    }
+
+    .nav-link {
+        height: 5rem;
+        padding: 1.25rem;
+    }
+
+    h3 {
+        font-size: 3rem;
+    }
+
+    .account-content {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 1rem;
+    }
+
+    .header-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        
+        .name-wrapper {
+            width: 80%;
+            font-size: 2rem;
+        }
+    }
+
+    .navbar-toggler {
+        display: flex;
+    }
+
+    .search-wrapper {
+
+        svg {
+            width: 3rem;
+            height: 3rem;
+            padding: 1rem;
+        }
+
+        input{
+            padding-left: 5rem;
+            font-size: 1.5rem;
+        }
+    }
+
+    .notifications-wrapper {
+        display: none;
+    }
+
+    .photo-wrapper {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        background-color: #F4F4F4;
+        padding: 0 10%;
+
+        img {
+            object-position: top;
+            width: auto;
+            height: 100%;
+            top:0
+        }
+    }
+    
+    .content-wrapper {
+        width: 100%!important;
+        height: auto!important;
+    }
+
+    .stats-wrapper {
+        font-size: 2rem;
+    }
+
+    .datepicker {
+        font-size: 2rem;
+
+        .datepicker-calendar {
+            grid-row-gap: 1rem;
+        }
+        
+        .date {
+            width: 3rem;
+            font-size: 2rem;
+        }
+    }
+
+    .closest-checkup-date {
+        
+        .header {
+            font-size: 2rem;
+        }
+
+        .date {
+            font-size: 10rem;
+        }
+
+        .month {
+            font-size: 4rem;
+        }
+    }
+
+    .age-tile {
+        font-size: 4rem;
+    }
+
+    .passed-steps-tile {
+        font-size: 2rem;
+    }
+} */
