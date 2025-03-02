@@ -2,13 +2,29 @@
 
 .progress-content {
     .content-wrapper {
+
+        .age-wrapper .age-tile {
+            aspect-ratio: 10 / 1;
+            background: 
+                url("../source/img/account/backgrounds/AgeBg.png") right / 100% no-repeat,
+                white;
+            font-weight: 500;
+            color: #37BA03;
+        }
+
+        .info-tile {
+            border: .15rem solid white;
+            background-color: var(--account-info-tile-bg-clr);
+        }
+
         .indicators-list {
             row-gap: 1rem;
 
             .indicator {
-                column-gap: 1rem;
+                /* column-gap: 1rem; */
                 text-align: center;
                 font-weight: 400;
+                /* aspect-ratio: 100 / 1; */
                 -ms-overflow-style: none;
                 scrollbar-width: none;
 
@@ -17,29 +33,36 @@
                 }
 
                 .heart-tile {
+                    width: 30%;
+                    aspect-ratio: 1 / 1;
 
+                    img {
+                        width: 100%;
+                    }
                 }
 
                 .name {
-                    font-size: 1.2rem;
+                    /* font-size: 1.2rem; */
                 }
 
                 .pulse-tile {
-                    width: 30rem;
+                    width: 20%;
 
                     .value {
-                        margin-top: 1rem;
-                        margin-bottom: 1rem;
-                        font-size: 3rem;
+                        /* margin-top: 1rem;
+                        margin-bottom: 1rem; */
+                        /* font-size: 3rem; */
                         color: #37BA03;
                     }
                 }
 
                 .pressure-tile {
+                    width: 30%;
+
                     .pressure-value {
-                        margin-top: 1rem;
-                        margin-bottom: 1rem;
-                        font-size: 3rem;
+                        /* margin-top: 1rem;
+                        margin-bottom: 1rem; */
+                        /* font-size: 3rem; */
                         color: var(--search-muted-clr);
 
                         .upper-pressure {
@@ -58,9 +81,392 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
 
-                .info-tile {
-                    height: 7rem;
+@media (max-width: 575px) {
+    .progress-content {
+        flex-direction: column;
+        flex-wrap: wrap;
+        row-gap: 1rem;
+    }
+    
+    .progress-content .content-wrapper {
+
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .info-tile {
+            border-radius: 1rem;
+        }
+
+        .age-header {
+            font-size: .5rem;
+        }
+
+        .age-wrapper .age-tile {
+            /* border-width: 1px; */
+            border-radius: .5rem;
+            padding: 1% 5%;
+            font-size: 1.5rem;
+        }
+
+        .indicators-steps-header {
+
+        }
+
+        .indicators-list .indicator{
+            column-gap: .5rem;
+            font-size: 1rem;
+
+            .name {
+                font-size: .7rem;
+            }
+
+            .heart-tile {
+                font-size: inherit;
+                padding: 3% 6%;
+            }
+
+            .pulse-tile {
+                font-size: inherit;
+                
+                .value {
+                    margin-top: .5rem;
+                    margin-bottom: .5rem;
+                }
+            }
+
+            .pressure-tile {
+                font-size: inherit;
+                padding: 5% 6%;
+
+                .pressure-value {
+                    margin-top: .5rem;
+                    margin-bottom: .5rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .progress-content {
+        flex-direction: column;
+        flex-wrap: wrap;
+        row-gap: 2rem;
+
+    }
+
+    .progress-content .content-wrapper {
+        width: 100%;
+
+        h3 {
+            /* margin-top: 1.5rem; */
+            margin-bottom: 1rem;
+        }
+        
+        .info-tile {
+            border-radius: 1.5rem;
+        }
+
+        .age-header {
+            font-size: 1.5rem;
+        }
+
+        .age-wrapper .age-tile {
+            /* border-width: 1px; */
+            border-radius: 1.5rem;
+            padding: 2% 5%;
+            font-size: 2rem;
+        }
+
+        .indicators-list .indicator{
+            column-gap: .75rem;
+            font-size: 2rem;
+
+            .name {
+                font-size: 1rem;
+            }
+
+            .heart-tile {
+                font-size: inherit;
+                padding: 3% 6%;
+            }
+
+            .pulse-tile {
+                font-size: inherit;
+                
+                .value {
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            .pressure-tile {
+                font-size: inherit;
+                padding: 5% 6%;
+
+                .pressure-value {
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .progress-content {
+        row-gap: 2rem;
+
+    }
+    
+    .progress-content .content-wrapper {
+        /* width: 100%; */
+
+        h3 {
+            /* margin-top: 1.5rem; */
+            margin-bottom: 1.5rem;
+        }
+        
+        .info-tile {
+            border-radius: 2rem;
+        }
+
+        .age-wrapper .age-tile {
+            /* border-width: 1px; */
+            border-radius: 1.5rem;
+            padding: 2% 5%;
+            font-size: 2.5rem;
+        }
+
+        .indicators-list .indicator{
+            column-gap: 1rem;
+            font-size: 2.5rem;
+
+            .name {
+                font-size: 1.5rem;
+            }
+
+            .heart-tile {
+                font-size: inherit;
+                padding: 3% 6%;
+            }
+
+            .pulse-tile {
+                font-size: inherit;
+                
+                .value {
+                    margin-top: 1.25rem;
+                    margin-bottom: 1.25rem;
+                }
+            }
+
+            .pressure-tile {
+                font-size: inherit;
+                padding: 5% 6%;
+
+                .pressure-value {
+                    margin-top: 1.25rem;
+                    margin-bottom: 1.25rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .progress-content {
+        flex-direction: column;
+        flex-wrap: wrap;
+        row-gap: 2rem;
+
+    }
+
+    .progress-content .content-wrapper {
+        
+        h3 {
+            /* margin-top: 1.5rem; */
+            margin-bottom: 1.5rem;
+        }
+        
+        .info-tile {
+            border-width: 2px;
+            border-radius: 2.5rem;
+        }
+
+        .age-wrapper .age-tile {
+            /* border-width: 1px; */
+            border-radius: 1.5rem;
+            padding: 3% 5%;
+            font-size: 3.5rem;
+        }
+
+        .indicators-list .indicator{
+            column-gap: 1rem;
+            font-size: 3.5rem;
+
+            .name {
+                font-size: 2rem;
+            }
+
+            .heart-tile {
+                font-size: inherit;
+                padding: 3% 6%;
+            }
+
+            .pulse-tile {
+                font-size: inherit;
+                
+                .value {
+                    margin-top: 1.25rem;
+                    margin-bottom: 1.25rem;
+                }
+            }
+
+            .pressure-tile {
+                font-size: inherit;
+                padding: 5% 6%;
+
+                .pressure-value {
+                    margin-top: 1.25rem;
+                    margin-bottom: 1.25rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .account {
+        padding: 2rem;
+    }
+
+    .progress-content {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        row-gap: 3rem;
+    }
+
+    .progress-content .content-wrapper {
+        width: 50%;
+        height: 35rem;
+        row-gap: 1.25rem;
+
+        h3 {
+            /* margin-top: 1.5rem; */
+            margin-bottom: 0;
+        }
+        
+        .info-tile {
+            border-width: 2px;
+            border-radius: 2rem;
+        }
+
+        .age-wrapper .age-tile {
+            /* border-width: 1px; */
+            border-radius: 1.5rem;
+            padding: 3% 5%;
+            font-size: 2.5rem;
+        }
+
+        .indicators-list .indicator{
+            column-gap: 1rem;
+            font-size: 2.5rem;
+
+            .name {
+                font-size: 1.5rem;
+            }
+
+            .heart-tile {
+                font-size: inherit;
+                padding: 2% 5%;
+            }
+
+            .pulse-tile {
+                font-size: inherit;
+                
+                .value {
+                    margin-top: 1.25rem;
+                    margin-bottom: 1.25rem;
+                }
+            }
+
+            .pressure-tile {
+                font-size: inherit;
+                padding: 3% 4%;
+
+                .pressure-value {
+                    margin-top: 1.25rem;
+                    margin-bottom: 1.25rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    .progress-content {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        row-gap: 3rem;
+    }
+
+    .progress-content .content-wrapper {
+        /* width: 50%; */
+        height: 35rem;
+        /* row-gap: 1.25rem; */
+
+        h3 {
+            /* margin-top: 1.5rem; */
+            /* margin-bottom: 0; */
+        }
+        
+        .info-tile {
+            border-width: 2px;
+            border-radius: 2rem;
+        }
+
+        .age-wrapper .age-tile {
+            /* border-width: 1px; */
+            /* border-radius: 1.5rem;
+            padding: 3% 5%; */
+            font-size: 2.5rem;
+        }
+
+        .indicators-list .indicator{
+            font-size: 3rem;
+
+            .name {
+                font-size: 1.5rem;
+            }
+
+            .heart-tile {
+                font-size: inherit;
+                padding: 2% 5%;
+            }
+
+            .pulse-tile {
+                font-size: inherit;
+                
+                .value {
+                    margin-top: 1.25rem;
+                    margin-bottom: 1.25rem;
+                }
+            }
+
+            .pressure-tile {
+                font-size: inherit;
+                padding: 3% 4%;
+
+                .pressure-value {
+                    margin-top: 1.25rem;
+                    margin-bottom: 1.25rem;
                 }
             }
         }
