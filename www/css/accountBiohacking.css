@@ -105,8 +105,14 @@
     }
     
     .biohacking-content .content-wrapper {
+        row-gap: .5rem;
+
         .content-description {
             font-size: .8rem;
+        }
+
+        .search-and-filter-wrapper {
+            column-gap: .5rem;
         }
 
         .search-wrapper {
@@ -114,25 +120,28 @@
         }
 
         button.filter {
-
+            height: 1.8rem;
+            padding: 2%;
         }
         
         .articles-cards-list {
             row-gap: 1rem;
 
             .article-card {
-                width: 100%;
+                width: 48%;
                 border-radius: 1rem;
                 aspect-ratio: 1 / 1.6;
 
                 .article-info {
+                    width: 100%;
                     height: 25%;
-                    bottom: 13%;
+                    bottom: 18%;
                     padding: 5%;
-                    font-size: .8rem;
+                    font-size: .6rem;
                 }
                 
                 .article-description {
+                    display: none;
                     align-items: center;
                     height: max-content;
                 }
