@@ -129,24 +129,26 @@
         
         .education-cards-list {
             column-gap: .5rem;
-            row-gap: .5rem;
+            row-gap: 5vw;
             
             .education-card {
                 width: 48%;
-                border-radius: .5rem;
-                font-size: .7rem;
+                border-radius: 3vw;
+                font-size: 3vw;
                 aspect-ratio: 1 / 1.5;
-                row-gap: 1rem;
+                row-gap: 4vw;
 
                 .education-img {
                     aspect-ratio: inherit;
 
                     svg {
+                        width: 16.2vw;
+                        height: 2.7vw;
                         margin: 10% 0;
                     }
     
                     h3 {
-                        font-size: 1.5rem;
+                        font-size: 4vw;
                         margin-top: 10%;
                         margin-bottom: 20%;
                     }
@@ -154,7 +156,7 @@
     
                 .education-info {
                     height: 20%;
-                    bottom: 13%;
+                    bottom: 15%;
                     
                     .education-name {
                     }

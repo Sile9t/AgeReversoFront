@@ -505,40 +505,42 @@
     }
 
     .datepicker {
-        font-size: 2rem;
+        padding: 0;
+        font-size: 1rem;
 
         .datepicker-calendar {
-            grid-row-gap: 1rem;
+            grid-row-gap: .5rem;
         }
         
         .date {
-            width: 3rem;
-            font-size: 2rem;
+            width: 2rem;
+            font-size: 1rem;
         }
     }
 
     .closest-checkup-date {
         
         .header {
-            font-size: 2rem;
+            margin: .5rem 0;
+            font-size: 1.5rem;
         }
 
         .date {
-            font-size: 10rem;
+            font-size: 6rem;
         }
 
         .month {
-            font-size: 4rem;
+            font-size: 3rem;
         }
     }
 
     .age-tile {
         padding: 1% 5%;
-        font-size: 3rem;
+        font-size: 1.5rem;
     }
 
     .passed-steps-tile {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 }
 

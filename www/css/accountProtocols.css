@@ -211,16 +211,55 @@
     }
 
     .search-and-filter-wrapper {
+        column-gap: .5rem;
         
         button.filter {
-            width: 1rem;
+            height: 2rem;
+            width: 2rem;
         }
     }
 
     .protocols-list {
-        .protocol {
-            .download-btn {
+        row-gap: 2rem;
 
+        .protocol {
+            
+            .protocol-preview {
+                border-radius: .5rem;
+                font-size: .7rem;
+
+                .protocol-preview-body {
+                    height: 20rem;
+                }
+
+                .protocol-date {
+                    font-size: .7rem;
+                }
+
+                h4 {
+                    font-size: .8rem;
+                }
+
+                ol {
+                    font-size: .5rem;
+                }
+
+                footer {
+                    height: 5rem;
+                    font-size: .4rem;
+
+                    .lines-wrapper {
+
+                    }
+
+                    .qrcode-name {
+                        font-size: .3rem;
+                    }
+                }
+            }
+
+            .download-btn {
+                font-size: .7rem;
             }
         }
     }

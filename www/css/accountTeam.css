@@ -3,7 +3,7 @@
 .body-wrapper {
     .team-content {
         .specialists-cards-list {
-            overflow-y: scroll;
+            /* overflow-y: scroll; */
             -ms-overflow-style: none;
             scrollbar-width: none;
 
@@ -72,38 +72,47 @@
     }
     
     .team-content .specialists-cards-list {
-        height: 45rem;
-        column-gap: 1rem;
+        /* overflow-y: none; */
+        column-gap: .5rem;
         row-gap: 1rem;
         
         .specialist-card {
-            border-radius: 1.25rem;
-            width: 17rem;
-            aspect-ratio: 1 / 1.75;
+            border-radius: 3vw;
+            width: 48%;
+            aspect-ratio: 1 / 1.5;
         
             .specialist-img {
-                width: 17rem;
-                aspect-ratio: 1 / 1.75;
-                border-radius: 1.25rem;
+                /* width: 17rem; */
+                aspect-ratio: 1 / 1.5;
+                border-radius: inherit;
                 
                 img {
                 }
             }
 
             .specialist-info {
-                border-radius: 1.25rem;
-                padding: 1.5rem;
-                bottom: -.5rem;
-                height: 6rem;
-                
+                border-radius: inherit;
+                height: 30%;
+                width: 100%;
+                bottom: 0;
+                row-gap: .5rem;
+
                 .specialist-name {
-                    font-size: 1.2rem;
+                    font-size: 3vw;
                 }
 
                 .specialist-specializations {
-                    height: 4rem;
-                    margin: .5rem 0 ;
-                    font-size: .9rem;
+                    display: none;
+                }
+
+                .specialist-more {
+                    display: flex;
+                    font-size: 2.5vw;
+                    
+                    svg {
+                        height: 2.5vw;
+                        width: 2.5vw;
+                    }
                 }
             }
         }
@@ -269,6 +278,7 @@
     }
 
     .team-content .specialists-cards-list {
+        overflow-y: scroll;
         width: 90%;
         height: 35rem;
         column-gap: 1rem;
