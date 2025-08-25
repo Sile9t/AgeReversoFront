@@ -1,9 +1,21 @@
-# AgeReverso 
+# [AgeReverso](https://agereverso.com/) 
  
- AgeResverso is a team of life hacking specialist.
+*AgeResverso is a team of life hacking specialist.*
 
- There are those official site design.
+---
 
- Design was got from a client from [Figma](https://www.figma.com/design/n2acuYQE7AXIgtvLQ8JX04/AgeReverso-%D1%80%D0%B5%D0%B1%D1%80%D0%B5%D0%BD%D0%B4%D0%B8%D0%BD%D0%B3?node-id=914-410&t=Np0fxlWiLxiBazCe-1).
+ [Figma design.](https://www.figma.com/design/n2acuYQE7AXIgtvLQ8JX04/AgeReverso-ребрендинг?node-id=672-297&p=f&t=UrU4cvLRMrf2oHc1-0)
 
- My task was to implement new design for the site.
+Repository of implemented responsive user account pages to track user hacking progress, trainings, protocols, checkup's and articles.
+
+---
+
+## 📂 Project Structure
+
+ ```java
+    /bootstrap-5.0.2-dist          - Bootstrap styles
+    /css                           - All styles
+    /js                            - All JavaScript
+    /source                        - Additional files (fonts, imgs)
+    *account*.html                 - All account pages
+ ```
